@@ -1,11 +1,10 @@
-import { Outlet } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import { Footer } from "./Footer";
 
 export function NavHeader() {
   return (
-    <div className="min-h-full h-lvh ">
-      <div className="flex justify-evenly items-center shadow-lg text-3xl">
+    <div className="min-h-full bg-[#F4F2EA] ">
+      <div className="flex justify-evenly items-center shadow-lg text-3xl ">
         {/* <Link to="/" className="hover:text-[#85D3A5]">
           Home
         </Link> */}
@@ -13,7 +12,7 @@ export function NavHeader() {
           About
         </Link> */}
 
-        <Link to="/flavors" className="hover:text-[#85D3A5]">
+        <Link to="/flavors" className="hover:text-[#343535]">
           Flavors
         </Link>
         <Link to="/">
@@ -29,7 +28,7 @@ export function NavHeader() {
           Order
         </Link>
       </div>
-      <div className="relative p-4 pb-8">
+      <div className="relative p-4 pb-8 min-h-screen">
         <Outlet />
       </div>
       <Footer />

@@ -36,7 +36,10 @@ function FlavorWrapper({
   return (
     <div className="flex flex-col justify-center items-center basis-1/3 my-8">
       <h2>{title}</h2>
-      <FontAwesomeIcon icon={faIceCream} style={{ height: "25px" }} />
+      <FontAwesomeIcon
+        icon={faIceCream}
+        style={{ height: "25px", margin: "3rem" }}
+      />
       <h3>{description}</h3>
     </div>
   );
