@@ -6,11 +6,15 @@ export function NavHeader() {
   return (
     <div className="min-h-full h-lvh ">
       <div className="flex justify-evenly items-center shadow-lg text-3xl">
-        <Link to="/" className="hover:text-[#85D3A5]">
+        {/* <Link to="/" className="hover:text-[#85D3A5]">
           Home
-        </Link>
-        <Link to="/about" className="hover:text-[#85D3A5]">
+        </Link> */}
+        {/* <Link to="/about" className="hover:text-[#85D3A5]">
           About
+        </Link> */}
+
+        <Link to="/flavors" className="hover:text-[#85D3A5]">
+          Flavors
         </Link>
         <Link to="/">
           <div className="h-48">
@@ -20,9 +24,6 @@ export function NavHeader() {
               className="h-full"
             />
           </div>
-        </Link>
-        <Link to="/flavors" className="hover:text-[#85D3A5]">
-          Flavors
         </Link>
         <Link to="/order" className="hover:text-[#85D3A5]">
           Order
