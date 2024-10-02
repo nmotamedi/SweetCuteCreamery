@@ -38,7 +38,7 @@ function FlavorWrapper({
       <h2>{title}</h2>
       <FontAwesomeIcon
         icon={faIceCream}
-        style={{ height: "25px", margin: "3rem" }}
+        style={{ height: "2rem", margin: "1rem" }}
       />
       <h3>{description}</h3>
     </div>

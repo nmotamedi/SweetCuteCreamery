@@ -12,7 +12,7 @@ export function NavHeader() {
           About
         </Link> */}
 
-        <Link to="/flavors" className="hover:text-[#343535]">
+        <Link to="/flavors" className="hover:text-[#85D3A5]">
           Flavors
         </Link>
         <Link to="/">
@@ -28,7 +28,7 @@ export function NavHeader() {
           Order
         </Link>
       </div>
-      <div className="relative p-4 pb-8 min-h-screen">
+      <div className="relative p-4 pb-8 min-h-full">
         <Outlet />
       </div>
       <Footer />
