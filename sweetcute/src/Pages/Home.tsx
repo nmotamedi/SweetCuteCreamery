@@ -41,7 +41,7 @@ export function Home() {
         </div>
         <div className="relative md:absolute flex justify-center items-center top-1/2 bottom-1/2 mt-40 mb-48 md:m-0">
           <Link to="/order">
-            <div className="rounded-full bg-pink-400 border border-black w-fit h-fit">
+            <div className="rounded-full bg-[#6BA1DF] border border-black w-fit h-fit">
               <h2 className="text-center justify-center p-16">
                 Click here to order
               </h2>
