@@ -2,22 +2,61 @@ import { useState, useRef } from "react";
 import { flavors } from "../data";
 import emailjs from "@emailjs/browser";
 
+type OptionProps = {
+  option: string;
+  isSelected: boolean;
+  isDisabled: boolean;
+  handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
 export function Order() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [notes, setNotes] = useState("");
   const [amountOfPints, setAmountOfPints] = useState(0);
   const [selectedFlavors, setSelectedFlavors] = useState<string[]>([]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedOptions = Array.from(
-      event.target.selectedOptions,
-      (option) => option.value
-    );
-
-    setSelectedFlavors(selectedOptions);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
+
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    const isChecked = event.target.checked;
+
+    setSelectedFlavors((prev) => {
+      if (isChecked) {
+        // Prevent selecting more than maxOptions
+        if (prev.length >= amountOfPints) {
+          return prev;
+        }
+        return [...prev, value];
+      } else {
+        return prev.filter((val) => val !== value);
+      }
+    });
+  };
+
+  const Option: React.FC<OptionProps> = ({
+    option,
+    isSelected,
+    handleCheckboxChange,
+    isDisabled,
+  }) => (
+    <label className="flex items-center p-2 cursor-pointer hover:bg-gray-100">
+      <input
+        type="checkbox"
+        value={option}
+        disabled={isDisabled}
+        checked={isSelected}
+        onChange={handleCheckboxChange}
+        className="mr-2"
+      />
+      {option}
+    </label>
+  );
 
   async function handleSubmit(
     event: React.FormEvent<HTMLFormElement>
@@ -27,8 +66,15 @@ export function Order() {
       if (!form.current) {
         throw new Error("Error");
       }
+      const emailParams = {
+        selectedFlavors: selectedFlavors.join(", "), // The string of selected options
+        name,
+        email,
+        notes,
+        amountOfPints,
+      };
       emailjs
-        .sendForm("service_xupfg62", "template_uq02pdv", form.current, {
+        .send("service_xupfg62", "template_uq02pdv", emailParams, {
           publicKey: "Hn_2krR1sFjxnrUyV",
         })
         .then(
@@ -50,8 +96,8 @@ export function Order() {
   }
 
   return (
-    <>
-      <div className="text-center">ORDER</div>
+    <div className="pb-44 md:pb-10">
+      <div className="text-center py-6">ORDER</div>
       <div className="text-center">
         Send us an email using the form below and we will get in touch about
         your order!
@@ -66,6 +112,7 @@ export function Order() {
           <input
             type="text"
             name="name"
+            required
             placeholder="Name"
             className="bg-slate-200 border border-slate-500 rounded-xl p-1"
             value={name}
@@ -76,6 +123,7 @@ export function Order() {
           <input
             type="email"
             name="email"
+            required
             placeholder="Email"
             className="bg-slate-200 border border-slate-500 rounded-xl p-1"
             value={email}
@@ -95,26 +143,38 @@ export function Order() {
           />
 
           <h2>What flavors are you interested in?</h2>
-          <h3>Click multiple by holding Command or Control</h3>
-          <select
-            className="bg-slate-200 border border-slate-500 rounded-xl p-1"
-            name="selectedFlavors"
-            multiple={true}
-            onChange={handleSelectChange}
-            value={selectedFlavors}
-          >
-            {flavors.map((flavor) => {
-              return (
-                <option
-                  value={flavor.title.split(" ").join("")}
-                  key={flavor.title}
-                >
-                  {flavor.title} {flavor.isGF && "- GF "}
-                  {flavor.isVegan && "- VG"}
-                </option>
-              );
-            })}
-          </select>
+          <div className="relative w-64">
+            {/* Select Box */}
+            <div
+              className="flex justify-between items-center border border-gray-300 bg-slate-200 p-2 rounded-md cursor-pointer"
+              onClick={toggleDropdown}
+            >
+              <div className="flex-grow truncate">
+                {selectedFlavors.length > 0
+                  ? selectedFlavors.join(", ")
+                  : "Select options"}
+              </div>
+              <div className="text-gray-500">{isDropdownOpen ? "▲" : "▼"}</div>
+            </div>
+
+            {/* Dropdown Options */}
+            {isDropdownOpen && (
+              <div className="absolute mt-1 w-full border border-gray-300 bg-slate-200 rounded-md shadow-lg max-h-60 overflow-y-auto z-10">
+                {flavors.foreverFlavors.map((option) => (
+                  <Option
+                    key={option.title}
+                    option={option.title}
+                    isSelected={selectedFlavors.includes(option.title)}
+                    isDisabled={
+                      selectedFlavors.length >= amountOfPints &&
+                      !selectedFlavors.includes(option.title)
+                    }
+                    handleCheckboxChange={handleCheckboxChange}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
 
           <h2>Any Notes?</h2>
           <textarea
@@ -130,6 +190,6 @@ export function Order() {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 }

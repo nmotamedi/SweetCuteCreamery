@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export function Home() {
   return (
     <>
-      <div className="text-center">FALL BACK IN LOVE WITH ICE CREAM</div>
+      <div className="text-center py-6">FALL BACK IN LOVE WITH ICE CREAM</div>
       <div className="flex justify-evenly relative pb-36 md:pb-48 flex-wrap">
         <div className="w-5/12 md:w-1/4 relative">
           <img
@@ -20,8 +20,8 @@ export function Home() {
         </div>
         <div className="w-5/12 md:w-1/4 relative">
           <img
-            src="../../Screen Shot 2024-10-02 at 11.43.53 AM.png"
-            alt="Kiwi Pomogranate Ice Cream in a bowl next to a plant"
+            src="../../2CB1323C-5887-4D45-860C-1BEAA1C70400_1_201_a.jpg"
+            alt="A hand holding a pint of Sweet Cute Ice Cream"
             className="w-full"
           />
           <div className="absolute inset-0 bg-gray-700 opacity-20 rounded-md"></div>
