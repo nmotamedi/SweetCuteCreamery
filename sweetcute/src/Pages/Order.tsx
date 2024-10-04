@@ -51,12 +51,12 @@ export function Order() {
 
   return (
     <>
-      <div className="text-center">Order</div>
+      <div className="text-center">ORDER</div>
       <div className="text-center">
         Send us an email using the form below and we will get in touch about
         your order!
       </div>
-      <div className="text-center bg-green-200 border border-slate-400 rounded-xl w-1/3 m-auto">
+      <div className="text-center bg-green-200 border border-slate-400 rounded-xl w-11/12 pb-16 md:w-1/3 m-auto">
         <form
           className="flex flex-col justify-center items-center"
           ref={form}

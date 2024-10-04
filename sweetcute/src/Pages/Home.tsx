@@ -4,8 +4,8 @@ export function Home() {
   return (
     <>
       <div className="text-center">FALL BACK IN LOVE WITH ICE CREAM</div>
-      <div className="flex justify-evenly relative">
-        <div className="w-1/4 mr-10 relative">
+      <div className="flex justify-evenly relative pb-36 md:pb-48 flex-wrap">
+        <div className="w-5/12 md:w-1/4 relative">
           <img
             src="../../Screen Shot 2024-10-02 at 11.42.28 AM.png"
             alt="Banana Chocolate Chip Ice Cream in front of a banana tablecloth"
@@ -13,12 +13,12 @@ export function Home() {
           />
           <div className="absolute inset-0 bg-gray-700 opacity-20 rounded-md"></div>
           <div className="absolute top-1/2 bottom-1/2 flex ">
-            <h2 className="-rotate-45 text-[#9F2B93] text-xl">
+            <h2 className="-rotate-45 text-[#ac269e] text-base md:text-xl font-extrabold">
               HANDMADE CUSTARD-BASED ICE CREAM
             </h2>
           </div>
         </div>
-        <div className="w-1/4 mr-10 relative">
+        <div className="w-5/12 md:w-1/4 relative">
           <img
             src="../../Screen Shot 2024-10-02 at 11.43.53 AM.png"
             alt="Kiwi Pomogranate Ice Cream in a bowl next to a plant"
@@ -26,12 +26,12 @@ export function Home() {
           />
           <div className="absolute inset-0 bg-gray-700 opacity-20 rounded-md"></div>
           <div className="absolute top-1/2 bottom-1/2">
-            <h2 className="rotate-45 text-[#00AFF0] text-xl">
+            <h2 className="rotate-45 text-[#00AFF0] text-base md:text-xl font-extrabold">
               QUALITY INGREDIENTS NO FLUFF! JUST THE GOOD STUFF!
             </h2>
           </div>
         </div>
-        <div className="absolute flex justify-center items-center top-1/2 bottom-1/2">
+        <div className="relative md:absolute flex justify-center items-center top-1/2 bottom-1/2 mt-40 mb-48 md:m-0">
           <Link to="/order">
             <div className="rounded-full bg-pink-400 border border-black w-fit h-fit">
               <h2 className="text-center justify-center p-16">
