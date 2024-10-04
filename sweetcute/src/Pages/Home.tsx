@@ -11,10 +11,14 @@ export function Home() {
             alt="Banana Chocolate Chip Ice Cream in front of a banana tablecloth"
             className="w-full"
           />
-          <div className="absolute inset-0 bg-gray-700 opacity-20 rounded-md"></div>
-          <div className="absolute top-1/2 bottom-1/2 flex ">
-            <h2 className="-rotate-45 text-[#ac269e] text-base md:text-xl font-extrabold">
-              HANDMADE CUSTARD-BASED ICE CREAM
+          <div className="absolute inset-0 bg-gray-700 opacity-70 rounded-md"></div>
+          <div className="absolute inset-0 flex justify-center items-center -rotate-45">
+            <h2 className=" text-[#d52fc4] text-center text-base md:text-3xl font-extrabold">
+              HANDMADE
+              <br />
+              CUSTARD-BASED
+              <br />
+              ICE CREAM
             </h2>
           </div>
         </div>
@@ -24,10 +28,14 @@ export function Home() {
             alt="A hand holding a pint of Sweet Cute Ice Cream"
             className="w-full"
           />
-          <div className="absolute inset-0 bg-gray-700 opacity-20 rounded-md"></div>
-          <div className="absolute top-1/2 bottom-1/2">
-            <h2 className="rotate-45 text-[#00AFF0] text-base md:text-xl font-extrabold">
-              QUALITY INGREDIENTS NO FLUFF! JUST THE GOOD STUFF!
+          <div className="absolute inset-0 bg-gray-700 opacity-70 rounded-md"></div>
+          <div className="absolute inset-0 flex justify-center items-center rotate-45">
+            <h2 className=" text-center text-[#00AFF0] text-base md:text-xl font-extrabold">
+              QUALITY INGREDIENTS!
+              <br />
+              NO FLUFF!
+              <br />
+              JUST THE GOOD STUFF!
             </h2>
           </div>
         </div>
