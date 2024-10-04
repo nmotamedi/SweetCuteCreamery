@@ -94,7 +94,8 @@ export function Order() {
             onChange={(e) => setAmountOfPints(+e.currentTarget.value)}
           />
 
-          <h2>What flavors do you interested in?</h2>
+          <h2>What flavors are you interested in?</h2>
+          <h3>Click multiple by holding Command or Control</h3>
           <select
             className="bg-slate-200 border border-slate-500 rounded-xl p-1"
             name="selectedFlavors"
