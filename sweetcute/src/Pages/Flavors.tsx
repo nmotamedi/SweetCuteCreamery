@@ -1,31 +1,28 @@
-import { flavors } from "../data";
-
 export function Flavors() {
-  let keyCount = 0;
   return (
-    <>
-      <div>
-        <h2 className="m-auto text-center py-6">
-          CURRENT FLAVORS (but we’re always dreaming up more!)
+    <div className="flex flex-col justify-evenly items-center relative pb-36 md:pb-48 flex-wrap bg-[#FAE498]">
+      <div className="text-center py-4 pb-20">
+        <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
+          <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
+          <text fill="#FF0000" font-size="36" fontFamily="FaroVariableDisplay">
+            <textPath href="#curve" startOffset="50%" text-anchor="middle">
+              HAND MADE
+            </textPath>
+          </text>
+        </svg>
+        <h2 className="font-FaroVariable text-[#FF0000] text-4xl -mt-8 mb-16">
+          CUSTARD
+          <br />
+          BASED ICE CREAM
         </h2>
+        <div className="w-1/4 m-auto">
+          <img
+            src="/Sweet_Cute_Title.png"
+            className="w-full"
+            alt="Sweet Cute Title Icon"
+          />
+        </div>
       </div>
-      <div className="flex justify-around text-center pb-44">
-        <ul>
-          <h2 className="font-bold">OUR FOREVER FLAVORS</h2>
-          {flavors.foreverFlavors.map((flavor) => {
-            return <li key={keyCount++}>{flavor.title}</li>;
-          })}
-        </ul>
-        <ul>
-          <h2 className="font-bold">OUR SIDE PIECES</h2>
-          <h2 className="font-semibold">
-            (AVAILABLE ON ROTATION FOR LIMITED TIMES)
-          </h2>
-          {flavors.sidePieces.map((flavor) => {
-            return <li key={keyCount++}>{flavor.title}</li>;
-          })}
-        </ul>
-      </div>
-    </>
+    </div>
   );
 }

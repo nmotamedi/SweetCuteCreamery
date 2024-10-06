@@ -3,31 +3,22 @@ import { Footer } from "./Footer";
 
 export function NavHeader() {
   return (
-    <div className="min-h-full bg-[#E0CE90] ">
-      <div className="flex justify-evenly items-center text-xl md:text-3xl text-[#DA3B40] ">
-        <Link to="/" className="hover:text-[#85D3A5]">
+    <div className="min-h-full ">
+      <div className="flex py-8 justify-center items-center text-xl md:text-4xl text-[#FF0000] font-FaroVariable uppercase bg-[#FAE498]">
+        <Link to="/" className="hover:text-[#85D3A5] mx-12">
           Home
         </Link>
-        <Link to="/about" className="hover:text-[#85D3A5]">
+        <Link to="/about" className="hover:text-[#85D3A5] mx-12">
           About
         </Link>
-        <Link to="/">
-          <div className="h-28">
-            <img
-              src="/SweetCute_Logo_CircleSticker.png"
-              alt="Sweet Cute Creamery Logo"
-              className="h-full"
-            />
-          </div>
-        </Link>
-        <Link to="/flavors" className="hover:text-[#85D3A5]">
+        <Link to="/flavors" className="hover:text-[#85D3A5] mx-12">
           Flavors
         </Link>
-        <Link to="/order" className="hover:text-[#85D3A5]">
+        <Link to="/order" className="hover:text-[#85D3A5] mx-12">
           Order
         </Link>
       </div>
-      <div className="relative p-4 pb-8 min-h-full">
+      <div className="relative min-h-full">
         <Outlet />
       </div>
       <Footer />

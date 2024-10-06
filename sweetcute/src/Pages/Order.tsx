@@ -13,7 +13,7 @@ export function Order() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [notes, setNotes] = useState("");
-  const [amountOfPints, setAmountOfPints] = useState(0);
+  const [amountOfPints, setAmountOfPints] = useState<number>(0);
   const [selectedFlavors, setSelectedFlavors] = useState<string[]>([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const form = useRef<HTMLFormElement>(null);
@@ -29,7 +29,7 @@ export function Order() {
     setSelectedFlavors((prev) => {
       if (isChecked) {
         // Prevent selecting more than maxOptions
-        if (prev.length >= amountOfPints) {
+        if (!amountOfPints || prev.length >= amountOfPints) {
           return prev;
         }
         return [...prev, value];
@@ -96,78 +96,83 @@ export function Order() {
   }
 
   return (
-    <div className="pb-44 md:pb-10">
-      <div className="text-center py-6">ORDER</div>
-      <div className="text-center">
-        Send us an email using the form below and we will get in touch about
-        your order!
-      </div>
-      <div className="text-center bg-[#6BA1DF] border border-slate-400 rounded-xl w-11/12 pb-16 md:w-1/3 m-auto">
+    <div className="pb-44 md:pb-10 bg-[#7FBEF0] text-center">
+      <h2 className="font-FaroVariable text-[#FEE38C] text-4xl  pt-16 mb-2 text-center">
+        PICK UP OR DELIVERY
+      </h2>
+      <h2 className="font-FaroVariable text-[#FEE38C] text-4xl mb-10 text-center">
+        LOS ANGELES
+      </h2>
+      <h3 className="font-PoppinsBold text-white text-xl mb-6">
+        WE ARE NOW TAKING ORDERS.
+        <br />
+        PLEASE FILL OUT THE FORM BELOW AND WE WILL
+        <br />
+        GET IN TOUCH TO CONFIRM.
+      </h3>
+      <h3 className="font-PoppinsBold text-white text-xl mb-6">$12 per Pint</h3>
+      <div className="text-center pb-16 md:w-5/12 m-auto">
         <form
-          className="flex flex-col justify-center items-center"
+          className="flex flex-col justify-center items-center font-PoppinsLight text-[#FF0000]"
           ref={form}
           onSubmit={handleSubmit}
         >
-          <h2>Enter Your Name</h2>
           <input
             type="text"
             name="name"
             required
             placeholder="Name"
-            className="bg-slate-200 border border-slate-500 rounded-xl p-1"
+            className="bg-white rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
             value={name}
             onChange={(e) => setName(e.currentTarget.value)}
           />
 
-          <h2>Enter Your Email</h2>
           <input
             type="email"
             name="email"
             required
             placeholder="Email"
-            className="bg-slate-200 border border-slate-500 rounded-xl p-1"
+            className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
             value={email}
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
 
-          <h2>How Many Pints Do You Want?</h2>
-          <h3>$12 per Pint</h3>
           <input
             type="number"
             name="amountOfPints"
-            placeholder="0"
-            className="bg-slate-200 border border-slate-500 rounded-xl p-1"
+            placeholder="How many pints do you want?"
+            className="bg-white rounded-full p-4 w-full mb-2 text-[#FF0000] placeholder:text-[#FF0000]"
             min={0}
             value={amountOfPints}
             onChange={(e) => setAmountOfPints(+e.currentTarget.value)}
           />
 
-          <h2>What flavors are you interested in?</h2>
-          <div className="relative w-64">
+          <div className="relative w-full mb-2">
             {/* Select Box */}
             <div
-              className="flex justify-between items-center border border-gray-300 bg-slate-200 p-2 rounded-md cursor-pointer"
+              className="flex justify-between items-center  bg-white p-2 rounded-full cursor-pointer w-full"
               onClick={toggleDropdown}
             >
-              <div className="flex-grow truncate">
+              <div className="flex-grow truncate text-[#FF0000]">
                 {selectedFlavors.length > 0
                   ? selectedFlavors.join(", ")
-                  : "Select options"}
+                  : "Select Flavors"}
               </div>
-              <div className="text-gray-500">{isDropdownOpen ? "▲" : "▼"}</div>
+              <div className="text-[#FF0000]">{isDropdownOpen ? "▲" : "▼"}</div>
             </div>
 
             {/* Dropdown Options */}
             {isDropdownOpen && (
-              <div className="absolute mt-1 w-full border border-gray-300 bg-slate-200 rounded-md shadow-lg max-h-60 overflow-y-auto z-10">
+              <div className="absolute mt-1 w-full  bg-white rounded-md shadow-lg max-h-60 overflow-y-auto z-10">
                 {flavors.foreverFlavors.map((option) => (
                   <Option
                     key={option.title}
                     option={option.title}
                     isSelected={selectedFlavors.includes(option.title)}
                     isDisabled={
-                      selectedFlavors.length >= amountOfPints &&
-                      !selectedFlavors.includes(option.title)
+                      !amountOfPints ||
+                      (selectedFlavors.length >= amountOfPints &&
+                        !selectedFlavors.includes(option.title))
                     }
                     handleCheckboxChange={handleCheckboxChange}
                   />
@@ -176,16 +181,15 @@ export function Order() {
             )}
           </div>
 
-          <h2>Any Notes?</h2>
           <textarea
-            className="bg-slate-200 border border-slate-500 rounded-xl p-1"
+            className="bg-white  rounded-3xl p-4 w-full placeholder:text-[#FF0000]"
             name="notes"
             placeholder="Notes"
             value={notes}
             onChange={(e) => setNotes(e.currentTarget.value)}
           />
 
-          <button className="bg-[#FC4700] border border-slate-100 rounded-xl p-3">
+          <button className="bg-[#FC4700] text-white rounded-xl mt-2 p-3">
             Submit
           </button>
         </form>
