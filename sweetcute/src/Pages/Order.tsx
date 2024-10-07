@@ -137,18 +137,25 @@ export function Order() {
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
 
-          <input
-            type="number"
-            name="amountOfPints"
-            placeholder="How many pints do you want?"
-            className="bg-white rounded-full p-4 w-full mb-2 text-[#FF0000] placeholder:text-[#FF0000]"
-            min={0}
-            value={amountOfPints}
-            onChange={(e) => setAmountOfPints(+e.currentTarget.value)}
-          />
+          <div className="relative w-full">
+            {" "}
+            <input
+              type="number"
+              name="amountOfPints"
+              placeholder="How many pints do you want?"
+              className="bg-white relative rounded-full p-4 w-full mb-2 text-[#FF0000] placeholder:text-[#FF0000]"
+              min={0}
+              value={amountOfPints === 0 ? "" : amountOfPints}
+              onChange={(e) => setAmountOfPints(+e.currentTarget.value)}
+            ></input>
+            {amountOfPints === 0 && (
+              <span className="absolute top-0 left-0 p-4 text-[#FF0000] pointer-events-none">
+                How many pints do you want?
+              </span>
+            )}
+          </div>
 
           <div className="relative w-full mb-2">
-            {/* Select Box */}
             <div
               className="flex justify-between items-center  bg-white p-2 rounded-full cursor-pointer w-full"
               onClick={toggleDropdown}
@@ -160,8 +167,6 @@ export function Order() {
               </div>
               <div className="text-[#FF0000]">{isDropdownOpen ? "▲" : "▼"}</div>
             </div>
-
-            {/* Dropdown Options */}
             {isDropdownOpen && (
               <div className="absolute mt-1 w-full  bg-white rounded-md shadow-lg max-h-60 overflow-y-auto z-10">
                 {flavors.foreverFlavors.map((option) => (
