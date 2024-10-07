@@ -17,7 +17,7 @@ export function Home() {
             BASED ICE CREAM
           </h2>
         </div>
-        <div className="w-7/12">
+        <div className="w-6/12">
           <img
             src="/Sweet_Cute_Title.png"
             className="w-full"

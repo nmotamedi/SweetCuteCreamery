@@ -8,8 +8,8 @@ export function About() {
       </h2>
       <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
         <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
-        <text fill="#FEE38C" font-size="36" fontFamily="FaroVariableDisplay">
-          <textPath href="#curve" startOffset="50%" text-anchor="middle">
+        <text fill="#FEE38C" fontSize="36" fontFamily="FaroVariableDisplay">
+          <textPath href="#curve" startOffset="50%" textAnchor="middle">
             ICE CREAM
           </textPath>
         </text>

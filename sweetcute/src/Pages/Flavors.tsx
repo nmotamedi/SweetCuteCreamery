@@ -40,6 +40,20 @@ export function FlavorsPage() {
             />
           ))}
         </div>
+        <div className="flex w-1/2 justify-center items-start m-auto text-center">
+          <div className="basis-1/3 px-4 flex flex-col justify-center items-center">
+            <GFBullet />
+            <h2 className="text-[#FF0000] font-MyriadPro">Gluten Free</h2>
+          </div>
+          <div className="basis-1/3 px-4 flex flex-col justify-center items-center">
+            <VeganBullet />
+            <h2 className="text-[#FF0000] font-MyriadPro">Vegan</h2>
+          </div>
+          <div className="basis-1/3 px-4 flex flex-col justify-center items-center">
+            <DFBullet />
+            <h2 className="text-[#FF0000] font-MyriadPro">Dairy Free</h2>
+          </div>
+        </div>
         <h2 className="font-FaroVariable text-[#FF0000] text-4xl my-16 mb-4 underline">
           OUR SIDE PIECES (in rotation)
         </h2>
@@ -95,7 +109,7 @@ export function FlavorsPage() {
               className=" h-full w-full flex flex-col justify-center items-center"
               onClick={() => setDescIsOpen(flavor.title)}
             >
-              <div className="basis-1/3 flex justify-evenly items-center">
+              <div className="basis-1/3 w-full flex justify-evenly items-center">
                 {flavor.isGF && <GFBullet />}
                 {flavor.isVegan && <VeganBullet />}
                 {flavor.isDairyFree && <DFBullet />}
