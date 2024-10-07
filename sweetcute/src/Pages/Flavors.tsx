@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { flavors } from "../data";
 import { Flavors } from "../data";
 
@@ -79,47 +79,56 @@ export function FlavorsPage() {
     flavor: Flavors;
     isDescOpen: boolean;
   }) {
+    const [isFlipped, setisFlipped] = useState(false);
+    useEffect(() => {
+      setisFlipped(isDescOpen);
+    }, [isDescOpen]);
     return (
-      <>
+      <div className="basis-[32%] h-64 my-4 rounded-2xl hover:cursor-pointer perspective-1000">
         <div
-          className={
-            isDescOpen
-              ? "hidden"
-              : "bg-[#FFF5C1] basis-[32%] h-64 my-4 flex flex-col justify-center items-center rounded-2xl hover:cursor-pointer"
-          }
-          onClick={() => setDescIsOpen(flavor.title)}
+          className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
+            isFlipped ? "rotate-y-180" : ""
+          }`}
         >
-          <div className="basis-1/3 flex justify-evenly items-center">
-            {flavor.isGF && <GFBullet />}
-            {flavor.isVegan && <VeganBullet />}
-            {flavor.isDairyFree && <DFBullet />}
+          <div className="absolute w-full h-full backface-hidden flex items-center justify-center bg-[#FFF5C1]">
+            <div
+              className=" h-full w-full flex flex-col justify-center items-center"
+              onClick={() => setDescIsOpen(flavor.title)}
+            >
+              <div className="basis-1/3 flex justify-evenly items-center">
+                {flavor.isGF && <GFBullet />}
+                {flavor.isVegan && <VeganBullet />}
+                {flavor.isDairyFree && <DFBullet />}
+              </div>
+              <div className="basis-2/3 ">
+                <h2 className="text-[#FF0000] font-FaroVariable text-3xl p-6">
+                  {flavor.title}
+                </h2>
+              </div>
+            </div>
           </div>
-          <div className="basis-2/3 ">
-            <h2 className="text-[#FF0000] font-FaroVariable text-3xl p-6">
-              {flavor.title}
-            </h2>
+          <div className="absolute w-full h-full backface-hidden flex items-center justify-center bg-[#FFB0AA] rotate-y-180">
+            <div
+              className=" flex w-full h-full flex-col justify-center items-center"
+              onClick={() => {
+                setDescIsOpen(undefined);
+                setisFlipped(false);
+              }}
+            >
+              <div className="basis-1/3">
+                <h2 className="text-[#FF0000] font-FaroVariable text-3xl p-6">
+                  {flavor.title}
+                </h2>
+              </div>
+              <div className="basis-2/3 ">
+                <h2 className="text-[#FF0000] font-PoppinsLight text-2xl p-6">
+                  {flavor.description}
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
-        <div
-          className={
-            isDescOpen
-              ? "bg-[#FFB0AA] basis-[32%] h-64 my-4 flex flex-col justify-center items-center rounded-2xl hover:cursor-pointer"
-              : "hidden"
-          }
-          onClick={() => setDescIsOpen(undefined)}
-        >
-          <div className="basis-1/3">
-            <h2 className="text-[#FF0000] font-FaroVariable text-3xl p-6">
-              {flavor.title}
-            </h2>
-          </div>
-          <div className="basis-2/3 ">
-            <h2 className="text-[#FF0000] font-PoppinsLight text-2xl p-6">
-              {flavor.description}
-            </h2>
-          </div>
-        </div>
-      </>
+      </div>
     );
   }
 
