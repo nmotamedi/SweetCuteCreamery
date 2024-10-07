@@ -1,11 +1,17 @@
-export function Flavors() {
+import { useState } from "react";
+import { flavors } from "../data";
+import { Flavors } from "../data";
+
+export function FlavorsPage() {
+  const [descIsOpen, setDescIsOpen] = useState<string>();
+
   return (
     <div className="flex flex-col justify-evenly items-center relative pb-36 md:pb-48 flex-wrap bg-[#FAE498]">
       <div className="text-center py-4 pb-20">
         <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
           <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
-          <text fill="#FF0000" font-size="36" fontFamily="FaroVariableDisplay">
-            <textPath href="#curve" startOffset="50%" text-anchor="middle">
+          <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
+            <textPath href="#curve" startOffset="50%" textAnchor="middle">
               HAND MADE
             </textPath>
           </text>
@@ -22,7 +28,122 @@ export function Flavors() {
             alt="Sweet Cute Title Icon"
           />
         </div>
+        <h2 className="font-FaroVariable text-[#FF0000] text-4xl my-16 mb-4 underline">
+          OUR FOREVER FLAVORS
+        </h2>
+        <div className="flex flex-wrap justify-between mx-16">
+          {flavors.foreverFlavors.map((flavor) => (
+            <FlavorCards
+              flavor={flavor}
+              key={flavor.title}
+              isDescOpen={descIsOpen === flavor.title}
+            />
+          ))}
+        </div>
+        <h2 className="font-FaroVariable text-[#FF0000] text-4xl my-16 mb-4 underline">
+          OUR SIDE PIECES (in rotation)
+        </h2>
+        <ul>
+          {flavors.sidePieces.map((flavor) => (
+            <li
+              key={flavor.title}
+              className="font-FaroVariable text-[#FF0000] text-xl"
+            >
+              {flavor.title}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="text-center py-6">
+        <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
+          <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
+          <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
+            <textPath href="#curve" startOffset="50%" textAnchor="middle">
+              FALL BACK
+            </textPath>
+          </text>
+        </svg>
+        <h2 className="font-FaroVariable text-[#FF0000] text-4xl -mt-8">
+          IN LOVE
+          <br />
+          WITH ICE CREAM
+        </h2>
       </div>
     </div>
   );
+
+  function FlavorCards({
+    flavor,
+    isDescOpen,
+  }: {
+    flavor: Flavors;
+    isDescOpen: boolean;
+  }) {
+    return (
+      <>
+        <div
+          className={
+            isDescOpen
+              ? "hidden"
+              : "bg-[#FFF5C1] basis-[32%] h-64 my-4 flex flex-col justify-center items-center rounded-2xl hover:cursor-pointer"
+          }
+          onClick={() => setDescIsOpen(flavor.title)}
+        >
+          <div className="basis-1/3 flex justify-evenly items-center">
+            {flavor.isGF && <GFBullet />}
+            {flavor.isVegan && <VeganBullet />}
+            {flavor.isDairyFree && <DFBullet />}
+          </div>
+          <div className="basis-2/3 ">
+            <h2 className="text-[#FF0000] font-FaroVariable text-3xl p-6">
+              {flavor.title}
+            </h2>
+          </div>
+        </div>
+        <div
+          className={
+            isDescOpen
+              ? "bg-[#FFB0AA] basis-[32%] h-64 my-4 flex flex-col justify-center items-center rounded-2xl hover:cursor-pointer"
+              : "hidden"
+          }
+          onClick={() => setDescIsOpen(undefined)}
+        >
+          <div className="basis-1/3">
+            <h2 className="text-[#FF0000] font-FaroVariable text-3xl p-6">
+              {flavor.title}
+            </h2>
+          </div>
+          <div className="basis-2/3 ">
+            <h2 className="text-[#FF0000] font-PoppinsLight text-2xl p-6">
+              {flavor.description}
+            </h2>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  function GFBullet() {
+    return (
+      <div className="w-8 h-8 flex justify-center items-center bg-[#FF0000] rounded-full">
+        <h2 className="font-FaroVariable text-[#FEE38C]">GF</h2>
+      </div>
+    );
+  }
+
+  function VeganBullet() {
+    return (
+      <div className="w-8 h-8 flex justify-center items-center bg-[#FF0000] rounded-full">
+        <h2 className="font-FaroVariable text-[#FEE38C]">V</h2>
+      </div>
+    );
+  }
+
+  function DFBullet() {
+    return (
+      <div className="w-8 h-8 flex justify-center items-center bg-[#FF0000] rounded-full">
+        <h2 className="font-FaroVariable text-[#FEE38C]">DF</h2>
+      </div>
+    );
+  }
 }

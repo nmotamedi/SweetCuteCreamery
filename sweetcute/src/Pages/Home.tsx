@@ -5,12 +5,8 @@ export function Home() {
         <div className="text-center py-6 pb-20">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
-            <text
-              fill="#FF0000"
-              font-size="36"
-              fontFamily="FaroVariableDisplay"
-            >
-              <textPath href="#curve" startOffset="50%" text-anchor="middle">
+            <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
+              <textPath href="#curve" startOffset="50%" textAnchor="middle">
                 HAND MADE
               </textPath>
             </text>
@@ -36,12 +32,8 @@ export function Home() {
         <div className="text-center py-6">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
-            <text
-              fill="#FF0000"
-              font-size="36"
-              fontFamily="FaroVariableDisplay"
-            >
-              <textPath href="#curve" startOffset="50%" text-anchor="middle">
+            <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
+              <textPath href="#curve" startOffset="50%" textAnchor="middle">
                 FALL BACK
               </textPath>
             </text>

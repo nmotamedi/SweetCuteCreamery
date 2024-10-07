@@ -1,5 +1,6 @@
-type Flavors = {
+export type Flavors = {
   title: string;
+  description?: string;
   isGF?: boolean;
   isVegan?: boolean;
   isDairyFree?: boolean;
@@ -8,53 +9,82 @@ type Flavors = {
 export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
   foreverFlavors: [
     {
-      title: "SWEET CREAM VANILLA",
-      isGF: true,
-    },
-    { title: "DOUBLE DARK CHOCOLATE", isGF: true },
-    {
-      title: "HAZELNUT CHOCOLATE CRUNCH",
+      title: "Sweet Cream Vanilla",
+      description:
+        "A refined classic. French Vanilla and Vanilla Beanall in one!",
       isGF: true,
     },
     {
-      title: "COOKIE DOUGH",
-    },
-    {
-      title: "BANANA CHOCOLATE CHIP",
+      title: "Double Dark Chocolate",
+      description: "Pure Dutch processed dark chocolate churned to perfection.",
       isGF: true,
     },
     {
-      title: "CHOCOLATE CARAMEL CONE CRUNCH",
-    },
-    {
-      title: "S'MORES",
-    },
-    {
-      title: "PISTACHIO CHIP",
+      title: "Hazelnut Chocolate Crunch",
+      description:
+        "Toasted Hazelnuts woven into our classic creamy base complimented by a chocolate crunch!",
       isGF: true,
     },
     {
-      title: "BIRTHDAY CAKE",
+      title: "Cookie Dough",
+      description:
+        "Ready to eat scratch-made chunks of chocolate chip cookie dough in a sweet cream base.",
     },
     {
-      title: "MnM CHIP",
+      title: "Banana Chocolate Chip",
+      description:
+        "A personal favorite. Perfectly ripened bananas turned into creamy goodness with a chocolate chip crunch.",
       isGF: true,
     },
     {
-      title: "STRAWBERRY CHOCOLATE CHIP",
+      title: "Chocolate Caramel Cone Crunch",
+      description:
+        "Sweet cream ice cream with delicate chocolate covered waffle cone pieces and house-made caramel.",
+    },
+    {
+      title: "S'mores",
+      description:
+        "Dark chocolate based ice cream with a marshmallow swirl and chocolate-covered graham crackers.",
+    },
+    {
+      title: "Pistachio Chip",
+      description:
+        "Everything is better with chocolate. Even pistachio. Toasted pistachio based ice cream with a crunchy chocolate swirl.",
       isGF: true,
     },
     {
-      title: "PEANUT BUTTER SALTED GANACHE",
+      title: "Birthday Cake",
+      description:
+        "Cake batter based ice cream with fresh yellow cake pieces and sprinkles!",
+    },
+    {
+      title: "MnM Chip",
+      description: "A “flurry” of MnMs swirled into our sweet cream base.",
       isGF: true,
     },
     {
-      title: "VEGAN COCONUT CHIP",
+      title: "Strawberry Chocolate Chip",
+      description:
+        "Locally sourced farm fresh strawberries with a crunchy chocolate swirl.",
+      isGF: true,
+    },
+    {
+      title: "Peanut Butter Salted Ganache",
+      description:
+        "House-made peanut butter churned into our classic base with chunks of salty chocolate ganache.",
+      isGF: true,
+    },
+    {
+      title: "Vegan Coconut Chip",
+      description:
+        "Our coconut cream-based vegan ice cream with a crunchy chocolate swirl.",
       isGF: true,
       isVegan: true,
     },
     {
-      title: "STRAWBERRY LEMONADE SORBET",
+      title: "Strawberry Lemonade Sorbet",
+      description:
+        "First it’s sour, then it’s sweet! Farm fresh strawberries and tart lemon sorbet.",
       isGF: true,
       isVegan: true,
     },
