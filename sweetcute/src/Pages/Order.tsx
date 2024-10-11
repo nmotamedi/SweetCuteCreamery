@@ -1,11 +1,9 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { flavors } from "../data";
 import emailjs from "@emailjs/browser";
 
 type OptionProps = {
   option: string;
-  isSelected: boolean;
-  isDisabled: boolean;
   handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -13,8 +11,9 @@ export function Order() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [notes, setNotes] = useState("");
-  const [amountOfPints, setAmountOfPints] = useState<number>(0);
-  const [selectedFlavors, setSelectedFlavors] = useState<string[]>([]);
+  const [selectedFlavors, setSelectedFlavors] = useState<Map<string, number>>(
+    new Map()
+  );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
@@ -23,40 +22,43 @@ export function Order() {
   };
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    const isChecked = event.target.checked;
+    const value = +event.target.value;
+    const flavorName = event.target.name;
 
     setSelectedFlavors((prev) => {
-      if (isChecked) {
-        // Prevent selecting more than maxOptions
-        if (!amountOfPints || prev.length >= amountOfPints) {
-          return prev;
-        }
-        return [...prev, value];
+      if (prev.has(flavorName)) {
+        const map = new Map(prev.set(flavorName, value));
+        return map;
       } else {
-        return prev.filter((val) => val !== value);
+        return new Map(prev.set(flavorName, value));
       }
     });
   };
 
-  const Option: React.FC<OptionProps> = ({
-    option,
-    isSelected,
-    handleCheckboxChange,
-    isDisabled,
-  }) => (
-    <label className="flex items-center p-2 cursor-pointer hover:bg-gray-100">
-      <input
-        type="checkbox"
-        value={option}
-        disabled={isDisabled}
-        checked={isSelected}
-        onChange={handleCheckboxChange}
-        className="mr-2"
-      />
-      {option}
-    </label>
-  );
+  const Option: React.FC<OptionProps> = ({ option, handleCheckboxChange }) => {
+    const [val, setVal] = useState<number>(0);
+
+    useEffect(() => {
+      const flavCount = selectedFlavors.has(option)
+        ? selectedFlavors.get(option)
+        : 0;
+      setVal(flavCount!);
+    }, [option]);
+
+    return (
+      <label className="flex items-center p-2 cursor-pointer hover:bg-gray-100">
+        <input
+          type="number"
+          min={0}
+          value={val}
+          name={option}
+          onChange={handleCheckboxChange}
+          className="mr-2"
+        />
+        {option}
+      </label>
+    );
+  };
 
   async function handleSubmit(
     event: React.FormEvent<HTMLFormElement>
@@ -67,11 +69,10 @@ export function Order() {
         throw new Error("Error");
       }
       const emailParams = {
-        selectedFlavors: selectedFlavors.join(", "), // The string of selected options
+        selectedFlavors: JSON.stringify(Object.fromEntries(selectedFlavors)),
         name,
         email,
         notes,
-        amountOfPints,
       };
       emailjs
         .send("service_xupfg62", "template_uq02pdv", emailParams, {
@@ -88,8 +89,7 @@ export function Order() {
       setName("");
       setEmail("");
       setNotes("");
-      setAmountOfPints(0);
-      setSelectedFlavors([]);
+      setSelectedFlavors(new Map());
     } catch (err) {
       alert(err);
     }
@@ -137,33 +137,13 @@ export function Order() {
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
 
-          <div className="relative w-full">
-            {" "}
-            <input
-              type="number"
-              name="amountOfPints"
-              placeholder="How many pints do you want?"
-              className="bg-white relative rounded-full p-4 w-full mb-2 text-[#FF0000] placeholder:text-[#FF0000]"
-              min={0}
-              value={amountOfPints === 0 ? "" : amountOfPints}
-              onChange={(e) => setAmountOfPints(+e.currentTarget.value)}
-            ></input>
-            {amountOfPints === 0 && (
-              <span className="absolute top-0 left-0 p-4 text-[#FF0000] pointer-events-none">
-                How many pints do you want?
-              </span>
-            )}
-          </div>
-
           <div className="relative w-full mb-2">
             <div
               className="flex justify-between items-center  bg-white p-2 rounded-full cursor-pointer w-full"
               onClick={toggleDropdown}
             >
               <div className="flex-grow truncate text-[#FF0000]">
-                {selectedFlavors.length > 0
-                  ? selectedFlavors.join(", ")
-                  : "Select Flavors"}
+                {"Select Flavors"}
               </div>
               <div className="text-[#FF0000]">{isDropdownOpen ? "▲" : "▼"}</div>
             </div>
@@ -175,12 +155,6 @@ export function Order() {
                     option={`${option.title}${option.isGF ? " - GF" : ""}${
                       option.isVegan ? " - V" : ""
                     }${option.isDairyFree ? "- DF" : ""}`}
-                    isSelected={selectedFlavors.includes(option.title)}
-                    isDisabled={
-                      !amountOfPints ||
-                      (selectedFlavors.length >= amountOfPints &&
-                        !selectedFlavors.includes(option.title))
-                    }
                     handleCheckboxChange={handleCheckboxChange}
                   />
                 ))}
