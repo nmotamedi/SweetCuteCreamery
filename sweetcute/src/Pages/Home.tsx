@@ -11,25 +11,25 @@ export function Home() {
               </textPath>
             </text>
           </svg>
-          <h2 className="font-FaroVariable text-[#FF0000] text-4xl -mt-8">
+          <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl -mt-8">
             CUSTARD
             <br />
             BASED ICE CREAM
           </h2>
         </div>
-        <div className="w-6/12">
+        <div className="w-9/12 md:w-6/12">
           <img
             src="/Sweet_Cute_Title.png"
             className="w-full"
             alt="Sweet Cute Title Icon"
           />
         </div>
-        <h2 className="text-center font-FaroVariable text-[#FF0000] text-2xl my-12">
+        <h2 className="text-center font-FaroVariable text-[#FF0000] text-base md:text-2xl my-12">
           NO FLUFF
           <br />
           JUST THE GOOD STUFF
         </h2>
-        <div className="text-center py-6">
+        <div className="text-center md:py-6">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
             <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
@@ -38,7 +38,7 @@ export function Home() {
               </textPath>
             </text>
           </svg>
-          <h2 className="font-FaroVariable text-[#FF0000] text-4xl -mt-8">
+          <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl -mt-8">
             IN LOVE
             <br />
             WITH ICE CREAM

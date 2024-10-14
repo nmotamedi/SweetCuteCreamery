@@ -7,7 +7,7 @@ export function FlavorsPage() {
 
   return (
     <div className="flex flex-col justify-evenly items-center relative pb-36 md:pb-48 flex-wrap bg-[#FAE498]">
-      <div className="text-center py-4 pb-20">
+      <div className="text-center py-1 md:py-4 pb-20">
         <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
           <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
           <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
@@ -16,22 +16,22 @@ export function FlavorsPage() {
             </textPath>
           </text>
         </svg>
-        <h2 className="font-FaroVariable text-[#FF0000] text-4xl -mt-8 mb-16">
+        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl -mt-8 mb-10 md:mb-16">
           CUSTARD
           <br />
           BASED ICE CREAM
         </h2>
-        <div className="w-1/4 m-auto">
+        <div className="w-3/4 md:w-1/4 m-auto">
           <img
             src="/Sweet_Cute_Title.png"
             className="w-full"
             alt="Sweet Cute Title Icon"
           />
         </div>
-        <h2 className="font-FaroVariable text-[#FF0000] text-4xl my-16 mb-4 underline">
+        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 md:my-16 mb-4 underline">
           OUR FOREVER FLAVORS
         </h2>
-        <div className="flex flex-wrap justify-between mx-16">
+        <div className="flex flex-wrap justify-between mx-3 md:mx-16">
           {flavors.foreverFlavors.map((flavor) => (
             <FlavorCards
               flavor={flavor}
@@ -54,21 +54,21 @@ export function FlavorsPage() {
             <h2 className="text-[#FF0000] font-MyriadPro">Dairy Free</h2>
           </div>
         </div>
-        <h2 className="font-FaroVariable text-[#FF0000] text-4xl my-16 mb-4 underline">
+        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-16 mb-1 md:mb-4 underline">
           OUR SIDE PIECES (in rotation)
         </h2>
         <ul>
           {flavors.sidePieces.map((flavor) => (
             <li
               key={flavor.title}
-              className="font-FaroVariable text-[#FF0000] text-xl"
+              className="font-FaroVariable text-[#FF0000] text-sm md:text-xl"
             >
               {flavor.title}
             </li>
           ))}
         </ul>
       </div>
-      <div className="text-center py-6">
+      <div className="text-center py-2 md:py-6">
         <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
           <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
           <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
@@ -77,7 +77,7 @@ export function FlavorsPage() {
             </textPath>
           </text>
         </svg>
-        <h2 className="font-FaroVariable text-[#FF0000] text-4xl -mt-8">
+        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl -mt-8">
           IN LOVE
           <br />
           WITH ICE CREAM
@@ -98,7 +98,7 @@ export function FlavorsPage() {
       setisFlipped(isDescOpen);
     }, [isDescOpen]);
     return (
-      <div className="basis-[32%] h-64 my-4 rounded-2xl hover:cursor-pointer perspective-1000">
+      <div className="basis-[32%] h-64 my-2 md:my-4 rounded-2xl hover:cursor-pointer perspective-1000">
         <div
           className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
             isFlipped ? "rotate-y-180" : ""
@@ -115,7 +115,7 @@ export function FlavorsPage() {
                 {flavor.isDairyFree && <DFBullet />}
               </div>
               <div className="basis-2/3 ">
-                <h2 className="text-[#FF0000] font-FaroVariable text-3xl p-6">
+                <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-3xl p-2 md:p-6">
                   {flavor.title}
                 </h2>
               </div>
@@ -130,12 +130,12 @@ export function FlavorsPage() {
               }}
             >
               <div className="basis-1/3">
-                <h2 className="text-[#FF0000] font-FaroVariable text-3xl p-6">
+                <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-3xl p-1 md:p-6">
                   {flavor.title}
                 </h2>
               </div>
               <div className="basis-2/3 ">
-                <h2 className="text-[#FF0000] font-PoppinsLight text-2xl p-6">
+                <h2 className="text-[#FF0000] font-PoppinsLight text-xs md:text-2xl p-1 md:p-6">
                   {flavor.description}
                 </h2>
               </div>

@@ -97,21 +97,23 @@ export function Order() {
 
   return (
     <div className="pb-44 md:pb-4 bg-[#7FBEF0] text-center">
-      <h2 className="font-FaroVariable text-[#FEE38C] text-4xl  pt-6 mb-2 text-center">
+      <h2 className="font-FaroVariable text-[#FEE38C] text-xl md:text-4xl  pt-6 mb-2 text-center">
         PICK UP OR DELIVERY
       </h2>
-      <h2 className="font-FaroVariable text-[#FEE38C] text-4xl mb-6 text-center">
+      <h2 className="font-FaroVariable text-[#FEE38C] text-xl md:text-4xl mb-6 text-center">
         LOS ANGELES
       </h2>
-      <h3 className="font-PoppinsBold text-white text-xl mb-3">
+      <h3 className="font-PoppinsBold text-white text-sm md:text-xl mb-3">
         WE ARE NOW TAKING ORDERS.
         <br />
         PLEASE FILL OUT THE FORM BELOW AND WE WILL
         <br />
         GET IN TOUCH TO CONFIRM.
       </h3>
-      <h3 className="font-PoppinsBold text-white text-xl mb-3">$12 per Pint</h3>
-      <div className="text-center pb-16 md:w-5/12 m-auto">
+      <h3 className="font-PoppinsBold text-white text-base md:text-xl mb-3">
+        $12 per Pint
+      </h3>
+      <div className="text-center pb-4 md:pb-16 w-11/12 md:w-5/12 m-auto">
         <form
           className="flex flex-col justify-center items-center font-PoppinsLight text-[#FF0000]"
           ref={form}
