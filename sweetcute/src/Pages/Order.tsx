@@ -47,15 +47,17 @@ export function Order() {
 
     return (
       <label className="flex items-center p-2 cursor-pointer hover:bg-gray-100">
-        <input
-          type="number"
-          min={0}
-          value={val}
-          name={option}
-          onChange={handleCheckboxChange}
-          className="mr-2"
-        />
-        {option}
+        <div className="basis-2/12">
+          <input
+            type="number"
+            min={0}
+            value={val}
+            name={option}
+            onChange={handleCheckboxChange}
+            className="mr-2 w-full"
+          />
+        </div>
+        <h2 className="basis-10/12 text-xs md:text-base">{option}</h2>
       </label>
     );
   };
