@@ -107,13 +107,13 @@ export function FlavorsPage() {
     return (
       <div className="basis-[32%] h-64 my-2 md:my-4 rounded-2xl hover:cursor-pointer perspective-1000">
         <div
-          className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
+          className={`relative w-full h-full transition-transform rounded-2xl duration-500 transform-style-preserve-3d ${
             isFlipped ? "rotate-y-180" : ""
           }`}
         >
-          <div className="absolute w-full h-full backface-hidden flex items-center justify-center bg-[#FFF5C1]">
+          <div className="absolute w-full rounded-2xl h-full backface-hidden flex items-center justify-center bg-[#FFF5C1]">
             <div
-              className=" h-full w-full flex flex-col justify-center items-center"
+              className=" h-full w-full rounded-2xl flex flex-col justify-center items-center"
               onClick={() => setDescIsOpen(flavor.title)}
             >
               <div className="basis-1/3 w-full flex justify-evenly items-center">
@@ -128,7 +128,7 @@ export function FlavorsPage() {
               </div>
             </div>
           </div>
-          <div className="absolute w-full h-full backface-hidden flex items-center justify-center bg-[#FFB0AA] rotate-y-180">
+          <div className="absolute w-full rounded-2xl h-full backface-hidden flex items-center justify-center bg-[#FFB0AA] rotate-y-180">
             <div
               className=" flex w-full h-full flex-col justify-center items-center"
               onClick={() => {
@@ -137,12 +137,12 @@ export function FlavorsPage() {
               }}
             >
               <div className="basis-1/3">
-                <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-3xl p-1 md:p-6">
+                <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-3xl p-3 md:p-6">
                   {flavor.title}
                 </h2>
               </div>
               <div className="basis-2/3 ">
-                <h2 className="text-[#FF0000] font-PoppinsLight text-xs md:text-2xl p-1 md:p-6">
+                <h2 className="text-[#FF0000] font-PoppinsLight text-xs md:text-2xl p-3 md:p-6">
                   {flavor.description}
                 </h2>
               </div>
