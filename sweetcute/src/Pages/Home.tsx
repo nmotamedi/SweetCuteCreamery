@@ -1,7 +1,7 @@
 export function Home() {
   return (
     <>
-      <div className="flex flex-col justify-evenly items-center relative pb-18 md:pb-24 flex-wrap bg-[#FAE498]">
+      <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
         <div className="text-center py-6 pb-20">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
@@ -44,9 +44,9 @@ export function Home() {
             WITH ICE CREAM
           </h2>
         </div>
-        <div className="w-1/4 flex justify-center">
+        <div className="w-5/12 flex justify-center">
           <img
-            src="/SweetCute_IceCream_Illustration.png"
+            src="/SweetCute_IceCream_Illustration_Cut.png"
             alt="2 Ice cream cones in love"
             className="w-full"
           />

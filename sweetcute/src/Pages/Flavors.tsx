@@ -68,7 +68,7 @@ export function FlavorsPage() {
           ))}
         </ul>
       </div>
-      <div className="text-center py-2 md:py-6 pb-36 md:pb-48">
+      <div className="text-center py-2 md:py-6 pb-36 ">
         <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
           <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
           <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
@@ -83,9 +83,9 @@ export function FlavorsPage() {
           WITH ICE CREAM
         </h2>
       </div>
-      <div className="w-1/4 flex justify-center">
+      <div className="w-1/4 flex justify-center pb-12">
         <img
-          src="/SweetCute_IceCream_Illustration_Cut.png"
+          src="/SweetCute_IceCream_Illustration.png"
           className="w-full"
           alt="Image of 2 cones of ice cream in love"
         />
@@ -105,7 +105,7 @@ export function FlavorsPage() {
       setisFlipped(isDescOpen);
     }, [isDescOpen]);
     return (
-      <div className="basis-[32%] h-64 my-2 md:my-4 rounded-2xl hover:cursor-pointer perspective-1000">
+      <div className="basis-[32%] h-72 my-2 md:my-4 rounded-2xl hover:cursor-pointer perspective-1000">
         <div
           className={`relative w-full h-full transition-transform rounded-2xl duration-500 transform-style-preserve-3d ${
             isFlipped ? "rotate-y-180" : ""
@@ -137,12 +137,12 @@ export function FlavorsPage() {
               }}
             >
               <div className="basis-1/3">
-                <h2 className="text-[#FF0000] font-FaroVariable text-base lg:text-3xl p-3 md:p-6">
+                <h2 className="text-[#FF0000] font-FaroVariable text-base lg:text-3xl p-2 pt-3 md:p-6">
                   {flavor.title}
                 </h2>
               </div>
               <div className="basis-2/3 ">
-                <h2 className="text-[#FF0000] font-PoppinsLight text-xs lg:text-2xl p-3 md:p-6">
+                <h2 className="text-[#FF0000] font-PoppinsLight text-xs lg:text-2xl p-2 pt-3md:p-6">
                   {flavor.description}
                 </h2>
               </div>

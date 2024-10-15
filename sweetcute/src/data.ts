@@ -10,13 +10,13 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
   foreverFlavors: [
     {
       title: "Sweet Cream Vanilla",
-      description:
-        "A refined classic. French Vanilla and Vanilla Beanall in one!",
+      description: "A refined classic.",
       isGF: true,
     },
     {
       title: "Double Dark Chocolate",
-      description: "Pure Dutch processed dark chocolate churned to perfection.",
+      description:
+        "Pure Dutch process dark chocolate churned to perfection with a swirl of crunchy chocolate throughout.",
       isGF: true,
     },
     {
@@ -28,7 +28,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: "Cookie Dough",
       description:
-        "Ready to eat scratch-made chunks of chocolate chip cookie dough in a sweet cream base.",
+        "Ready to eat scratch-made chunks of chocolate chip cookie dough in a sweet cream base with swirls of rich fudge.",
     },
     {
       title: "Banana Chocolate Chip",
@@ -37,17 +37,17 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
     },
     {
-      title: "Chocolate Caramel Cone Crunch",
+      title: "Chocolate Caramel Waffle Cone",
       description:
         "Sweet cream ice cream with delicate chocolate covered waffle cone pieces and house-made caramel.",
     },
     {
       title: "S'mores",
       description:
-        "Dark chocolate based ice cream with a marshmallow swirl and chocolate-covered graham crackers.",
+        "Graham-cracker infused dark chocolate ice cream with a marshmallow swirl and chocolate-covered graham crackers.",
     },
     {
-      title: "Pistachio Chip",
+      title: "Pistachio Chocolate Chip",
       description:
         "Everything is better with chocolate. Even pistachio. Toasted pistachio based ice cream with a crunchy chocolate swirl.",
       isGF: true,
@@ -58,7 +58,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "Cake batter based ice cream with fresh yellow cake pieces and sprinkles!",
     },
     {
-      title: "MnM Chip",
+      title: "M&M McFlurry",
       description: "A “flurry” of MnMs swirled into our sweet cream base.",
       isGF: true,
     },
@@ -87,6 +87,11 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "First it’s sour, then it’s sweet! Farm fresh strawberries and tart lemon sorbet.",
       isGF: true,
       isVegan: true,
+    },
+    {
+      title: "Caramel Brownie Sundae",
+      description:
+        "House made fudge brownies pieces in our sweet cream base with a crunchy caramel swirl!",
     },
   ],
   sidePieces: [
@@ -123,7 +128,6 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "ESPRESSO CHOCOLATE CHIP",
       isGF: true,
     },
-    { title: "BROWNIE SUNDAE" },
     { title: "COOKIES & CREAM" },
     { title: "BISCOFF COOKIE BUTTER" },
     { title: "MATZAH CHOCOLATE CRUNCH (for Passover)" },
