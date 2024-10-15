@@ -6,7 +6,7 @@ export function FlavorsPage() {
   const [descIsOpen, setDescIsOpen] = useState<string>();
 
   return (
-    <div className="flex flex-col justify-evenly items-center relative pb-36 md:pb-48 flex-wrap bg-[#FAE498]">
+    <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
       <div className="text-center py-1 md:py-4 pb-20">
         <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
           <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
@@ -41,20 +41,20 @@ export function FlavorsPage() {
           ))}
         </div>
         <div className="flex w-1/2 justify-center items-start m-auto text-center">
-          <div className="basis-1/3 px-4 flex flex-col justify-center items-center">
+          <div className="px-4 flex flex-col justify-center items-center">
             <GFBullet />
             <h2 className="text-[#FF0000] font-MyriadPro">Gluten Free</h2>
           </div>
-          <div className="basis-1/3 px-4 flex flex-col justify-center items-center">
+          <div className="px-4 flex flex-col justify-center items-center">
             <VeganBullet />
             <h2 className="text-[#FF0000] font-MyriadPro">Vegan</h2>
           </div>
-          <div className="basis-1/3 px-4 flex flex-col justify-center items-center">
+          <div className="px-4 flex flex-col justify-center items-center">
             <DFBullet />
             <h2 className="text-[#FF0000] font-MyriadPro">Dairy Free</h2>
           </div>
         </div>
-        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-16 mb-1 md:mb-4 underline">
+        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-16 mb-1 md:mb-10 underline">
           OUR SIDE PIECES (in rotation)
         </h2>
         <ul>
@@ -68,7 +68,7 @@ export function FlavorsPage() {
           ))}
         </ul>
       </div>
-      <div className="text-center py-2 md:py-6">
+      <div className="text-center py-2 md:py-6 pb-36 md:pb-48">
         <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
           <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
           <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
@@ -82,6 +82,13 @@ export function FlavorsPage() {
           <br />
           WITH ICE CREAM
         </h2>
+      </div>
+      <div className="w-1/4 flex justify-center">
+        <img
+          src="/SweetCute_IceCream_Illustration_Cut.png"
+          className="w-full"
+          alt="Image of 2 cones of ice cream in love"
+        />
       </div>
     </div>
   );
