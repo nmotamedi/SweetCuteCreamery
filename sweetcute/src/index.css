@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: rgb(244 242 234 / var(--tw-bg-opacity));
+@font-face {
+  font-family: "FaroVariableDisplay";
+  src: url("/font/FaroVariableDisplayTrial.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PoppinsBlack";
+  src: url("/font/Poppins-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("/font/Poppins-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PoppinsLight";
+  src: url("/font/Poppins-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyriadPro";
+  src: url("/font/MyriadPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }

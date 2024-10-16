@@ -1,11 +1,9 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { flavors } from "../data";
 import emailjs from "@emailjs/browser";
 
 type OptionProps = {
   option: string;
-  isSelected: boolean;
-  isDisabled: boolean;
   handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -13,8 +11,9 @@ export function Order() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [notes, setNotes] = useState("");
-  const [amountOfPints, setAmountOfPints] = useState(0);
-  const [selectedFlavors, setSelectedFlavors] = useState<string[]>([]);
+  const [selectedFlavors, setSelectedFlavors] = useState<Map<string, number>>(
+    new Map()
+  );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
@@ -23,40 +22,45 @@ export function Order() {
   };
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    const isChecked = event.target.checked;
+    const value = +event.target.value;
+    const flavorName = event.target.name;
 
     setSelectedFlavors((prev) => {
-      if (isChecked) {
-        // Prevent selecting more than maxOptions
-        if (prev.length >= amountOfPints) {
-          return prev;
-        }
-        return [...prev, value];
+      if (prev.has(flavorName)) {
+        const map = new Map(prev.set(flavorName, value));
+        return map;
       } else {
-        return prev.filter((val) => val !== value);
+        return new Map(prev.set(flavorName, value));
       }
     });
   };
 
-  const Option: React.FC<OptionProps> = ({
-    option,
-    isSelected,
-    handleCheckboxChange,
-    isDisabled,
-  }) => (
-    <label className="flex items-center p-2 cursor-pointer hover:bg-gray-100">
-      <input
-        type="checkbox"
-        value={option}
-        disabled={isDisabled}
-        checked={isSelected}
-        onChange={handleCheckboxChange}
-        className="mr-2"
-      />
-      {option}
-    </label>
-  );
+  const Option: React.FC<OptionProps> = ({ option, handleCheckboxChange }) => {
+    const [val, setVal] = useState<number>(0);
+
+    useEffect(() => {
+      const flavCount = selectedFlavors.has(option)
+        ? selectedFlavors.get(option)
+        : 0;
+      setVal(flavCount!);
+    }, [option]);
+
+    return (
+      <label className="flex items-center p-2 cursor-pointer hover:bg-gray-100">
+        <div className="basis-2/12">
+          <input
+            type="number"
+            min={0}
+            value={val}
+            name={option}
+            onChange={handleCheckboxChange}
+            className="mr-2 w-full"
+          />
+        </div>
+        <h2 className="basis-10/12 text-xs md:text-base">{option}</h2>
+      </label>
+    );
+  };
 
   async function handleSubmit(
     event: React.FormEvent<HTMLFormElement>
@@ -67,11 +71,10 @@ export function Order() {
         throw new Error("Error");
       }
       const emailParams = {
-        selectedFlavors: selectedFlavors.join(", "), // The string of selected options
+        selectedFlavors: JSON.stringify(Object.fromEntries(selectedFlavors)),
         name,
         email,
         notes,
-        amountOfPints,
       };
       emailjs
         .send("service_xupfg62", "template_uq02pdv", emailParams, {
@@ -88,87 +91,74 @@ export function Order() {
       setName("");
       setEmail("");
       setNotes("");
-      setAmountOfPints(0);
-      setSelectedFlavors([]);
+      setSelectedFlavors(new Map());
     } catch (err) {
       alert(err);
     }
   }
 
   return (
-    <div className="pb-44 md:pb-10">
-      <div className="text-center py-6">ORDER</div>
-      <div className="text-center">
-        Send us an email using the form below and we will get in touch about
-        your order!
-      </div>
-      <div className="text-center bg-green-200 border border-slate-400 rounded-xl w-11/12 pb-16 md:w-1/3 m-auto">
+    <div className="pb-44 md:pb-4 bg-[#7FBEF0] text-center">
+      <h2 className="font-FaroVariable text-[#FEE38C] text-xl md:text-4xl  pt-6 mb-2 text-center">
+        PICK UP OR DELIVERY
+      </h2>
+      <h2 className="font-FaroVariable text-[#FEE38C] text-xl md:text-4xl mb-6 text-center">
+        LOS ANGELES
+      </h2>
+      <h3 className="font-PoppinsBold text-white text-sm md:text-xl mb-3">
+        WE ARE NOW TAKING ORDERS.
+        <br />
+        PLEASE FILL OUT THE FORM BELOW AND WE WILL
+        <br />
+        GET IN TOUCH TO CONFIRM.
+      </h3>
+      <h3 className="font-PoppinsBold text-white text-base md:text-xl mb-3">
+        $12 per Pint
+      </h3>
+      <div className="text-center pb-4 md:pb-16 w-11/12 md:w-5/12 m-auto">
         <form
-          className="flex flex-col justify-center items-center"
+          className="flex flex-col justify-center items-center font-PoppinsLight text-[#FF0000]"
           ref={form}
           onSubmit={handleSubmit}
         >
-          <h2>Enter Your Name</h2>
           <input
             type="text"
             name="name"
             required
             placeholder="Name"
-            className="bg-slate-200 border border-slate-500 rounded-xl p-1"
+            className="bg-white rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
             value={name}
             onChange={(e) => setName(e.currentTarget.value)}
           />
 
-          <h2>Enter Your Email</h2>
           <input
             type="email"
             name="email"
             required
             placeholder="Email"
-            className="bg-slate-200 border border-slate-500 rounded-xl p-1"
+            className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
             value={email}
             onChange={(e) => setEmail(e.currentTarget.value)}
           />
 
-          <h2>How Many Pints Do You Want?</h2>
-          <h3>$12 per Pint</h3>
-          <input
-            type="number"
-            name="amountOfPints"
-            placeholder="0"
-            className="bg-slate-200 border border-slate-500 rounded-xl p-1"
-            min={0}
-            value={amountOfPints}
-            onChange={(e) => setAmountOfPints(+e.currentTarget.value)}
-          />
-
-          <h2>What flavors are you interested in?</h2>
-          <div className="relative w-64">
-            {/* Select Box */}
+          <div className="relative w-full mb-2">
             <div
-              className="flex justify-between items-center border border-gray-300 bg-slate-200 p-2 rounded-md cursor-pointer"
+              className="flex justify-between items-center  bg-white p-2 rounded-full cursor-pointer w-full"
               onClick={toggleDropdown}
             >
-              <div className="flex-grow truncate">
-                {selectedFlavors.length > 0
-                  ? selectedFlavors.join(", ")
-                  : "Select options"}
+              <div className="flex-grow truncate text-[#FF0000]">
+                {"Select Flavors"}
               </div>
-              <div className="text-gray-500">{isDropdownOpen ? "▲" : "▼"}</div>
+              <div className="text-[#FF0000]">{isDropdownOpen ? "▲" : "▼"}</div>
             </div>
-
-            {/* Dropdown Options */}
             {isDropdownOpen && (
-              <div className="absolute mt-1 w-full border border-gray-300 bg-slate-200 rounded-md shadow-lg max-h-60 overflow-y-auto z-10">
+              <div className="absolute mt-1 w-full  bg-white rounded-3xl shadow-lg max-h-60 overflow-y-auto z-10">
                 {flavors.foreverFlavors.map((option) => (
                   <Option
                     key={option.title}
-                    option={option.title}
-                    isSelected={selectedFlavors.includes(option.title)}
-                    isDisabled={
-                      selectedFlavors.length >= amountOfPints &&
-                      !selectedFlavors.includes(option.title)
-                    }
+                    option={`${option.title}${option.isGF ? " - GF" : ""}${
+                      option.isVegan ? " - V" : ""
+                    }${option.isDairyFree ? "- DF" : ""}`}
                     handleCheckboxChange={handleCheckboxChange}
                   />
                 ))}
@@ -176,16 +166,15 @@ export function Order() {
             )}
           </div>
 
-          <h2>Any Notes?</h2>
           <textarea
-            className="bg-slate-200 border border-slate-500 rounded-xl p-1"
+            className="bg-white  rounded-3xl p-4 w-full placeholder:text-[#FF0000]"
             name="notes"
             placeholder="Notes"
             value={notes}
             onChange={(e) => setNotes(e.currentTarget.value)}
           />
 
-          <button className="bg-[#FC4700] border border-slate-100 rounded-xl p-3">
+          <button className="bg-[#FC4700] hover:bg-[#85D3A5] text-white rounded-xl mt-2 p-3">
             Submit
           </button>
         </form>
