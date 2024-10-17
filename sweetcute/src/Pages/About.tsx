@@ -33,7 +33,7 @@ export function About() {
         <p className="font-PoppinsBold text-white text-base md:text-2xl mb-4 md:mb-8">
           Each batch at Sweet Cute is scratch-made with love by an ice cream
           fanatic that knows what makes good ice cream and aspires to help the
-          community find that perfect scoop theyve always been searching for.
+          community find that perfect scoop they've always been searching for.
         </p>
       </div>
     </div>
