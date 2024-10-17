@@ -41,7 +41,7 @@ export function Footer() {
           </a>
         </div>
       </div>
-      <footer className="text-center text-[#ff0000ce] text-sm">
+      <footer className="text-center text-[#ff0000ce] text-xs md:text-sm">
         Designed by Meagan Rafferty. Developed by Nader Motamedi.
       </footer>
     </div>
