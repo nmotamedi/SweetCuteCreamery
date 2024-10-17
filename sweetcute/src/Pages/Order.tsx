@@ -77,8 +77,8 @@ export function Order() {
         notes,
       };
       emailjs
-        .send("service_xupfg62", "template_uq02pdv", emailParams, {
-          publicKey: "Hn_2krR1sFjxnrUyV",
+        .send("service_w05al14", "template_nh8jalo", emailParams, {
+          publicKey: "xWvR0d6huBxCsxOxl",
         })
         .then(
           () => {
