@@ -206,7 +206,6 @@ export function Order() {
                 type="radio"
                 name="Delivery"
                 value="delivery"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
                 checked={pickUpDelivery === "delivery"}
                 onChange={() =>
                   setPickUpDelivery(
