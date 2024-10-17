@@ -11,6 +11,9 @@ export function Order() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [notes, setNotes] = useState("");
+  const [pickUpDelivery, setPickUpDelivery] = useState<
+    "pickUp" | "delivery" | ""
+  >("");
   const [selectedFlavors, setSelectedFlavors] = useState<Map<string, number>>(
     new Map()
   );
@@ -74,6 +77,7 @@ export function Order() {
         selectedFlavors: JSON.stringify(Object.fromEntries(selectedFlavors)),
         name,
         email,
+        pickUpDelivery,
         notes,
       };
       emailjs
@@ -91,6 +95,7 @@ export function Order() {
       setName("");
       setEmail("");
       setNotes("");
+      setPickUpDelivery("");
       setSelectedFlavors(new Map());
     } catch (err) {
       alert(err);
@@ -164,6 +169,36 @@ export function Order() {
                 ))}
               </div>
             )}
+          </div>
+
+          <div className="bg-white  rounded-3xl p-4 w-full mb-2 placeholder:text-[#FF0000] flex">
+            <div className="basis-1/2">
+              <h2>Pick up (Mar Vista)</h2>
+              <input
+                type="radio"
+                name="Pick Up"
+                value="pickUp"
+                checked={pickUpDelivery === "pickUp"}
+                onChange={() =>
+                  setPickUpDelivery(pickUpDelivery === "pickUp" ? "" : "pickUp")
+                }
+              />
+            </div>
+            <div className="basis-1/2">
+              <h2>Delivery ($10 fee within LA)</h2>
+              <input
+                type="radio"
+                name="Delivery"
+                value="delivery"
+                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                checked={pickUpDelivery === "delivery"}
+                onChange={() =>
+                  setPickUpDelivery(
+                    pickUpDelivery === "delivery" ? "" : "delivery"
+                  )
+                }
+              />
+            </div>
           </div>
 
           <textarea
