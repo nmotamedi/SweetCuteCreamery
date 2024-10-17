@@ -173,7 +173,13 @@ export function Order() {
 
           <div className="bg-white  rounded-3xl p-4 w-full mb-2 placeholder:text-[#FF0000] flex">
             <div className="basis-1/2">
-              <h2>Pick up (Mar Vista)</h2>
+              <h2
+                onClick={() =>
+                  setPickUpDelivery(pickUpDelivery === "pickUp" ? "" : "pickUp")
+                }
+              >
+                Pick up (Mar Vista)
+              </h2>
               <input
                 type="radio"
                 name="Pick Up"
@@ -185,7 +191,15 @@ export function Order() {
               />
             </div>
             <div className="basis-1/2">
-              <h2>Delivery ($10 fee within LA)</h2>
+              <h2
+                onClick={() =>
+                  setPickUpDelivery(
+                    pickUpDelivery === "delivery" ? "" : "delivery"
+                  )
+                }
+              >
+                Delivery ($10 fee within LA)
+              </h2>
               <input
                 type="radio"
                 name="Delivery"
