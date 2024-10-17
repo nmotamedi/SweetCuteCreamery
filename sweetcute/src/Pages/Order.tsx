@@ -177,6 +177,7 @@ export function Order() {
                 onClick={() =>
                   setPickUpDelivery(pickUpDelivery === "pickUp" ? "" : "pickUp")
                 }
+                className="cursor-pointer"
               >
                 Pick up (Mar Vista)
               </h2>
@@ -197,6 +198,7 @@ export function Order() {
                     pickUpDelivery === "delivery" ? "" : "delivery"
                   )
                 }
+                className="cursor-pointer"
               >
                 Delivery ($10 fee within LA)
               </h2>
