@@ -58,8 +58,8 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "Cake batter based ice cream with fresh yellow cake pieces and sprinkles!",
     },
     {
-      title: "M&M McFlurry",
-      description: "A “flurry” of MnMs swirled into our sweet cream base.",
+      title: "M&M Flurry",
+      description: "A “flurry” of M&Ms swirled into our sweet cream base.",
       isGF: true,
     },
     {
@@ -129,7 +129,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
     },
     { title: "COOKIES & CREAM" },
-    { title: "BISCOFF COOKIE BUTTER" },
+    { title: "SPECULOOS COOKIE BUTTER" },
     { title: "MATZAH CHOCOLATE CRUNCH (for Passover)" },
     { title: "HALLOWEEN CANDY CRUNCH" },
   ],
