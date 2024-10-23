@@ -55,6 +55,12 @@ export function FlavorsPage() {
             <DFBullet />
             <h2 className="text-[#FF0000] font-MyriadPro">Dairy Free</h2>
           </div>
+          {selectedFlavor && (
+            <div className="px-4 flex flex-col justify-center items-center">
+              <MFBullet />
+              <h2 className="text-[#FF0000] font-MyriadPro">Your Flavor</h2>
+            </div>
+          )}
         </div>
         <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-16 mb-1 md:mb-10 underline">
           OUR SIDE PIECES (in rotation)
@@ -123,7 +129,7 @@ export function FlavorsPage() {
                 {flavor.isGF && <GFBullet />}
                 {flavor.isVegan && <VeganBullet />}
                 {flavor.isDairyFree && <DFBullet />}
-                {flavor === selectedFlavor && <StarBullet />}
+                {flavor === selectedFlavor && <MFBullet />}
               </div>
               <div className="basis-2/3 ">
                 <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-3xl p-2 md:p-6">
@@ -157,10 +163,10 @@ export function FlavorsPage() {
     );
   }
 
-  function StarBullet() {
+  function MFBullet() {
     return (
-      <div className="w-8 h-8 flex justify-center items-center bg-[#FF0000] rounded-full">
-        <h2 className="font-FaroVariable text-[#FEE38C]">*</h2>
+      <div className="w-8 h-8 flex justify-center items-center bg-[#7FBEF0] rounded-full">
+        <h2 className="font-FaroVariable text-[#FEE38C]">YF</h2>
       </div>
     );
   }

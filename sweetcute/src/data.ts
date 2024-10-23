@@ -2,6 +2,7 @@ export type Flavors = {
   title: string;
   id: number;
   description?: string;
+  respDescription?: string;
   isGF?: boolean;
   isVegan?: boolean;
   isDairyFree?: boolean;
@@ -26,6 +27,8 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Double Dark Chocolate",
       description:
         "Pure Dutch process dark chocolate churned to perfection with a swirl of crunchy chocolate throughout.",
+      respDescription:
+        "Like Double Dark Chocolate, you appreciate the finer things in life and know what you like! You are an elegant classic but let your opinions be heard! Like Dark Chocolate, you are reliable, sophisticated and meant for people with a refined taste. Grab a pint of our rich and daring Double Dark Chocolate today!",
       isGF: true,
       id: 2,
     },
@@ -33,6 +36,8 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Hazelnut Chocolate Crunch",
       description:
         "Toasted Hazelnuts woven into our classic creamy base complimented by a chocolate crunch!",
+      respDescription:
+        "Like Hazelnut Chocolate Crunch, you are quietly confident and bring depth and richness to those around you! Your strong yet grounded personality brings peace and comfort to those that you love and you will always serve as a shoulder to cry on. Though you are gentle and kind, if anyone wrongs you, you’ve got a little bit of “crunch” in you to stand up for yourself! Grab a pint of the bold Hazelnut Chocolate Crunch today!",
       isGF: true,
       id: 3,
     },
@@ -40,12 +45,16 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Cookie Dough",
       description:
         "Ready to eat scratch-made chunks of chocolate chip cookie dough in a sweet cream base with swirls of rich fudge.",
+      respDescription:
+        "Like Cookie Dough, you are strong, bold and trendy. You bring the energy in every situation, so much so that people always want to come back for more! You are not afraid to speak up for what you believe in and stand out! Grab a pint of the addictively chunky Cookie Dough today!",
       id: 4,
     },
     {
       title: "Banana Chocolate Chip",
       description:
         "A personal favorite. Perfectly ripened bananas turned into creamy goodness with a chocolate chip crunch.",
+      respDescription:
+        "You are comfort food to the max! You are someone that everyone gets along with everyone and is seen as the peacekeeper amongst your social groups. You are reliable, sweet, and grounded. Order a pint of the rich and creamy Banana Chocolate Chip today!",
       isGF: true,
       id: 5,
     },
@@ -59,6 +68,8 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "S'mores",
       description:
         "Graham-cracker infused dark chocolate ice cream with a marshmallow swirl and chocolate-covered graham crackers.",
+      respDescription:
+        "Like S’mores you are full of child-like wonder and are sweet as can be. You are the friend that everyone counts on for a shoulder to cry on but you also know how to brighten up everyone’s day. You are sweet, compassionate, and you probably give great hugs! Grab a pint of nostalgic S’mores today!",
       id: 7,
     },
     {
@@ -72,6 +83,8 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Birthday Cake",
       description:
         "Cake batter based ice cream with fresh yellow cake pieces and sprinkles!",
+      respDescription:
+        "Like Birthday Cake, you aren’t afraid to let you personality shine! You are sweet and friendly, but also know how to party! You are full of flavor and full of surprises, keeping everyone in your life guessing what spontaneous fun you’ll bring to their lives next! Grab a pint of the party-starting Birthday Cake today!",
       id: 9,
     },
     {
@@ -84,6 +97,8 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Strawberry Chocolate Chip",
       description:
         "Locally sourced farm fresh strawberries with a crunchy chocolate swirl.",
+      respDescription:
+        "You are fun, flirty and thriving! Like Strawberry Chocolate Chip, you bring the party with you everywhere you go. You are classic and reliable with a passionate heart that brings a little sweetness into everyone’s life! Grab a pint of the adorably refreshing Strawberry Chocolate Chip today!",
       isGF: true,
       id: 11,
     },
@@ -91,6 +106,8 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Peanut Butter Salted Ganache",
       description:
         "House-made peanut butter churned into our classic base with chunks of salty chocolate ganache.",
+      respDescription:
+        "Like Peanut Butter Salted Ganache, are you uniquely you and with you, what you see is what you get! You are down to earth, well-rounded and stand up for what you believe in. You are funky, rebellious and like to take the road less traveled! Grab a pint of wonderfully funky Peanut Butter Salted Ganache today!",
       isGF: true,
       id: 12,
     },
@@ -232,11 +249,11 @@ export const quizResponses = [
     responses: ["b", "b", "a", "a", "b", "a", "b", "b"],
   },
   {
-    flavorId: 22,
+    flavorId: 4,
     responses: ["a", "b", "a", "a", "a", "a", "a", "a"],
   },
   {
-    flavorId: 17,
+    flavorId: 12,
     responses: ["b", "a", "a", "b", "a", "b", "a", "b"],
   },
   {
@@ -244,7 +261,7 @@ export const quizResponses = [
     responses: ["a", "a", "b", "b", "b", "b", "b", "a"],
   },
   {
-    flavorId: 16,
+    flavorId: 9,
     responses: ["a", "a", "b", "a", "a", "a", "a", "a"],
   },
   {

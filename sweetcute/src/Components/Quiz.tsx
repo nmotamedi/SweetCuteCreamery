@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { quizQuestions, quizResponses } from "../data";
 import { useFlavor } from "./useFlavor";
+import { Link } from "react-router-dom";
 
 export function Quiz() {
   const [questionView, setQuestionView] = useState(0);
@@ -148,8 +149,14 @@ export function Quiz() {
         <h2 className="text-lg sm:text-2xl mb-4">Your flavor is...</h2>
         <h3 className="text-lg sm:text-2xl mb-4">{selectedFlavor?.title}</h3>
         <h3 className="text-base sm:text-xl sm:w-3/4 w-full">
-          {selectedFlavor?.description}
+          {selectedFlavor?.respDescription}
         </h3>
+        <Link
+          to="order"
+          className="bg-[#FC4700] hover:bg-[#85D3A5] border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
+        >
+          Order Now!
+        </Link>
       </div>
     </div>
   );

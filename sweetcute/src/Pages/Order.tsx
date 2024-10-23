@@ -6,6 +6,7 @@ import { useFlavor } from "../Components/useFlavor";
 type OptionProps = {
   option: string;
   handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  optionId: number;
 };
 
 export function Order() {
@@ -40,7 +41,11 @@ export function Order() {
     });
   };
 
-  const Option: React.FC<OptionProps> = ({ option, handleCheckboxChange }) => {
+  const Option: React.FC<OptionProps> = ({
+    option,
+    optionId,
+    handleCheckboxChange,
+  }) => {
     const [val, setVal] = useState<number>(0);
 
     useEffect(() => {
@@ -62,7 +67,13 @@ export function Order() {
             className="mr-2 w-full"
           />
         </div>
-        <h2 className="basis-10/12 text-xs md:text-base">{option}</h2>
+        <h2
+          className={`basis-10/12 text-xs md:text-base ${
+            selectedFlavor?.id === optionId && "text-[#3a99e7]"
+          }`}
+        >
+          {option}
+        </h2>
       </label>
     );
   };
@@ -162,12 +173,11 @@ export function Order() {
               <div className="absolute mt-1 w-full  bg-white rounded-3xl shadow-lg max-h-60 overflow-y-auto z-10">
                 {flavors.foreverFlavors.map((option) => (
                   <Option
-                    key={option.title}
+                    key={option.id}
+                    optionId={option.id}
                     option={`${option.title}${option.isGF ? " - GF" : ""}${
                       option.isVegan ? " - V" : ""
-                    }${option.isDairyFree ? " - DF" : ""}${
-                      selectedFlavor === option ? " - *" : ""
-                    }`}
+                    }${option.isDairyFree ? " - DF" : ""}`}
                     handleCheckboxChange={handleCheckboxChange}
                   />
                 ))}
