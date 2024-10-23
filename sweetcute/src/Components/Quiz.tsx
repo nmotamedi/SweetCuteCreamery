@@ -61,9 +61,11 @@ export function Quiz() {
   return (
     <div>
       <div className={questionView !== 0 || selectedFlavor ? "hidden" : ""}>
-        <h2 className="mb-4 text-2xl">Find out what flavor you are</h2>
+        <h2 className="mb-4 text-md sm:text-2xl">
+          Find out what flavor you are
+        </h2>
         <a
-          className="bg-[#FC4700] hover:bg-[#85D3A5] border text-2xl border-black p-4 hover:cursor-pointer rounded-full"
+          className="bg-[#FC4700] hover:bg-[#85D3A5] border text-md sm:text-2xl border-black p-4 hover:cursor-pointer rounded-full"
           onClick={() => setQuestionView(questionView + 1)}
         >
           Get started!
@@ -76,13 +78,15 @@ export function Quiz() {
               className={
                 questionView !== question.questionId || selectedFlavor
                   ? "hidden"
-                  : ""
+                  : "flex flex-col justify-around"
               }
               key={question.questionId}
             >
-              <h2 className="mb-4 text-2xl">{question.question}</h2>
-              <div className="flex justify-around mb-8 ">
-                <label className="hover:cursor-pointer text-2xl hover:drop-shadow-2xl hover:text-slate-200">
+              <h2 className="mb-4 text-lg sm:text-2xl">
+                Q{question.questionId}: {question.question}
+              </h2>
+              <div className="flex justify-between mb-8 ">
+                <label className="hover:cursor-pointer text-lg sm:text-2xl hover:drop-shadow-2xl hover:text-slate-200 capitalize basis-[45%] sm:basis-1/2">
                   <input
                     type="checkbox"
                     value="a"
@@ -92,7 +96,7 @@ export function Quiz() {
                   <br />
                   {question.option1}
                 </label>
-                <label className="hover:cursor-pointer text-2xl hover:drop-shadow-2xl hover:text-slate-200">
+                <label className="hover:cursor-pointer text-lg sm:text-2xl hover:drop-shadow-2xl hover:text-slate-200 capitalize basis-[45%] sm:basis-1/2">
                   <input
                     type="checkbox"
                     value="b"
@@ -112,7 +116,7 @@ export function Quiz() {
                   }}
                   className={
                     question.respVal !== ""
-                      ? "bg-[#FC4700] hover:bg-[#85D3A5] border text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
+                      ? "bg-[#FC4700] hover:bg-[#85D3A5] border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
                       : "invisible"
                   }
                 >
@@ -121,7 +125,11 @@ export function Quiz() {
               ) : (
                 <button
                   disabled={isSubmitting}
-                  className="bg-[#FC4700] hover:bg-[#85D3A5] border text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full "
+                  className={
+                    question.respVal !== ""
+                      ? "bg-[#FC4700] hover:bg-[#85D3A5] border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full "
+                      : "invisible"
+                  }
                 >
                   Submit!
                 </button>
@@ -137,9 +145,11 @@ export function Quiz() {
             : "flex flex-col justify-center items-center"
         }
       >
-        <h2 className="text-2xl mb-4">Your flavor is...</h2>
-        <h3 className="text-2xl mb-4">{selectedFlavor?.title}</h3>
-        <h3 className="text-xl w-1/2">{selectedFlavor?.description}</h3>
+        <h2 className="text-lg sm:text-2xl mb-4">Your flavor is...</h2>
+        <h3 className="text-lg sm:text-2xl mb-4">{selectedFlavor?.title}</h3>
+        <h3 className="text-base sm:text-xl sm:w-3/4 w-full">
+          {selectedFlavor?.description}
+        </h3>
       </div>
     </div>
   );
