@@ -1,7 +1,15 @@
+import { useRef } from "react";
+import { Quiz } from "../Components/Quiz";
+
 export function Home() {
+  const modal = useRef<HTMLDialogElement>(null);
+
   return (
     <>
       <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
+        <button onClick={() => modal.current?.showModal()}>
+          Take our quiz to find what flavor you are!
+        </button>
         <div className="text-center py-6 pb-20">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
@@ -51,6 +59,15 @@ export function Home() {
             className="w-full"
           />
         </div>
+        <dialog ref={modal} className="w-3/4 text-center ">
+          <div className=" p-4 flex flex-col items-center">
+            <a className="self-end" onClick={() => modal.current?.close()}>
+              X
+            </a>
+
+            <Quiz />
+          </div>
+        </dialog>
       </div>
     </>
   );

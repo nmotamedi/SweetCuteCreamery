@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { flavors } from "../data";
 import emailjs from "@emailjs/browser";
+import { useFlavor } from "../Components/useFlavor";
 
 type OptionProps = {
   option: string;
@@ -19,6 +20,7 @@ export function Order() {
   );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const form = useRef<HTMLFormElement>(null);
+  const { selectedFlavor } = useFlavor();
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -163,7 +165,9 @@ export function Order() {
                     key={option.title}
                     option={`${option.title}${option.isGF ? " - GF" : ""}${
                       option.isVegan ? " - V" : ""
-                    }${option.isDairyFree ? "- DF" : ""}`}
+                    }${option.isDairyFree ? " - DF" : ""}${
+                      selectedFlavor === option ? " - *" : ""
+                    }`}
                     handleCheckboxChange={handleCheckboxChange}
                   />
                 ))}

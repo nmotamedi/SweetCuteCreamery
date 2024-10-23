@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { flavors } from "../data";
 import { Flavors } from "../data";
+import { useFlavor } from "../Components/useFlavor";
 
 export function FlavorsPage() {
   const [descIsOpen, setDescIsOpen] = useState<string>();
+  const { selectedFlavor } = useFlavor();
 
   return (
     <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
@@ -120,6 +122,7 @@ export function FlavorsPage() {
                 {flavor.isGF && <GFBullet />}
                 {flavor.isVegan && <VeganBullet />}
                 {flavor.isDairyFree && <DFBullet />}
+                {flavor === selectedFlavor && <StarBullet />}
               </div>
               <div className="basis-2/3 ">
                 <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-3xl p-2 md:p-6">
@@ -149,6 +152,14 @@ export function FlavorsPage() {
             </div>
           </div>
         </div>
+      </div>
+    );
+  }
+
+  function StarBullet() {
+    return (
+      <div className="w-8 h-8 flex justify-center items-center bg-[#FF0000] rounded-full">
+        <h2 className="font-FaroVariable text-[#FEE38C]">*</h2>
       </div>
     );
   }
