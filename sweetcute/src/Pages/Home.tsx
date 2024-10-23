@@ -7,9 +7,12 @@ export function Home() {
   return (
     <>
       <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
-        <button onClick={() => modal.current?.showModal()}>
-          Take our quiz to find what flavor you are!
-        </button>
+        <a
+          onClick={() => modal.current?.showModal()}
+          className="hover:cursor-pointer h-52 w-52 rounded-full bg-[#7FBEF0] flex justify-center items-center absolute top-48 left-36 hover:drop-shadow-2xl font-FaroVariable text-white text-3xl -rotate-12 p-3 uppercase text-center"
+        >
+          What flavor are you?
+        </a>
         <div className="text-center py-6 pb-20">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
@@ -59,13 +62,20 @@ export function Home() {
             className="w-full"
           />
         </div>
-        <dialog ref={modal} className="w-3/4 text-center ">
-          <div className=" p-4 flex flex-col items-center">
-            <a className="self-end" onClick={() => modal.current?.close()}>
+        <dialog
+          ref={modal}
+          className="bg-[#7FBEF0] w-3/4 rounded-3xl h-2/3 border-white border-8 backdrop:backdrop-blur-xl outline-none"
+        >
+          <div className="w-full h-full text-center   flex flex-col items-center">
+            <a
+              className="basis-1/12 self-end pt-6 pr-6 hover:text-[#FF0000] hover:cursor-pointer text-3xl font-MyriadPro  text-white"
+              onClick={() => modal.current?.close()}
+            >
               X
             </a>
-
-            <Quiz />
+            <div className="basis-11/12 w-full p-16 flex flex-col items-center justify-center font-FaroVariable text-white">
+              <Quiz />
+            </div>
           </div>
         </dialog>
       </div>

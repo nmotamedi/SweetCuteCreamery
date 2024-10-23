@@ -44,7 +44,7 @@ export function Quiz() {
       if (responses[7] === val.responses[7]) {
         let comp = 0;
         for (let i = 0; i < val.responses.length; i++) {
-          if (val.responses[0] === responses[0]) {
+          if (val.responses[i] === responses[i]) {
             comp += 1;
           }
         }
@@ -61,9 +61,9 @@ export function Quiz() {
   return (
     <div>
       <div className={questionView !== 0 || selectedFlavor ? "hidden" : ""}>
-        <h2>Find out what flavor you are</h2>
+        <h2 className="mb-4 text-2xl">Find out what flavor you are</h2>
         <a
-          className="bg-orange-300 border border-black p-2 hover:cursor-pointer"
+          className="bg-[#FC4700] hover:bg-[#85D3A5] border text-2xl border-black p-4 hover:cursor-pointer rounded-full"
           onClick={() => setQuestionView(questionView + 1)}
         >
           Get started!
@@ -80,9 +80,9 @@ export function Quiz() {
               }
               key={question.questionId}
             >
-              <h2>{question.question}</h2>
-              <div className="flex justify-around">
-                <label className="hover:cursor-pointer">
+              <h2 className="mb-4 text-2xl">{question.question}</h2>
+              <div className="flex justify-around mb-8 ">
+                <label className="hover:cursor-pointer text-2xl hover:drop-shadow-2xl hover:text-slate-200">
                   <input
                     type="checkbox"
                     value="a"
@@ -92,7 +92,7 @@ export function Quiz() {
                   <br />
                   {question.option1}
                 </label>
-                <label className="hover:cursor-pointer">
+                <label className="hover:cursor-pointer text-2xl hover:drop-shadow-2xl hover:text-slate-200">
                   <input
                     type="checkbox"
                     value="b"
@@ -104,20 +104,42 @@ export function Quiz() {
                 </label>
               </div>
               {question.questionId !== 8 ? (
-                <a onClick={() => setQuestionView(questionView + 1)}>
+                <a
+                  onClick={() => {
+                    if (question.respVal !== "") {
+                      setQuestionView(questionView + 1);
+                    }
+                  }}
+                  className={
+                    question.respVal !== ""
+                      ? "bg-[#FC4700] hover:bg-[#85D3A5] border text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
+                      : "invisible"
+                  }
+                >
                   Next question
                 </a>
               ) : (
-                <button disabled={isSubmitting}>Submit!</button>
+                <button
+                  disabled={isSubmitting}
+                  className="bg-[#FC4700] hover:bg-[#85D3A5] border text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full "
+                >
+                  Submit!
+                </button>
               )}
             </div>
           );
         })}
       </form>
-      <div className={questionView !== 9 && !selectedFlavor ? "hidden" : ""}>
-        <h2>Your flavor is...</h2>
-        <h3>{selectedFlavor?.title}</h3>
-        <h3>{selectedFlavor?.description}</h3>
+      <div
+        className={
+          questionView !== 9 && !selectedFlavor
+            ? "hidden"
+            : "flex flex-col justify-center items-center"
+        }
+      >
+        <h2 className="text-2xl mb-4">Your flavor is...</h2>
+        <h3 className="text-2xl mb-4">{selectedFlavor?.title}</h3>
+        <h3 className="text-xl w-1/2">{selectedFlavor?.description}</h3>
       </div>
     </div>
   );
