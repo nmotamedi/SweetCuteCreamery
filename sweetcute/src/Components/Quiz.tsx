@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { quizQuestions, quizResponses } from "../data";
-import { useFlavor } from "./useFlavor";
+import { flavors, Flavors, quizQuestions, quizResponses } from "../data";
 import { Link } from "react-router-dom";
 
 export function Quiz() {
@@ -14,7 +13,7 @@ export function Quiz() {
   const [resp6, setResp6] = useState<"a" | "b" | "">("");
   const [resp7, setResp7] = useState<"a" | "b" | "">("");
   const [resp8, setResp8] = useState<"a" | "b" | "">("");
-  const { selectedFlavor, handleSetFlavor } = useFlavor();
+  const [selectedFlavor, setSelectedFlavor] = useState<Flavors>();
 
   const resps = [resp1, resp2, resp3, resp4, resp5, resp6, resp7, resp8];
   const setResps = [
@@ -54,14 +53,20 @@ export function Quiz() {
         }
       }
     });
-    handleSetFlavor(highest.flavorId);
+    const flav = flavors.foreverFlavors.find(
+      (val) => val.id === highest.flavorId
+    );
+    if (!flav) {
+      throw new Error("cannot find flavor");
+    }
+    setSelectedFlavor(flav);
     setIsSubmitting(false);
     setQuestionView(questionView + 1);
   }
 
   return (
     <div>
-      <div className={questionView !== 0 || selectedFlavor ? "hidden" : ""}>
+      <div className={questionView !== 0 ? "hidden" : ""}>
         <h2 className="mb-4 text-md sm:text-2xl">
           Find out what flavor you are
         </h2>
@@ -77,7 +82,7 @@ export function Quiz() {
           return (
             <div
               className={
-                questionView !== question.questionId || selectedFlavor
+                questionView !== question.questionId
                   ? "hidden"
                   : "flex flex-col justify-around"
               }
@@ -141,7 +146,7 @@ export function Quiz() {
       </form>
       <div
         className={
-          questionView !== 9 && !selectedFlavor
+          questionView !== 9
             ? "hidden"
             : "flex flex-col justify-center items-center"
         }

@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { flavors } from "../data";
 import { Flavors } from "../data";
-import { useFlavor } from "../Components/useFlavor";
 
 export function FlavorsPage() {
   const [descIsOpen, setDescIsOpen] = useState<string>();
-  const { selectedFlavor } = useFlavor();
 
   return (
     <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
@@ -55,12 +53,6 @@ export function FlavorsPage() {
             <DFBullet />
             <h2 className="text-[#FF0000] font-MyriadPro">Dairy Free</h2>
           </div>
-          {selectedFlavor && (
-            <div className="px-4 flex flex-col justify-center items-center">
-              <MFBullet />
-              <h2 className="text-[#FF0000] font-MyriadPro">Your Flavor</h2>
-            </div>
-          )}
         </div>
         <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-16 mb-1 md:mb-10 underline">
           OUR SIDE PIECES (in rotation)
@@ -72,7 +64,6 @@ export function FlavorsPage() {
               className="font-FaroVariable text-[#FF0000] text-sm md:text-xl"
             >
               {flavor.title}
-              {flavor === selectedFlavor && "*"}
             </li>
           ))}
         </ul>
@@ -129,7 +120,6 @@ export function FlavorsPage() {
                 {flavor.isGF && <GFBullet />}
                 {flavor.isVegan && <VeganBullet />}
                 {flavor.isDairyFree && <DFBullet />}
-                {flavor === selectedFlavor && <MFBullet />}
               </div>
               <div className="basis-2/3 ">
                 <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-3xl p-2 md:p-6">
@@ -159,14 +149,6 @@ export function FlavorsPage() {
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
-
-  function MFBullet() {
-    return (
-      <div className="w-8 h-8 flex justify-center items-center bg-[#7FBEF0] rounded-full">
-        <h2 className="font-FaroVariable text-[#FEE38C]">YF</h2>
       </div>
     );
   }

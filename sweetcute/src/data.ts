@@ -186,8 +186,8 @@ export const quizQuestions: QuizQuestions = [
   {
     questionId: 1,
     question: "Are you introverted or extroverted?",
-    option1: "extrovert",
-    option2: "introvert",
+    option1: "extroverted",
+    option2: "introverted",
   },
   {
     questionId: 2,
@@ -198,32 +198,32 @@ export const quizQuestions: QuizQuestions = [
   {
     questionId: 3,
     question:
-      "Do you go for the finer things in life? Or do you stick to the classics?",
+      "Do you go for the finer things in life or do you stick to the classics?",
     option1: "i’m bougie!",
     option2: "i like my classic comforts!",
   },
   {
     questionId: 4,
-    question: "Are you more rebellious? Or do you like to follow the trends?",
+    question: "Are you more rebellious or do you like to follow the trends?",
     option1: "i’m a rebel!",
     option2: "i’m more comfortable letting others take the lead!",
   },
   {
     questionId: 5,
     question:
-      "do you prefer fun nights out? Or deep conversations with friends?",
+      "Do you prefer fun nights out or deep conversations with friends?",
     option1: "i’m a party animal!",
     option2: "i prefer to stay in and connect!",
   },
   {
     questionId: 6,
-    question: "Are you more passionate? or level headed?",
+    question: "Are you more passionate or level headed?",
     option1: "passionate",
     option2: "level-headed",
   },
   {
     questionId: 7,
-    question: "Are you more opinionated? or like to keep the peace?",
+    question: "Are you more opinionated or like to keep the peace?",
     option1: "i make my voice heard!",
     option2: "i’m a peacekeeper",
   },
