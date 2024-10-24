@@ -64,7 +64,7 @@ export function Home() {
         </div>
         <dialog
           ref={modal}
-          className="bg-[#7FBEF0] w-3/4 rounded-3xl h-2/3 border-white border-8 backdrop:backdrop-blur-xl outline-none"
+          className="bg-[#7FBEF0] w-3/4 rounded-3xl h-3/4 sm:h-2/3 border-white border-8 backdrop:backdrop-blur-xl outline-none"
         >
           <div className="w-full h-full text-center  flex flex-col items-center">
             <a
