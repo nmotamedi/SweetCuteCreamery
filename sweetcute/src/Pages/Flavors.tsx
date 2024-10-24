@@ -60,7 +60,7 @@ export function FlavorsPage() {
         <ul>
           {flavors.sidePieces.map((flavor) => (
             <li
-              key={flavor.title}
+              key={flavor.id}
               className="font-FaroVariable text-[#FF0000] text-sm md:text-xl"
             >
               {flavor.title}
