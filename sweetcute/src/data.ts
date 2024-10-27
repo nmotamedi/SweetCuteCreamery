@@ -84,7 +84,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       description:
         "Cake batter based ice cream with fresh yellow cake pieces and sprinkles!",
       respDescription:
-        "Like Birthday Cake, you aren’t afraid to let you personality shine! You are sweet and friendly, but also know how to party! You are full of flavor and full of surprises, keeping everyone in your life guessing what spontaneous fun you’ll bring to their lives next! Grab a pint of the party-starting Birthday Cake today!",
+        "Like Birthday Cake, you aren’t afraid to let your personality shine! You are sweet and friendly, but also know how to party! You are full of flavor and full of surprises, keeping everyone in your life guessing what spontaneous fun you’ll bring to their lives next! Grab a pint of the party-starting Birthday Cake today!",
       id: 9,
     },
     {
