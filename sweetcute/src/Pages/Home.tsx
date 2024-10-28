@@ -9,8 +9,10 @@ export function Home() {
       <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
         <a
           onClick={() => modal.current?.showModal()}
-          className="hover:cursor-pointer h-20 w-20 sm:h-36 sm:w-36 lg:h-52 lg:w-52 rounded-full bg-[#7FBEF0] flex justify-center items-center absolute top-0 sm:top-[10%] left-3 sm:left-[10%] hover:drop-shadow-2xl font-FaroVariable text-white text-xs sm:text-xl lg:text-3xl -rotate-12 p-3 uppercase text-center"
+          className="hover:cursor-pointer h-24 w-24 sm:h-40 sm:w-40 lg:h-56 lg:w-56 rounded-full bg-[#7FBEF0] flex justify-center items-center absolute top-0 sm:top-[10%] left-3 sm:left-[10%] hover:drop-shadow-2xl font-FaroVariable text-white text-xs sm:text-xl lg:text-3xl -rotate-12 p-3 uppercase text-center"
         >
+          QUIZ:
+          <br />
           What flavor are you?
         </a>
         <div className="text-center py-6 pb-20">
