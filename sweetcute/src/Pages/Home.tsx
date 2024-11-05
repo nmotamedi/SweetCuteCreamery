@@ -15,7 +15,7 @@ export function Home() {
           <br />
           What flavor are you?
         </a>
-        <div className="text-center pb-4">
+        <div className="text-center pb-8">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
             <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
