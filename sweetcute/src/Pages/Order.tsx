@@ -167,6 +167,19 @@ export function Order() {
                     handleCheckboxChange={handleCheckboxChange}
                   />
                 ))}
+                {flavors.sidePieces.map((option) => {
+                  return (
+                    option.isInSeason && (
+                      <Option
+                        key={option.id}
+                        option={`${option.title}${option.isGF ? " - GF" : ""}${
+                          option.isVegan ? " - V" : ""
+                        }${option.isDairyFree ? " - DF" : ""}`}
+                        handleCheckboxChange={handleCheckboxChange}
+                      />
+                    )
+                  );
+                })}
               </div>
             )}
           </div>

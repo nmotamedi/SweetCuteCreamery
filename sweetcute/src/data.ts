@@ -6,6 +6,7 @@ export type Flavors = {
   isGF?: boolean;
   isVegan?: boolean;
   isDairyFree?: boolean;
+  isInSeason?: boolean;
 };
 
 export type QuizQuestions = {
@@ -136,49 +137,49 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
   ],
   sidePieces: [
     {
-      title: "MINT FUDGE BROWNIE",
+      title: "Mint Fudge Brownie",
       id: 16,
     },
 
     {
-      title: "AVOCADO CHOCOLATE CHIP",
+      title: "Avocado Chocolate Chip",
       isGF: true,
       id: 17,
     },
     {
-      title: "PEACHES & CREAM",
+      title: "Peaches & Cream",
       isGF: true,
       id: 18,
     },
 
     {
-      title: "KIWI POMEGRANATE SORBET",
+      title: "Kiwi Pomegranate Sorbet",
       isGF: true,
       isDairyFree: true,
       id: 19,
     },
 
     {
-      title: "CHERRY CHOCOLATE GANACHE",
+      title: "Cherry Chocolate Ganache",
       isGF: true,
       id: 20,
     },
 
     {
-      title: "DARK CHOCOLATE PEANUT BRITTLE",
+      title: "Dark Chocolate Peanut Brittle",
       isGF: true,
       id: 21,
     },
 
     {
-      title: "ESPRESSO CHOCOLATE CHIP",
+      title: "Espress Chocolate Chip",
       isGF: true,
       id: 22,
     },
-    { title: "COOKIES & CREAM", id: 23 },
-    { title: "SPECULOOS COOKIE BUTTER", id: 24 },
-    { title: "MATZAH CHOCOLATE CRUNCH (for Passover)", id: 25 },
-    { title: "HALLOWEEN CANDY CRUNCH", id: 26 },
+    { title: "Cookies & Cream", id: 23 },
+    { title: "Speculoos Cookie Butter", id: 24 },
+    { title: "Matzah Chocolate Crunch (for Passover)", id: 25 },
+    { title: "Halloween Candy Crunch", id: 26 },
   ],
 };
 

@@ -4,47 +4,56 @@ import { Footer } from "./Footer";
 export function NavHeader() {
   return (
     <div className="min-h-full ">
-      <div className="flex py-8 justify-center items-center text-base md:text-4xl text-[#FF0000] font-FaroVariable uppercase bg-[#FAE498]">
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive
-              ? "mx-3 md:mx-12 underline"
-              : "hover:text-[#85D3A5] mx-3 md:mx-12"
-          }
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive
-              ? "mx-3 md:mx-12 underline"
-              : "hover:text-[#85D3A5] mx-3 md:mx-12"
-          }
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="/flavors"
-          className={({ isActive }) =>
-            isActive
-              ? "mx-3 md:mx-12 underline"
-              : "hover:text-[#85D3A5] mx-3 md:mx-12"
-          }
-        >
-          Flavors
-        </NavLink>
-        <NavLink
-          to="/order"
-          className={({ isActive }) =>
-            isActive
-              ? "mx-3 md:mx-12 underline"
-              : "hover:text-[#85D3A5] mx-3 md:mx-12"
-          }
-        >
-          Order
-        </NavLink>
+      <div className=" text-base md:text-2xl lg:text-4xl text-[#FF0000] font-FaroVariable uppercase bg-[#FAE498] text-center">
+        <div className="flex justify-center items-center w-3/4 m-auto">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "underline basis-1/5"
+                : "hover:text-[#85D3A5] basis-1/5"
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "underline basis-1/5"
+                : "hover:text-[#85D3A5] basis-1/5"
+            }
+          >
+            About
+          </NavLink>
+          <div className="flex justify-center basis-1/5">
+            <img
+              alt="Ice Cream Logo"
+              src="/SweetCute_IceCream_Illustration.png"
+              className="w-full"
+            />
+          </div>
+          <NavLink
+            to="/flavors"
+            className={({ isActive }) =>
+              isActive
+                ? "underline basis-1/5"
+                : "hover:text-[#85D3A5] basis-1/5"
+            }
+          >
+            Flavors
+          </NavLink>
+          <NavLink
+            to="/order"
+            className={({ isActive }) =>
+              isActive
+                ? "underline basis-1/5"
+                : "hover:text-[#85D3A5] basis-1/5"
+            }
+          >
+            Order
+          </NavLink>
+        </div>
       </div>
       <div className="relative min-h-full">
         <Outlet />
