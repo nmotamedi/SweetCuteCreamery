@@ -5,7 +5,7 @@ export function NavHeader() {
   return (
     <div className="min-h-full ">
       <div className=" text-base md:text-2xl lg:text-4xl text-[#FF0000] font-FaroVariable uppercase bg-[#FAE498] text-center">
-        <div className="flex justify-center items-center w-3/4 m-auto">
+        <div className="flex justify-center items-center w-full md:w-3/4 m-auto">
           <NavLink
             to="/"
             className={({ isActive }) =>
