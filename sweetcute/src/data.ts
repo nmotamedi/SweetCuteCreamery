@@ -139,17 +139,20 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: "Mint Fudge Brownie",
       id: 16,
+      isInSeason: false,
     },
 
     {
       title: "Avocado Chocolate Chip",
       isGF: true,
       id: 17,
+      isInSeason: false,
     },
     {
       title: "Peaches & Cream",
       isGF: true,
       id: 18,
+      isInSeason: false,
     },
 
     {
@@ -157,29 +160,33 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       isDairyFree: true,
       id: 19,
+      isInSeason: false,
     },
 
     {
       title: "Cherry Chocolate Ganache",
       isGF: true,
       id: 20,
+      isInSeason: false,
     },
 
     {
       title: "Dark Chocolate Peanut Brittle",
       isGF: true,
       id: 21,
+      isInSeason: false,
     },
 
     {
       title: "Espress Chocolate Chip",
       isGF: true,
       id: 22,
+      isInSeason: false,
     },
-    { title: "Cookies & Cream", id: 23 },
-    { title: "Speculoos Cookie Butter", id: 24, isInSeason: true, },
-    { title: "Matzah Chocolate Crunch (for Passover)", id: 25 },
-    { title: "Halloween Candy Crunch", id: 26 },
+    { title: "Cookies & Cream", id: 23, isInSeason: false, },
+    { title: "Speculoos Cookie Butter", id: 24, isInSeason: false, },
+    { title: "Matzah Chocolate Crunch (for Passover)", id: 25, isInSeason: false, },
+    { title: "Halloween Candy Crunch", id: 26, isInSeason: false, },
   ],
 };
 
