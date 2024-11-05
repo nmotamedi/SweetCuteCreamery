@@ -9,13 +9,13 @@ export function Home() {
       <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
         <a
           onClick={() => modal.current?.showModal()}
-          className="hover:cursor-pointer h-24 w-24 sm:h-40 sm:w-40 lg:h-56 lg:w-56 rounded-full bg-[#7FBEF0] flex justify-center items-center absolute top-0 sm:top-[10%] left-3 sm:left-[10%] hover:drop-shadow-2xl font-FaroVariable text-white text-xs sm:text-xl lg:text-3xl -rotate-12 p-3 uppercase text-center"
+          className="hover:cursor-pointer h-24 w-24 md:h-40 md:w-40 lg:h-56 lg:w-56 rounded-full bg-[#7FBEF0] flex justify-center items-center absolute top-0 md:top-[10%] left-3 md:left-[10%] hover:drop-shadow-2xl font-FaroVariable text-white text-xs md:text-xl lg:text-3xl -rotate-12 p-3 uppercase text-center"
         >
           QUIZ:
           <br />
           What flavor are you?
         </a>
-        <div className="text-center py-6 pb-20">
+        <div className="text-center pb-8">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
             <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
@@ -30,19 +30,19 @@ export function Home() {
             BASED ICE CREAM
           </h2>
         </div>
-        <div className="w-9/12 md:w-6/12">
+        <div className="w-8/12 lg:w-5/12">
           <img
             src="/Sweet_Cute_Title.png"
             className="w-full"
             alt="Sweet Cute Title Icon"
           />
         </div>
-        <h2 className="text-center font-FaroVariable text-[#FF0000] text-base md:text-2xl my-12">
+        <h2 className="text-center font-FaroVariable text-[#FF0000] text-base md:text-2xl my-6">
           NO FLUFF
           <br />
           JUST THE GOOD STUFF
         </h2>
-        <div className="text-center md:py-6 pb-18 md:pb-24">
+        <div className="text-center md:py-3 pb-9 md:pb-12">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
             <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
