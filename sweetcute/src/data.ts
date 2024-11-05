@@ -177,7 +177,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       id: 22,
     },
     { title: "Cookies & Cream", id: 23 },
-    { title: "Speculoos Cookie Butter", id: 24 },
+    { title: "Speculoos Cookie Butter", id: 24, isInSeason: true, },
     { title: "Matzah Chocolate Crunch (for Passover)", id: 25 },
     { title: "Halloween Candy Crunch", id: 26 },
   ],
