@@ -30,7 +30,7 @@ export function NavHeader() {
             <img
               alt="Ice Cream Logo"
               src="/SweetCute_IceCream_Illustration.png"
-              className="w-full"
+              className="w-3/4"
             />
           </div>
           <NavLink
