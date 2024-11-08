@@ -184,7 +184,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isInSeason: false,
     },
     { title: "Cookies & Cream", id: 23, isInSeason: false, },
-    { title: "Speculoos Cookie Butter", id: 24, isInSeason: false, },
+    { title: "Speculoos Cookie Butter", id: 24, isInSeason: true, },
     { title: "Matzah Chocolate Crunch (for Passover)", id: 25, isInSeason: false, },
     { title: "Halloween Candy Crunch", id: 26, isInSeason: false, },
   ],
