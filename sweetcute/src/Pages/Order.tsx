@@ -111,7 +111,10 @@ export function Order() {
         LOS ANGELES
       </h2>
       <h3 className="font-PoppinsBold text-white text-sm md:text-xl mb-3">
-        WE ARE NOW TAKING ORDERS.
+        PINTS ARE HANDMADE TO ORDER!
+        <br />
+        PLEASE ALLOW 3-5 DAYS FOR PRODUCTION!
+        <br />
         <br />
         PLEASE FILL OUT THE FORM BELOW AND WE WILL
         <br />
