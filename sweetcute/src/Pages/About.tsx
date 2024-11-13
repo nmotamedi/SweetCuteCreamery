@@ -27,7 +27,7 @@ export function About() {
         </p>
         <p className="font-PoppinsBold text-white text-base md:text-2xl mb-4 md:mb-8">
           What started out as a hobby quickly turned into a daily passion - I
-          was spending all my time at my office job dreaming up what flavors I'd
+          was spending all my time dreaming up what flavors I'd
           make next. And thus Sweet Cute was born.
         </p>
         <p className="font-PoppinsBold text-white text-base md:text-2xl mb-4 md:mb-8">
