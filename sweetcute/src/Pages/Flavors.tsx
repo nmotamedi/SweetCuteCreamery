@@ -116,12 +116,21 @@ export function FlavorsPage() {
               className=" h-full w-full rounded-2xl flex flex-col justify-center items-center"
               onClick={() => setDescIsOpen(flavor.title)}
             >
-              <div className="basis-1/3 w-full flex justify-evenly items-center">
+              <div className="basis-1/6 w-full h-8 flex justify-evenly items-center">
                 {flavor.isGF && <GFBullet />}
                 {flavor.isVegan && <VeganBullet />}
                 {flavor.isDairyFree && <DFBullet />}
               </div>
-              <div className="basis-2/3 ">
+
+              <div className="basis-1/2 lg:h-32 h-12 flex justify-center items-center">
+                {flavor.img && (
+                  <div className="h-12 w-12 lg:h-32 lg:w-32 founded-full">
+                    <img className="w-full" src={flavor.img} />
+                  </div>
+                )}
+              </div>
+
+              <div className="basis-1/6 ">
                 <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-3xl p-2 md:p-6">
                   {flavor.title}
                 </h2>
