@@ -3,6 +3,7 @@ export type Flavors = {
   id: number;
   description?: string;
   respDescription?: string;
+  img?: string;
   isGF?: boolean;
   isVegan?: boolean;
   isDairyFree?: boolean;
@@ -23,6 +24,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       description: "A refined classic.",
       isGF: true,
       id: 1,
+      img: "/flavor_imgs/Sweet Cream Vanilla.png",
     },
     {
       title: "Double Dark Chocolate",
@@ -32,6 +34,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "Like Double Dark Chocolate, you appreciate the finer things in life and know what you like! You are an elegant classic but let your opinions be heard! Like Dark Chocolate, you are reliable, sophisticated and meant for people with a refined taste. Grab a pint of our rich and daring Double Dark Chocolate today!",
       isGF: true,
       id: 2,
+      img: "/SweetCute_CircleSticker-03.png",
     },
     {
       title: "Hazelnut Chocolate Crunch",
@@ -41,6 +44,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "Like Hazelnut Chocolate Crunch, you are quietly confident and bring depth and richness to those around you! Your strong yet grounded personality brings peace and comfort to those that you love and you will always serve as a shoulder to cry on. Though you are gentle and kind, if anyone wrongs you, you’ve got a little bit of “crunch” in you to stand up for yourself! Grab a pint of the bold Hazelnut Chocolate Crunch today!",
       isGF: true,
       id: 3,
+      img: "/SweetCute_CircleSticker-03.png",
     },
     {
       title: "Cookie Dough",
@@ -49,6 +53,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       respDescription:
         "Like Cookie Dough, you are strong, bold and trendy. You bring the energy in every situation, so much so that people always want to come back for more! You are not afraid to speak up for what you believe in and stand out! Grab a pint of the addictively chunky Cookie Dough today!",
       id: 4,
+      img: "/flavor_imgs/Cookie Dough.png",
     },
     {
       title: "Banana Chocolate Chip",
@@ -58,17 +63,20 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "You are comfort food to the max! You are someone that everyone gets along with everyone and is seen as the peacekeeper amongst your social groups. You are reliable, sweet, and grounded. Order a pint of the rich and creamy Banana Chocolate Chip today!",
       isGF: true,
       id: 5,
+      img: "/flavor_imgs/Banana Choc Chip.png",
     },
     {
       title: "Chocolate Caramel Waffle Cone",
       description:
         "Sweet cream ice cream with delicate chocolate covered waffle cone pieces and house-made caramel.",
       id: 6,
+      img: "/flavor_imgs/Caramel Waffle Cone.png",
     },
     {
       title: "S'mores",
       description:
         "Graham-cracker infused dark chocolate ice cream with a marshmallow swirl and chocolate-covered graham crackers.",
+      img: "/flavor_imgs/Smores.png",
       respDescription:
         "Like S’mores you are full of child-like wonder and are sweet as can be. You are the friend that everyone counts on for a shoulder to cry on but you also know how to brighten up everyone’s day. You are sweet, compassionate, and you probably give great hugs! Grab a pint of nostalgic S’mores today!",
       id: 7,
@@ -78,6 +86,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       description:
         "Everything is better with chocolate. Even pistachio. Toasted pistachio based ice cream with a crunchy chocolate swirl.",
       isGF: true,
+      img: "/flavor_imgs/Pistachio Choc Chip.png",
       id: 8,
     },
     {
@@ -87,12 +96,14 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       respDescription:
         "Like Birthday Cake, you aren’t afraid to let your personality shine! You are sweet and friendly, but also know how to party! You are full of flavor and full of surprises, keeping everyone in your life guessing what spontaneous fun you’ll bring to their lives next! Grab a pint of the party-starting Birthday Cake today!",
       id: 9,
+      img: "/flavor_imgs/Birthday Cake.png",
     },
     {
       title: "M&M Flurry",
       description: "A “flurry” of M&Ms swirled into our sweet cream base.",
       isGF: true,
       id: 10,
+      img: "/flavor_imgs/M&M Flurry.png",
     },
     {
       title: "Strawberry Chocolate Chip",
@@ -101,6 +112,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       respDescription:
         "You are fun, flirty and thriving! Like Strawberry Chocolate Chip, you bring the party with you everywhere you go. You are classic and reliable with a passionate heart that brings a little sweetness into everyone’s life! Grab a pint of the adorably refreshing Strawberry Chocolate Chip today!",
       isGF: true,
+      img: "/flavor_imgs/Strawberry Choc Chip.png",
       id: 11,
     },
     {
@@ -111,6 +123,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "Like Peanut Butter Salted Ganache, are you uniquely you and with you, what you see is what you get! You are down to earth, well-rounded and stand up for what you believe in. You are funky, rebellious and like to take the road less traveled! Grab a pint of wonderfully funky Peanut Butter Salted Ganache today!",
       isGF: true,
       id: 12,
+      img: "/flavor_imgs/PB Salted Ganache.png",
     },
     {
       title: "Vegan Coconut Chip",
@@ -119,6 +132,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       isVegan: true,
       id: 13,
+      img: "/flavor_imgs/coconut_chip.png",
     },
     {
       title: "Strawberry Lemonade Sorbet",
@@ -126,6 +140,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "First it’s sour, then it’s sweet! Farm fresh strawberries and tart lemon sorbet.",
       isGF: true,
       isVegan: true,
+      img: "/SweetCute_CircleSticker-03.png",
       id: 14,
     },
     {
@@ -133,6 +148,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       description:
         "House made fudge brownies pieces in our sweet cream base with a crunchy caramel swirl!",
       id: 15,
+      img: "/flavor_imgs/Caramel Brownie Sundae.png",
     },
   ],
   sidePieces: [
