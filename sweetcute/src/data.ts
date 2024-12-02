@@ -34,6 +34,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "Like Double Dark Chocolate, you appreciate the finer things in life and know what you like! You are an elegant classic but let your opinions be heard! Like Dark Chocolate, you are reliable, sophisticated and meant for people with a refined taste. Grab a pint of our rich and daring Double Dark Chocolate today!",
       isGF: true,
       id: 2,
+      img: "/SweetCute_CircleSticker-03.png",
     },
     {
       title: "Hazelnut Chocolate Crunch",
@@ -43,6 +44,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "Like Hazelnut Chocolate Crunch, you are quietly confident and bring depth and richness to those around you! Your strong yet grounded personality brings peace and comfort to those that you love and you will always serve as a shoulder to cry on. Though you are gentle and kind, if anyone wrongs you, you’ve got a little bit of “crunch” in you to stand up for yourself! Grab a pint of the bold Hazelnut Chocolate Crunch today!",
       isGF: true,
       id: 3,
+      img: "/SweetCute_CircleSticker-03.png",
     },
     {
       title: "Cookie Dough",
@@ -130,6 +132,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       isVegan: true,
       id: 13,
+      img: "/SweetCute_CircleSticker-03.png",
     },
     {
       title: "Strawberry Lemonade Sorbet",
@@ -137,6 +140,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "First it’s sour, then it’s sweet! Farm fresh strawberries and tart lemon sorbet.",
       isGF: true,
       isVegan: true,
+      img: "/SweetCute_CircleSticker-03.png",
       id: 14,
     },
     {
