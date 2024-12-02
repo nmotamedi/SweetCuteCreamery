@@ -124,7 +124,11 @@ export function FlavorsPage() {
               <div className="basis-[60%] lg:h-36 h-24 flex justify-center items-center relative">
                 {flavor.img && (
                   <div className="h-24 w-24 lg:h-36 lg:w-36 founded-full">
-                    <img className="w-full" src={flavor.img} />
+                    <img
+                      className="w-full"
+                      src={flavor.img}
+                      alt={flavor.title}
+                    />
                   </div>
                 )}
               </div>

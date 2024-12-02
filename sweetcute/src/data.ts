@@ -132,7 +132,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       isVegan: true,
       id: 13,
-      img: "/SweetCute_CircleSticker-03.png",
+      img: "/flavor_imgs/coconut_chip.png",
     },
     {
       title: "Strawberry Lemonade Sorbet",
