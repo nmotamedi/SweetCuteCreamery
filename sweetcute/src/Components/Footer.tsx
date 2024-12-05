@@ -35,7 +35,7 @@ export function Footer() {
         <div className="basis-1/2 flex justify-end items-center">
           <a
             className="rounded-full w-10 md:w-24 h-10 md:h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center mr-20"
-            href="https://www.instagram.com/sweetcutecreamery/"
+            href="https://www.instagram.com/sweetcuteicecream/"
           >
             <img className="w-6 md:w-12" src="Instagram_Glyph_White.png" />
           </a>
