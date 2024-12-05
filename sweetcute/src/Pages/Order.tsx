@@ -30,8 +30,14 @@ export function Order() {
 
     setSelectedFlavors((prev) => {
       if (prev.has(flavorName)) {
-        const map = new Map(prev.set(flavorName, value));
-        return map;
+        if (value === 0) {
+          prev.delete(flavorName);
+          const map = new Map(prev);
+          return map;
+        } else {
+          const map = new Map(prev.set(flavorName, value));
+          return map;
+        }
       } else {
         return new Map(prev.set(flavorName, value));
       }
