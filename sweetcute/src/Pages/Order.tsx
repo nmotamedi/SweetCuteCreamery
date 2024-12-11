@@ -117,17 +117,15 @@ export function Order() {
         LOS ANGELES
       </h2>
       <h3 className="font-PoppinsBold text-white text-sm md:text-xl mb-3">
-        PINTS ARE HANDMADE TO ORDER!
+        $12 per pint or 4 pints for $40!
         <br />
-        PLEASE ALLOW 3-5 DAYS FOR PRODUCTION!
+        <br />
+        FOR LARGER ORDERS, PLEASE ALLOW 3-5 DAYS FOR PRODUCTION!
         <br />
         <br />
         PLEASE FILL OUT THE FORM BELOW AND WE WILL
         <br />
         GET IN TOUCH TO CONFIRM.
-      </h3>
-      <h3 className="font-PoppinsBold text-white text-base md:text-xl mb-3">
-        $12 per Pint
       </h3>
       <div className="text-center pb-4 md:pb-16 w-11/12 md:w-5/12 m-auto">
         <form
