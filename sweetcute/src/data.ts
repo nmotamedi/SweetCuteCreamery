@@ -134,21 +134,22 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       id: 13,
       img: "/flavor_imgs/coconut_chip.png",
     },
-    {
-      title: "Strawberry Lemonade Sorbet",
-      description:
-        "First it’s sour, then it’s sweet! Farm fresh strawberries and tart lemon sorbet.",
-      isGF: true,
-      isVegan: true,
-      img: "/SweetCute_CircleSticker-03.png",
-      id: 14,
-    },
+
     {
       title: "Caramel Brownie Sundae",
       description:
         "House made fudge brownies pieces in our sweet cream base with a crunchy caramel swirl!",
       id: 15,
       img: "/flavor_imgs/Caramel Brownie Sundae.png",
+    },
+    {
+      title: "Kiwi Pomegranate Sorbet",
+      isGF: true,
+      isDairyFree: true,
+      img: "/flavor_imgs/Pom Kiwi Sorb.png",
+      description:
+        "A unique combo of freshly juiced pomegranate seeds and mouth watering kiwi for a refreshing sorbet perfect for any season.",
+      id: 19,
     },
   ],
   sidePieces: [
@@ -157,7 +158,15 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       id: 16,
       isInSeason: false,
     },
-
+    {
+      title: "Strawberry Lemonade Sorbet",
+      description:
+        "First it’s sour, then it’s sweet! Farm fresh strawberries and tart lemon sorbet.",
+      isGF: true,
+      isVegan: true,
+      isInSeason: false,
+      id: 14,
+    },
     {
       title: "Avocado Chocolate Chip",
       isGF: true,
@@ -168,14 +177,6 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Peaches & Cream",
       isGF: true,
       id: 18,
-      isInSeason: false,
-    },
-
-    {
-      title: "Kiwi Pomegranate Sorbet",
-      isGF: true,
-      isDairyFree: true,
-      id: 19,
       isInSeason: false,
     },
 

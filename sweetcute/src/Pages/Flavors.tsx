@@ -153,7 +153,7 @@ export function FlavorsPage() {
                 </h2>
               </div>
               <div className="basis-2/3 ">
-                <h2 className="text-[#FF0000] font-PoppinsLight text-xs md:text-lg xl:text-2xl p-2 pt-3 lg:p-6">
+                <h2 className="text-[#FF0000] font-PoppinsLight text-xs md:text-lg xl:text-xl p-2 pt-3 lg:p-6">
                   {flavor.description}
                 </h2>
               </div>
