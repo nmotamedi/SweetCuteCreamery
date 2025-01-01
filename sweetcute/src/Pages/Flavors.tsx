@@ -7,8 +7,8 @@ export function FlavorsPage() {
 
   return (
     <div className="flex flex-col items-center relative flex-wrap bg-[#FAE498] w-full">
-      <div className="w-full h-96 flex">
-        <div className="basis-1/3">
+      <div className="w-full h-1/4 flex">
+        <div className="basis-1/3 ">
           <img
             alt="Pints of Sweet Cute Ice Cream"
             className="w-full  "

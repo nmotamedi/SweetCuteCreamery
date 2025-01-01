@@ -51,8 +51,7 @@ export function Carousel() {
         >
           <FontAwesomeIcon
             icon={faCaretLeft}
-            size="4x"
-            className="hover:text-[#69D6A1]"
+            className="hover:text-[#69D6A1] lg:text-7xl"
           />
         </div>
         <div>{imgObj.map((card, index) => CarouselCard(card, index))}</div>
@@ -64,12 +63,11 @@ export function Carousel() {
         >
           <FontAwesomeIcon
             icon={faCaretRight}
-            size="4x"
-            className="hover:text-[#69D6A1]"
+            className="hover:text-[#69D6A1] lg:text-7xl"
           />
         </div>
       </div>
-      <div className="flex justify-evenly w-1/2 my-3">
+      <div className="flex justify-center w-1/2 my-3">
         {[0, 1, 2, 3, 4, 5].map((num) => {
           return (
             <FontAwesomeIcon
@@ -103,14 +101,16 @@ export function Carousel() {
       >
         {card.circleText && (
           <div
-            className={`absolute rounded-full w-52 h-52 p-2 font-FaroVariable text-white text-md -top-8 text-center  drop-shadow-2xl flex flex-col items-center justify-center ${
+            className={`absolute rounded-full w-28 h-28 text-[0.5rem] p-1 md:w-52 md:h-52 md:p-2 font-FaroVariable text-white md:text-base -top-4 md:-top-8 text-center  drop-shadow-2xl flex flex-col items-center justify-center ${
               index % 2 === 0
-                ? "-right-8 bg-[#7FBEF0] rotate-12"
-                : "-left-8 bg-[#FF0000] -rotate-12"
+                ? "-right-0 md:-right-8 bg-[#7FBEF0] rotate-12"
+                : "-left-0 md:-left-8 bg-[#FF0000] -rotate-12"
             }`}
           >
             {card.circleText.split("\n").map((str) => (
-              <p className="font-PoppinsBold">{str}</p>
+              <p className="font-PoppinsBold" key={str}>
+                {str}
+              </p>
             ))}
           </div>
         )}

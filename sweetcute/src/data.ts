@@ -108,7 +108,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: "Strawberry Chocolate Chip",
       description:
-        "Locally sourced farm fresh strawberries with a crunchy chocolate swirl.",
+        "Fresh Strawberries infused into our creamy base with a crunchy chocolate swirl.",
       respDescription:
         "You are fun, flirty and thriving! Like Strawberry Chocolate Chip, you bring the party with you everywhere you go. You are classic and reliable with a passionate heart that brings a little sweetness into everyone’s life! Grab a pint of the adorably refreshing Strawberry Chocolate Chip today!",
       isGF: true,
@@ -118,7 +118,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: "Peanut Butter Salted Ganache",
       description:
-        "House-made peanut butter churned into our classic base with chunks of salty chocolate ganache.",
+        "House made peanut butter ice cream with chunks of salty chocolate ganache and crunchy peanut brittle.",
       respDescription:
         "Like Peanut Butter Salted Ganache, are you uniquely you and with you, what you see is what you get! You are down to earth, well-rounded and stand up for what you believe in. You are funky, rebellious and like to take the road less traveled! Grab a pint of wonderfully funky Peanut Butter Salted Ganache today!",
       isGF: true,
@@ -198,10 +198,10 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Espresso Chocolate Chip",
       isGF: true,
       id: 22,
-      isInSeason: false,
+      isInSeason: true,
     },
     { title: "Cookies & Cream", id: 23, isInSeason: false },
-    { title: "Speculoos Cookie Butter", id: 24, isInSeason: true },
+    { title: "Speculoos Cookie Butter", id: 24, isInSeason: false },
     {
       title: "Matzah Chocolate Crunch (for Passover)",
       id: 25,

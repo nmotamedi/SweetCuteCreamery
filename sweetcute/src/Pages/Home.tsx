@@ -10,7 +10,7 @@ export function Home() {
       <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
         <a
           onClick={() => modal.current?.showModal()}
-          className="hover:cursor-pointer h-24 w-24 md:h-40 md:w-40 lg:h-56 lg:w-56 rounded-full bg-[#7FBEF0] flex justify-center items-center absolute top-0 left-3 md:left-[10%] hover:drop-shadow-2xl font-FaroVariable text-white text-xs md:text-xl lg:text-3xl -rotate-12 p-3 uppercase text-center"
+          className="hover:cursor-pointer h-14 w-14 sm:h-40 sm:w-40 lg:h-56 lg:w-56 rounded-full bg-[#7FBEF0] flex justify-center items-center absolute top-0 left-3 lg:left-[10%] hover:drop-shadow-2xl font-FaroVariable text-white text-[0.4rem] sm:text-xl lg:text-3xl -rotate-12 p-3 uppercase text-center"
         >
           QUIZ:
           <br />
@@ -23,7 +23,7 @@ export function Home() {
             alt="Sweet Cute Title Icon"
           />
         </div>
-        <div className="w-7/12 my-10">
+        <div className="w-10/12 lg:w-7/12 my-10">
           <Carousel />
         </div>
         <div className="text-center md:py-3 pb-9 md:pb-12">
