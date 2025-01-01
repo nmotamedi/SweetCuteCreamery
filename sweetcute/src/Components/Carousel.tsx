@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import img2 from "/sweet_cute_branding_photos/img2.jpeg";
 import img4 from "/sweet_cute_branding_photos/img4.jpeg";
-import img6 from "/sweet_cute_branding_photos/img6.jpeg";
+import img10 from "/sweet_cute_branding_photos/img10.jpeg";
 import img7 from "/sweet_cute_branding_photos/img7.jpeg";
 import img8 from "/sweet_cute_branding_photos/img8.jpeg";
 import img9 from "/sweet_cute_branding_photos/img9.jpeg";
@@ -12,7 +12,7 @@ import { faIceCream } from "@fortawesome/free-solid-svg-icons";
 
 const imgObj: { src: string; circleText?: string }[] = [
   {
-    src: img6,
+    src: img10,
     circleText: `SMALL BATCH\nCUSTARD BASED\nICE CREAM`,
   },
   {
@@ -103,7 +103,7 @@ export function Carousel() {
       >
         {card.circleText && (
           <div
-            className={`absolute rounded-full w-64 h-64  font-FaroVariable text-white text-xl -top-8 text-center  drop-shadow-2xl flex flex-col items-center justify-center ${
+            className={`absolute rounded-full w-52 h-52 p-2 font-FaroVariable text-white text-md -top-8 text-center  drop-shadow-2xl flex flex-col items-center justify-center ${
               index % 2 === 0
                 ? "-right-8 bg-[#7FBEF0] rotate-12"
                 : "-left-8 bg-[#FF0000] -rotate-12"

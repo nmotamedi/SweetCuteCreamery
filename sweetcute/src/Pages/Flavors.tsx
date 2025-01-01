@@ -6,7 +6,7 @@ export function FlavorsPage() {
   const [descIsOpen, setDescIsOpen] = useState<string>();
 
   return (
-    <div className="flex flex-col justify-between items-center relative flex-wrap bg-[#FAE498] w-full">
+    <div className="flex flex-col items-center relative flex-wrap bg-[#FAE498] w-full">
       <div className="w-full h-96 flex">
         <div className="basis-1/3">
           <img
@@ -26,12 +26,12 @@ export function FlavorsPage() {
           <img
             alt="Hand holding a cone of Sweet Cute ice cream"
             className="w-full  "
-            src="/sweet_cute_branding_photos/img10.jpeg"
+            src="/sweet_cute_branding_photos/img6.jpeg"
           />
         </div>
       </div>
-      <div className="text-center py-1 md:py-4 pb-20 w-full">
-        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 md:my-16 mb-4 underline">
+      <div className="text-center py-1 md:pb-4 pb-20 w-full">
+        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 mb-4 underline">
           OUR FOREVER FLAVORS
         </h2>
         <div className="flex flex-wrap justify-between mx-3 md:mx-16">
