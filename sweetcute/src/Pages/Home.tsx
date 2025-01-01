@@ -23,7 +23,7 @@ export function Home() {
             alt="Sweet Cute Title Icon"
           />
         </div>
-        <div className="w-1/2 my-10">
+        <div className="w-7/12 my-10">
           <Carousel />
         </div>
         <div className="text-center md:py-3 pb-9 md:pb-12">
