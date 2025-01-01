@@ -110,9 +110,9 @@ export function Order() {
 
   return (
     <div className="pb-44 md:pb-4 bg-[#7FBEF0] text-center w-full">
-      <div className="w-full h-1/4 flex justify-center">
+      <div className="w-full h-32 md:h-64 lg:h-96 flex justify-center">
         <img
-          className="w-full h-96 object-cover"
+          className="w-full h-32 md:h-64 lg:h-96 object-cover"
           alt="Pints of sweet cute ice cream on a table with sprinkles and colorful napkins. "
           src="/sweet_cute_branding_photos/img1.jpeg"
         />

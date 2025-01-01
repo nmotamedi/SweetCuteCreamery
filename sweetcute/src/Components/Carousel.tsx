@@ -101,7 +101,7 @@ export function Carousel() {
       >
         {card.circleText && (
           <div
-            className={`absolute rounded-full w-28 h-28 text-[0.5rem] p-1 md:w-52 md:h-52 md:p-2 font-FaroVariable text-white md:text-base -top-4 md:-top-8 text-center  drop-shadow-2xl flex flex-col items-center justify-center ${
+            className={`z-20 absolute rounded-full w-28 h-28 text-[0.5rem] p-1 md:w-52 md:h-52 md:p-2 font-FaroVariable text-white md:text-base -top-4 md:-top-8 text-center  drop-shadow-2xl flex flex-col items-center justify-center ${
               index % 2 === 0
                 ? "-right-0 md:-right-8 bg-[#7FBEF0] rotate-12"
                 : "-left-0 md:-left-8 bg-[#FF0000] -rotate-12"
@@ -114,7 +114,7 @@ export function Carousel() {
             ))}
           </div>
         )}
-        <div className="w-full rounded-xl">
+        <div className=" z-10 w-full rounded-xl relative">
           <img className="w-full rounded-xl" src={card.src} />
         </div>
       </div>
