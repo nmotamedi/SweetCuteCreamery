@@ -54,7 +54,9 @@ export function Carousel() {
             className="hover:text-[#69D6A1] lg:text-7xl"
           />
         </div>
-        <div>{imgObj.map((card, index) => CarouselCard(card, index))}</div>
+        <div className="relative">
+          {imgObj.map((card, index) => CarouselCard(card, index))}
+        </div>
         <div
           className="cursor-pointer flex items-center"
           onClick={() => {
