@@ -55,7 +55,7 @@ export function NavHeader() {
           </NavLink>
         </div>
       </div>
-      <div className="relative min-h-full">
+      <div className="relative min-h-full w-screen">
         <Outlet />
       </div>
       <Footer />
