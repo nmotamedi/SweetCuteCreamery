@@ -39,7 +39,7 @@ export function Carousel() {
   }, [currentShowing]);
 
   return (
-    <div className="flex flex-col items-center drop-shadow-xl">
+    <div className="flex flex-col items-center md:drop-shadow-xl">
       <div className="flex justify-between select-none">
         <div
           onClick={() => {
