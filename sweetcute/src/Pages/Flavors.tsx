@@ -6,29 +6,32 @@ export function FlavorsPage() {
   const [descIsOpen, setDescIsOpen] = useState<string>();
 
   return (
-    <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
-      <div className="text-center py-1 md:py-4 pb-20">
-        <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
-          <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
-          <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
-            <textPath href="#curve" startOffset="50%" textAnchor="middle">
-              HAND MADE
-            </textPath>
-          </text>
-        </svg>
-        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl -mt-8 mb-10 md:mb-16">
-          CUSTARD
-          <br />
-          BASED ICE CREAM
-        </h2>
-        <div className="w-3/4 md:w-1/4 m-auto">
+    <div className="flex flex-col items-center relative flex-wrap bg-[#FAE498] w-full">
+      <div className="w-full h-1/4 flex">
+        <div className="basis-1/3 ">
           <img
-            src="/Sweet_Cute_Title.png"
-            className="w-full"
-            alt="Sweet Cute Title Icon"
+            alt="Pints of Sweet Cute Ice Cream"
+            className="w-full  "
+            src="/sweet_cute_branding_photos/img11.jpeg"
           />
         </div>
-        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 md:my-16 mb-4 underline">
+        <div className="basis-1/3">
+          <img
+            alt="Hand holding a pint of chocolate Sweet Cute ice cream"
+            className="w-full  "
+            src="/sweet_cute_branding_photos/img3.jpeg"
+          />
+        </div>
+        <div className="basis-1/3">
+          <img
+            alt="Hand holding a cone of Sweet Cute ice cream"
+            className="w-full  "
+            src="/sweet_cute_branding_photos/img6.jpeg"
+          />
+        </div>
+      </div>
+      <div className="text-center py-1 md:pb-4 pb-20 w-full">
+        <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 mb-4 underline">
           OUR FOREVER FLAVORS
         </h2>
         <div className="flex flex-wrap justify-between mx-3 md:mx-16">
