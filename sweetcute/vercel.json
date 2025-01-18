@@ -1,25 +1,3 @@
 {
-  "redirects": [
-    {
-      "source": "http://sweetcuteicecream.com/(.*)",
-      "destination": "https://www.sweetcuteicecream.com/$1",
-      "permanent": true
-    },
-    {
-      "source": "https://sweetcuteicecream.com/(.*)",
-      "destination": "https://www.sweetcuteicecream.com/$1",
-      "permanent": true
-    },
-    {
-      "source": "http://www.sweetcuteicecream.com/(.*)",
-      "destination": "https://www.sweetcuteicecream.com/$1",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
