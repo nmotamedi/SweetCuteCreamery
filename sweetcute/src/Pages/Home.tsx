@@ -1,12 +1,16 @@
 import { useRef } from "react";
 import { Quiz } from "../Components/Quiz";
 import { Carousel } from "../Components/Carousel";
+import { Helmet } from "react-helmet";
 
 export function Home() {
   const modal = useRef<HTMLDialogElement>(null);
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://www.sweetcuteicecream.com/" />
+      </Helmet>
       <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
         <a
           onClick={() => modal.current?.showModal()}

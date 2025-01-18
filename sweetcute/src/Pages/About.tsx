@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet";
+
 export function About() {
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://www.sweetcuteicecream.com/about" />
+      </Helmet>
       <div className="bg-[#7FBEF0] flex-col justify-center items-center hidden sm:flex">
         <div className="w-full flex items-center m-10">
           <div className="basis-1/2 flex justify-center">
