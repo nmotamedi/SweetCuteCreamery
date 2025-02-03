@@ -117,7 +117,11 @@ export function Carousel() {
           </div>
         )}
         <div className=" z-10 w-full rounded-xl relative">
-          <img className="w-full rounded-xl" src={card.src} />
+          <img
+            className="w-full rounded-xl"
+            src={card.src}
+            alt="Picture of Sweet Cute Ice Cream"
+          />
         </div>
       </div>
     );
