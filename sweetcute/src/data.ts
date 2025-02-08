@@ -181,10 +181,10 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     },
 
     {
-      title: "Cherry Chocolate Ganache",
+      title: "Cherry Chocolate Chunk",
       isGF: true,
       id: 20,
-      isInSeason: false,
+      isInSeason: true,
     },
 
     {
@@ -198,7 +198,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Espresso Chocolate Chip",
       isGF: true,
       id: 22,
-      isInSeason: true,
+      isInSeason: false,
     },
     { title: "Cookies & Cream", id: 23, isInSeason: false },
     { title: "Speculoos Cookie Butter", id: 24, isInSeason: false },
