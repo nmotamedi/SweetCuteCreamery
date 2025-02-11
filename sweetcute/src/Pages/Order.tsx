@@ -129,6 +129,9 @@ export function Order() {
           LOS ANGELES
         </h2>
         <h3 className="font-PoppinsBold text-white text-sm md:text-xl mb-3">
+          $12 PER PINT
+          <br />
+          <br />
           FOR LARGER ORDERS, PLEASE ALLOW 3-5 DAYS FOR PRODUCTION!
           <br />
           <br />
