@@ -45,7 +45,7 @@ export function Footer() {
           </a>
           <a
             className="rounded-full w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
-            href="https://www.instagram.com/sweetcuteicecream/"
+            href="https://g.page/r/CYap19fkGsPtECA/review"
           >
             <p className="font-PoppinsLight text-white text-center">
               Leave a review!
