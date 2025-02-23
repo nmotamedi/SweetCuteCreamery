@@ -32,16 +32,24 @@ export function Footer() {
             </li>
           </ul>
         </div>
-        <div className="basis-1/2 flex justify-end items-center">
+        <div className="basis-1/2 flex flex-col sm:flex-row justify-around items-center">
           <a
-            className="rounded-full w-10 md:w-24 h-10 md:h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center mr-20"
+            className="rounded-full w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
             href="https://www.instagram.com/sweetcuteicecream/"
           >
             <img
-              className="w-6 md:w-12"
+              className="w-12"
               src="Instagram_Glyph_White.png"
               alt="Instagram Logo in white"
             />
+          </a>
+          <a
+            className="rounded-full w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
+            href="https://www.instagram.com/sweetcuteicecream/"
+          >
+            <p className="font-PoppinsLight text-white text-center">
+              Leave a review!
+            </p>
           </a>
         </div>
       </div>
