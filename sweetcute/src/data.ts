@@ -154,9 +154,9 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
   ],
   sidePieces: [
     {
-      title: "Mint Fudge Brownie",
+      title: "Mint Cookies & Cream",
       id: 16,
-      isInSeason: false,
+      isInSeason: true,
     },
     {
       title: "Strawberry Lemonade Sorbet",
@@ -184,7 +184,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Cherry Chocolate Chunk",
       isGF: true,
       id: 20,
-      isInSeason: true,
+      isInSeason: false,
     },
 
     {
