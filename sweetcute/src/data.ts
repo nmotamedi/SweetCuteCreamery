@@ -156,7 +156,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: "Mint Cookies & Cream",
       id: 16,
-      isInSeason: true,
+      isInSeason: false,
     },
     {
       title: "Strawberry Lemonade Sorbet",
@@ -205,7 +205,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: "Matzah Toffee Bark (for Passover)",
       id: 25,
-      isInSeason: false,
+      isInSeason: true,
     },
     { title: "Halloween Candy Crunch", id: 26, isInSeason: false },
   ],
