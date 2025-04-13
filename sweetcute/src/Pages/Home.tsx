@@ -14,7 +14,7 @@ export function Home() {
       <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-[#FAE498]">
         <a
           onClick={() => modal.current?.showModal()}
-          className="hover:cursor-pointer h-24 w-24 sm:h-40 sm:w-40 lg:h-56 lg:w-56 rounded-full bg-[#7FBEF0] flex justify-center items-center absolute bottom-1/3 sm:bottom-auto sm:top-10 left-5 sm:left-3 lg:left-[10%] hover:drop-shadow-2xl font-FaroVariable text-white text-[0.67rem] sm:text-xl lg:text-3xl -rotate-12 p-3 uppercase text-center"
+          className="hover:cursor-pointer h-24 w-24 sm:h-40 sm:w-40 lg:h-56 lg:w-56 rounded-full bg-[#7FBEF0] flex justify-center items-center absolute bottom-[52%] sm:bottom-auto sm:top-10 left-2 sm:left-3 lg:left-[10%] hover:drop-shadow-2xl font-FaroVariable text-white text-[0.67rem] sm:text-xl lg:text-3xl -rotate-12 p-3 uppercase text-center z-20"
         >
           QUIZ:
           <br />
@@ -29,6 +29,21 @@ export function Home() {
         </div>
         <div className="w-10/12 lg:w-7/12 my-10">
           <Carousel />
+        </div>
+        <div className="w-10/12 lg:w-7/12 mt-20 sm:mt-auto my-10 md:py-12">
+          <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl uppercase text-center">
+            Come visit us at Banyan Tree Marketplace in Culver City for a scoop!
+            <br />
+            <br />
+            Follow us on{" "}
+            <a
+              className="underline"
+              href="https://www.instagram.com/sweetcuteicecream/"
+            >
+              Instagram
+            </a>{" "}
+            for our weekly schedule
+          </h2>
         </div>
         <div className="text-center md:py-3 pb-9 md:pb-12">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
