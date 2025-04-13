@@ -32,7 +32,14 @@ export function Home() {
         </div>
         <div className="w-10/12 lg:w-7/12 mt-20 sm:mt-auto my-10 md:py-12">
           <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl uppercase text-center">
-            Come visit us at Banyan Tree Marketplace in Culver City for a scoop!
+            Come visit us at{" "}
+            <a
+              className="underline"
+              href="https://maps.app.goo.gl/7dViRS66yYtGGmM3A"
+            >
+              Banyan Tree Marketplace
+            </a>{" "}
+            in Culver City for a scoop!
             <br />
             <br />
             Follow us on{" "}
