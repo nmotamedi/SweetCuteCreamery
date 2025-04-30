@@ -189,7 +189,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
 
     {
       title: "Vegan Banana Pudding",
-      isGF: true,
+      isGF: false,
       id: 21,
       isInSeason: true,
     },
