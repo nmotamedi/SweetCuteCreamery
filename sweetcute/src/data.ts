@@ -177,7 +177,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: "Avocado Chocolate Chip",
       isGF: true,
       id: 17,
-      isInSeason: false,
+      isInSeason: true,
     },
     {
       title: "Peaches & Cream",
@@ -194,10 +194,11 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     },
 
     {
-      title: "Dark Chocolate Peanut Brittle",
-      isGF: true,
+      title: "Vegan Banana Pudding",
+      isGF: false,
+      isVegan: true,
       id: 21,
-      isInSeason: false,
+      isInSeason: true,
     },
 
     {
@@ -211,7 +212,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: "Matzah Toffee Bark (for Passover)",
       id: 25,
-      isInSeason: true,
+      isInSeason: false,
     },
     { title: "Halloween Candy Crunch", id: 26, isInSeason: false },
   ],
