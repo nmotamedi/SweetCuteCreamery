@@ -8,6 +8,7 @@ export type Flavors = {
   isVegan?: boolean;
   isDairyFree?: boolean;
   isInSeason?: boolean;
+  isCatering?: boolean;
 };
 
 export type QuizQuestions = {
@@ -25,6 +26,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 1,
       img: "/flavor_imgs/Sweet Cream Vanilla.png",
+      isCatering: true,
     },
     {
       title: "Double Dark Chocolate",
@@ -35,6 +37,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 2,
       img: "/flavor_imgs/Double Dark Choc.png",
+      isCatering: true,
     },
     {
       title: "Hazelnut Chocolate Crunch",
@@ -45,6 +48,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 3,
       img: "/flavor_imgs/Hazelnut.png",
+      isCatering: true,
     },
     {
       title: "Cookie Dough",
@@ -54,6 +58,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         "Like Cookie Dough, you are strong, bold and trendy. You bring the energy in every situation, so much so that people always want to come back for more! You are not afraid to speak up for what you believe in and stand out! Grab a pint of the addictively chunky Cookie Dough today!",
       id: 4,
       img: "/flavor_imgs/Cookie Dough.png",
+      isCatering: true,
     },
     {
       title: "Banana Chocolate Chip",
@@ -64,6 +69,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 5,
       img: "/flavor_imgs/Banana Choc Chip.png",
+      isCatering: true,
     },
     {
       title: "Chocolate Caramel Waffle Cone",
