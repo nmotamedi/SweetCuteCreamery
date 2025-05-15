@@ -48,7 +48,7 @@ export function NavHeader() {
             className={({ isActive }) =>
               isActive
                 ? "underline basis-1/6"
-                : "hover:text-[#85D3A5] basis-1/5"
+                : "hover:text-[#85D3A5] basis-1/6"
             }
           >
             Catering
