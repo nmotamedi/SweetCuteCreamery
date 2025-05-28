@@ -1,15 +1,8 @@
-import { Helmet } from "react-helmet";
-import {
-  DFBullet,
-  FlavorCards,
-  GFBullet,
-  VeganBullet,
-} from "../Components/FlavorCards";
-import { cateringFlavors, CateringTier, cateringTiers } from "../data";
-import { useState } from "react";
+import { Helmet } from 'react-helmet';
+import { DFBullet, GFBullet, VeganBullet } from '../Components/FlavorCards';
+import { cateringFlavors, CateringTier, cateringTiers } from '../data';
 
 export function Catering() {
-  const [descIsOpen, setDescIsOpen] = useState<string>();
   return (
     <>
       <Helmet>
@@ -60,30 +53,54 @@ export function Catering() {
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Flavors:
           </h2>
-          <div className="flex flex-wrap justify-between content-center mx-3 md:mx-16 w-[70%]">
-            {cateringFlavors.map((flavor) => (
-              <FlavorCards
-                flavor={flavor}
-                key={flavor.title}
-                isDescOpen={descIsOpen === flavor.title}
-                handleChange={(flavor: string | undefined) =>
-                  setDescIsOpen(flavor)
-                }
-              />
-            ))}
+          <div className="relative ">
+            <ul className="text-black font-PoppinsLight text-xs md:text-lg xl:text-xl p-2 pt-3 lg:p-6 text-left list-disc">
+              {cateringFlavors.map((flavor, index) => {
+                return (
+                  <li key={index} className="my-2">
+                    <div className="flex justify-between">
+                      <h4>{flavor.title}</h4>
+                      <div className="flex justify-center w-1/4">
+                        {flavor.isVegan ? (
+                          <div className="inline mx-2">
+                            <VeganBullet />
+                          </div>
+                        ) : (
+                          ''
+                        )}
+                        {flavor.isDairyFree ? (
+                          <div className="inline mx-2">
+                            <DFBullet />
+                          </div>
+                        ) : (
+                          ''
+                        )}
+                        {flavor.isGF ? (
+                          <div className="inline mx-2">
+                            <GFBullet />
+                          </div>
+                        ) : (
+                          ''
+                        )}
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
           <div className="flex w-1/2 justify-center items-start m-auto text-center">
             <div className="px-4 flex flex-col justify-center items-center">
               <GFBullet />
-              <h2 className="text-[#FF0000] font-MyriadPro">Gluten Free</h2>
+              <h2 className="text-black font-MyriadPro">Gluten Free</h2>
             </div>
             <div className="px-4 flex flex-col justify-center items-center">
               <VeganBullet />
-              <h2 className="text-[#FF0000] font-MyriadPro">Vegan</h2>
+              <h2 className="text-black font-MyriadPro">Vegan</h2>
             </div>
             <div className="px-4 flex flex-col justify-center items-center">
               <DFBullet />
-              <h2 className="text-[#FF0000] font-MyriadPro">Dairy Free</h2>
+              <h2 className="text-black font-MyriadPro">Dairy Free</h2>
             </div>
           </div>
           <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 mb-4">
