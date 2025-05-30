@@ -39,7 +39,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: 'Hazelnut Chocolate Crunch',
       description:
-        'Toasted Hazelnuts woven into our classic creamy base complimented by a chocolate crunch!',
+        'Toasted hazelnuts woven into our classic creamy base complimented by a hazelnut infused fudge swirl.',
       respDescription:
         'Like Hazelnut Chocolate Crunch, you are quietly confident and bring depth and richness to those around you! Your strong yet grounded personality brings peace and comfort to those that you love and you will always serve as a shoulder to cry on. Though you are gentle and kind, if anyone wrongs you, you’ve got a little bit of “crunch” in you to stand up for yourself! Grab a pint of the bold Hazelnut Chocolate Crunch today!',
       isGF: true,
@@ -146,7 +146,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: 'Caramel Brownie Sundae',
       description:
-        'House made fudge brownies pieces in our sweet cream base with a crunchy caramel swirl!',
+        'House made fudge brownies pieces in our sweet cream base with a salty caramel swirl!',
       id: 15,
       img: '/flavor_imgs/Caramel Brownie Sundae.png',
     },
