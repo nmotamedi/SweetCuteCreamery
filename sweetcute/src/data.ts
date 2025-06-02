@@ -171,13 +171,13 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Avocado Chocolate Chip',
       isGF: true,
       id: 17,
-      isInSeason: true,
+      isInSeason: false,
     },
     {
       title: 'Peaches & Cream',
       isGF: true,
       id: 18,
-      isInSeason: false,
+      isInSeason: true,
     },
 
     {
