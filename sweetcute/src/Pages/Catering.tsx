@@ -1,8 +1,64 @@
 import { Helmet } from 'react-helmet';
 import { DFBullet, GFBullet, VeganBullet } from '../Components/FlavorCards';
 import { cateringFlavors, CateringTier, cateringTiers } from '../data';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export function Catering() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [eventType, setEventType] = useState('');
+  const [eventDate, setEventDate] = useState('');
+  const [guestCount, setGuestCount] = useState('');
+  const [eventLocation, setEventLocation] = useState('');
+  const [desiredPackage, setDesiredPackage] = useState('');
+
+  const form = useRef<HTMLFormElement>(null);
+
+  async function handleSubmit(
+    event: React.FormEvent<HTMLFormElement>
+  ): Promise<void> {
+    event.preventDefault();
+    try {
+      if (!form.current) {
+        throw new Error('Error');
+      }
+      const emailParams = {
+        name,
+        email,
+        phone,
+        eventType,
+        eventDate: new Date(eventDate).toLocaleString(),
+        eventLocation,
+        guestCount,
+        desiredPackage,
+      };
+      emailjs
+        .send('service_xupfg62', 'template_cszp1rv', emailParams, {
+          publicKey: 'Hn_2krR1sFjxnrUyV',
+        })
+        .then(
+          () => {
+            alert('Email successfully sent');
+          },
+          (error) => {
+            throw new Error(error);
+          }
+        );
+      setName('');
+      setEmail('');
+      setPhone('');
+      setEventType('');
+      setEventDate('');
+      setEventLocation('');
+      setGuestCount('');
+      setDesiredPackage('');
+    } catch (err) {
+      alert(err);
+    }
+  }
+
   return (
     <>
       <Helmet>
@@ -12,20 +68,12 @@ export function Catering() {
         />
       </Helmet>
       <div className="flex flex-col items-center relative flex-wrap bg-[#FAE498] w-full min-h-svh">
-        <div className="text-center py-1 md:pb-4 pb-20 w-full">
+        <div className="text-center py-1 md:pb-4 lg:pb-20 w-full">
           <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 mb-4 underline">
             Artisanal Ice Cream Catering
           </h2>
-          <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
-            Package Tiers
-          </h2>
-          <div className="flex flex-wrap justify-between mx-3 md:mx-16">
-            {cateringTiers.map((tier, index) => (
-              <PackageCard key={index} tier={tier} />
-            ))}
-          </div>
           <div className="flex flex-wrap justify-center mx-3 md:mx-16">
-            <div className="basis-[40%] h-64 my-2 md:my-4 rounded-2xl">
+            <div className="basis-[60%] lg:basis-[40%] h-64 sm:h-80 my-2 md:my-4 rounded-2xl">
               <div className="relative w-full h-full rounded-2xl">
                 <div className="absolute w-full rounded-2xl h-full backface-hidden flex items-center justify-center bg-[#94cbf8]">
                   <div className=" h-full w-full rounded-2xl flex flex-col justify-center items-center">
@@ -35,7 +83,7 @@ export function Catering() {
                       </h3>
                     </div>
                     <div className="relative ">
-                      <ul className="text-black font-PoppinsLight text-xs md:text-lg xl:text-xl p-2 pt-3 lg:p-6 text-left list-disc">
+                      <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl p-2 pt-3 lg:p-6 text-left list-disc">
                         <li>Hand Scooped Premium Ice Cream</li>
                         <li>1 Scooper</li>
                         <li>2 Hours of service (plus 30 minute set up)</li>
@@ -48,8 +96,83 @@ export function Catering() {
               </div>
             </div>
           </div>
+          <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
+            Hand Scooped Package
+          </h2>
+          <div className="flex flex-wrap justify-between mx-3 md:mx-16">
+            {cateringTiers.map((tier, index) => (
+              <PackageCard key={index} tier={tier} />
+            ))}
+          </div>
+
+          <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
+            Ice Cream Sammie Package
+          </h2>
+          <div className="flex flex-wrap justify-center mx-3 md:mx-16">
+            <div className="basis-[60%] lg:basis-[40%] h-64 sm:h-80 my-2 md:my-4 rounded-2xl">
+              <div className="relative w-full h-full rounded-2xl">
+                <div className="absolute w-full rounded-2xl h-full backface-hidden flex items-center justify-center bg-[#94cbf8]">
+                  <div className=" h-full w-full rounded-2xl flex flex-col justify-center items-center">
+                    <div className="w-full text-center flex justify-center mt-5">
+                      <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl p-2  bg-white rounded-xl w-fit h-fit">
+                        $12 per person with cart and server
+                      </h3>
+                    </div>
+                    <div className="relative ">
+                      <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl p-2 pt-3 lg:p-6 text-center">
+                        <li>
+                          Pre-packaged, ready to hand out to your guests from
+                          our ice cream cart!
+                        </li>
+                        <li>
+                          Your choice of 2 flavors of ice cream on scratch made
+                          Chocolate Chip Cookies.
+                        </li>
+                      </ul>
+                    </div>
+                    <h3 className="text-black font-FaroVariable text-sm md:text-lg xl:text-xl p-2  bg-white rounded-xl w-fit h-fit">
+                      $8 per sandwich for pickup
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
+            Pre-Scooped Package
+          </h2>
+          <h2 className="font-PoppinsLight text-black text-xl md:text-2xl my-5">
+            <em>*recommended for quicker service with large parties*</em>
+          </h2>
+          <div className="flex flex-wrap justify-center mx-3 md:mx-16">
+            <div className="basis-[60%] lg:basis-[40%] h-64 sm:h-80 my-2 md:my-4 rounded-2xl">
+              <div className="relative w-full h-full rounded-2xl">
+                <div className="absolute w-full rounded-2xl h-full backface-hidden flex items-center justify-center bg-[#94cbf8]">
+                  <div className=" h-full w-full rounded-2xl flex flex-col justify-center items-center">
+                    <div className="w-full text-center flex justify-center mt-5">
+                      <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl p-2  bg-white rounded-xl w-fit h-fit">
+                        $10 per person with cart and server
+                      </h3>
+                    </div>
+                    <div className="relative ">
+                      <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl p-2 pt-3 lg:p-6 text-center">
+                        <li>
+                          Pre-scooped into sealed cups, ready to hand out to
+                          your guests from our ice cream cart.
+                        </li>
+                        <li>Your choice of 3 flavors of Ice Cream.</li>
+                      </ul>
+                    </div>
+                    <h3 className="text-black font-FaroVariable text-sm md:text-lg xl:text-xl p-2  bg-white rounded-xl w-fit h-fit">
+                      $6 per scoop for pickup
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="text-center py-1 md:pb-4 pb-20 w-full flex flex-col items-center">
+        <div className="text-center py-1 md:pb-4 lg:pb-20 w-full flex flex-col items-center">
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Flavors:
           </h2>
@@ -59,8 +182,8 @@ export function Catering() {
                 return (
                   <li key={index} className="my-2">
                     <div className="flex justify-between">
-                      <h4>{flavor.title}</h4>
-                      <div className="flex justify-center w-1/4">
+                      <h4 className="text-lg">{flavor.title}</h4>
+                      <div className="flex justify-left items-center w-1/4">
                         {flavor.isVegan ? (
                           <div className="inline mx-2">
                             <VeganBullet />
@@ -107,6 +230,102 @@ export function Catering() {
             <em>Contact Us for Seasonal Flavors</em>
           </h2>
         </div>
+        <div className="text-center pb-4 md:pb-16 w-11/12 md:w-5/12 m-auto">
+          <form
+            className="flex flex-col justify-center items-center font-PoppinsLight text-[#FF0000]"
+            ref={form}
+            onSubmit={handleSubmit}
+          >
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Name"
+              className="bg-white rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+              value={name}
+              onChange={(e) => setName(e.currentTarget.value)}
+            />
+
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Email"
+              className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+              value={email}
+              onChange={(e) => setEmail(e.currentTarget.value)}
+            />
+
+            <input
+              type="tel"
+              name="phone"
+              required
+              placeholder="Contact Number"
+              className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+              value={phone}
+              onChange={(e) => setPhone(e.currentTarget.value)}
+            />
+
+            <input
+              type="number"
+              name="guestCount"
+              required
+              placeholder="Number of Guests"
+              className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+              value={guestCount}
+              inputMode="numeric"
+              onChange={(e) => setGuestCount(e.currentTarget.value)}
+            />
+
+            <input
+              type="datetime-local"
+              name="eventDate"
+              required
+              placeholder="Event Date"
+              className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+              value={eventDate}
+              onChange={(e) => setEventDate(e.currentTarget.value)}
+            />
+
+            <input
+              type="text"
+              name="eventLocation"
+              required
+              placeholder="Event Location"
+              className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+              value={eventLocation}
+              onChange={(e) => setEventLocation(e.currentTarget.value)}
+            />
+
+            <input
+              type="text"
+              name="eventType"
+              required
+              placeholder="Event Type"
+              className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+              value={eventType}
+              onChange={(e) => setEventType(e.currentTarget.value)}
+            />
+
+            <select
+              className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+              onChange={(e) => setDesiredPackage(e.currentTarget.value)}
+            >
+              <option defaultChecked value="">
+                What package are you interested in?
+              </option>
+              <option value="handScooped">Hand Scooped</option>
+              <option value="sammie_full">Ice Cream Sammie - Cart</option>
+              <option value="sammie_pickup">Ice Cream Sammie - Pickup</option>
+              <option value="preScooped_full">Scoops - Cart</option>
+              <option value="preScooped_pickup">Scoops - Pickup</option>
+            </select>
+
+            <button className="bg-[#FC4700] hover:bg-[#85D3A5] text-white rounded-xl mt-2 p-3">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </>
   );
@@ -114,7 +333,7 @@ export function Catering() {
 
 function PackageCard({ tier }: { tier: CateringTier }) {
   return (
-    <div className="basis-[23%] h-60 my-2 md:my-4 rounded-2xl">
+    <div className="basis-[23%] h-72 my-2 md:my-4 rounded-2xl">
       <div className="relative w-full h-full rounded-2xl">
         <div className="absolute w-full rounded-2xl h-full backface-hidden flex items-center justify-center bg-[#94cbf8]">
           <div className=" h-full w-full rounded-2xl flex flex-col justify-center items-center">
@@ -124,11 +343,11 @@ function PackageCard({ tier }: { tier: CateringTier }) {
               </h3>
             </div>
             <div className="basis-[40%] relative text-center mt-5">
-              <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-3xl px-2 md:px-6 overflow-visible leading-none relative">
+              <h2 className="text-[#FF0000] font-FaroVariable text-2xl md:text-3xl px-2 md:px-6 overflow-visible leading-none relative">
                 ${tier.price}
               </h2>
             </div>
-            <div className="basis-[35%] text-center relative text-black font-PoppinsLight text-xs md:text-lg xl:text-xl p-2 pt-3 lg:p-6">
+            <div className="basis-[35%] text-center relative text-black font-PoppinsLight text-sm md:text-lg xl:text-xl p-2 pt-3 lg:p-6">
               <h3>{tier.flavorCount} Flavors</h3>
               <h3>${tier.addFlavorPrice} for additional flavor</h3>
             </div>
