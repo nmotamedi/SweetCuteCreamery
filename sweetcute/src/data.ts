@@ -49,12 +49,12 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: 'Hazelnut Chocolate Crunch',
       description:
-        'Toasted Hazelnuts woven into our classic creamy base complimented by a chocolate crunch!',
+        'Toasted hazelnuts woven into our classic creamy base complimented by a hazelnut infused fudge swirl.',
       respDescription:
         'Like Hazelnut Chocolate Crunch, you are quietly confident and bring depth and richness to those around you! Your strong yet grounded personality brings peace and comfort to those that you love and you will always serve as a shoulder to cry on. Though you are gentle and kind, if anyone wrongs you, you’ve got a little bit of “crunch” in you to stand up for yourself! Grab a pint of the bold Hazelnut Chocolate Crunch today!',
       isGF: true,
       id: 3,
-      img: '/flavor_imgs/Hazelnut.png',
+      img: '/flavor_imgs/Hazelnute Chocolate Crunch (1).png',
       isCatering: true,
     },
     {
@@ -129,7 +129,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       respDescription:
         'You are fun, flirty and thriving! Like Strawberry Chocolate Chip, you bring the party with you everywhere you go. You are classic and reliable with a passionate heart that brings a little sweetness into everyone’s life! Grab a pint of the adorably refreshing Strawberry Chocolate Chip today!',
       isGF: true,
-      img: '/flavor_imgs/Strawberry Choc Chip.png',
+      img: '/flavor_imgs/Strawberry Chocolate Chip (1).png',
       id: 11,
       isCatering: true,
     },
@@ -155,21 +155,22 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isCatering: true,
     },
     {
-      title: 'Caramel Brownie Sundae',
+      title: 'Strawberry Lemonade Sorbet',
       description:
-        'House made fudge brownies pieces in our sweet cream base with a crunchy caramel swirl!',
-      id: 15,
-      img: '/flavor_imgs/Caramel Brownie Sundae.png',
+        'A refreshing blend of fresh strawberries and lemons for the perfect non-dairy treat!',
+      isGF: true,
+      isVegan: true,
+      img: '/flavor_imgs/Strawberry Lemonade (1).png',
+      id: 14,
       isCatering: true,
     },
     {
-      title: 'Kiwi Pomegranate Sorbet',
-      isGF: true,
-      isDairyFree: true,
-      img: '/flavor_imgs/Pom Kiwi Sorb.png',
+      title: 'Caramel Brownie Sundae',
       description:
-        'A unique combo of freshly juiced pomegranate seeds and mouth watering kiwi for a refreshing sorbet perfect for any season.',
-      id: 19,
+        'House made fudge brownies pieces in our sweet cream base with a salty caramel swirl!',
+      id: 15,
+      img: '/flavor_imgs/Caramel Brownie Sundae.png',
+      isCatering: true,
     },
   ],
   sidePieces: [
@@ -180,26 +181,26 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isCatering: true,
     },
     {
-      title: 'Strawberry Lemonade Sorbet',
-      description:
-        'First it’s sour, then it’s sweet! Farm fresh strawberries and tart lemon sorbet.',
+      title: 'Kiwi Pomegranate Sorbet',
       isGF: true,
-      isVegan: true,
+      isDairyFree: true,
+      img: '/flavor_imgs/Pom Kiwi Sorb.png',
       isInSeason: false,
-      id: 14,
-      isCatering: true,
+      description:
+        'A unique combo of freshly juiced pomegranate seeds and mouth watering kiwi for a refreshing sorbet perfect for any season.',
+      id: 19,
     },
     {
       title: 'Avocado Chocolate Chip',
       isGF: true,
       id: 17,
-      isInSeason: true,
+      isInSeason: false,
     },
     {
       title: 'Peaches & Cream',
       isGF: true,
       id: 18,
-      isInSeason: false,
+      isInSeason: true,
     },
 
     {
