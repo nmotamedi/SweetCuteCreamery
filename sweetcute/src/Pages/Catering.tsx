@@ -114,18 +114,18 @@ export function Catering() {
               <div className="relative w-full h-full rounded-2xl justify-center bg-[#94cbf8] p-2 md:p-5">
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
-                    $12 per person with cart and server
+                    $12 per person
                   </h3>
                 </div>
                 <div className="relative p-3">
                   <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl text-center">
                     <li>
-                      Pre-packaged, ready to hand out to your guests from our
-                      ice cream cart!
-                    </li>
-                    <li>
                       Your choice of 2 flavors of ice cream on scratch made
                       Chocolate Chip Cookies.
+                    </li>
+                    <li>
+                      Pre-packaged, ready to hand out to your guests from our
+                      ice cream cart!
                     </li>
                   </ul>
                 </div>
@@ -148,16 +148,16 @@ export function Catering() {
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5">
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
-                    $10 per person with cart and server
+                    $10 per person
                   </h3>
                 </div>
                 <div className="relative p-3">
                   <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl text-center">
+                    <li>Your choice of 3 flavors of Ice Cream.</li>
                     <li>
                       Pre-scooped into sealed cups, ready to hand out to your
                       guests from our ice cream cart.
                     </li>
-                    <li>Your choice of 3 flavors of Ice Cream.</li>
                   </ul>
                 </div>
                 <div className="w-full text-center flex justify-center p-3">
@@ -228,6 +228,16 @@ export function Catering() {
                     </li>
                   );
                 })}
+                <li className="my-2 w-1/2 px-4 list-inside">
+                  <div className="inline-flex justify-between w-10/12">
+                    <h4 className="text-base md:text-lg">Seasonal Sorbet</h4>
+                    <div className="flex justify-center sm:justify-left items-center w-1/4 flex-col sm:flex-row">
+                      <div className="inline mx-2">
+                        <DFBullet />
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
             <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-2xl mb-4">

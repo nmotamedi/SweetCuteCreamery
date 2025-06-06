@@ -162,7 +162,6 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isVegan: true,
       img: '/flavor_imgs/Strawberry Lemonade (1).png',
       id: 14,
-      isCatering: true,
     },
     {
       title: 'Caramel Brownie Sundae',
