@@ -120,7 +120,7 @@ export function Catering() {
                 <div className="relative p-3">
                   <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl text-center">
                     <li>
-                      Your choice of 2 flavors of ice cream on scratch made
+                      Your choice of 2 flavors of Ice Cream on scratch made
                       Chocolate Chip Cookies.
                     </li>
                     <li>
@@ -156,7 +156,7 @@ export function Catering() {
                     <li>Your choice of 3 flavors of Ice Cream.</li>
                     <li>
                       Pre-scooped into sealed cups, ready to hand out to your
-                      guests from our ice cream cart.
+                      guests from our ice cream cart!
                     </li>
                   </ul>
                 </div>
