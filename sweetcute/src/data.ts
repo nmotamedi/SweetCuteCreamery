@@ -243,6 +243,15 @@ export const cateringTiers: CateringTier[] = [
   { price: 1800, guestRange: '151 - 200', flavorCount: 4, addFlavorPrice: 75 },
 ];
 
+export const cateringAddOns: { desc: string; price: string }[] = [
+  { desc: 'Waffle Cones', price: '$0.50/guest' },
+  { desc: 'Extra Hour of Service', price: '$100' },
+  { desc: 'Extra Scooper (for faster service)', price: '$100/hr' },
+  { desc: 'Travel over 25 miles from Culver City', price: '$5/mile' },
+  { desc: 'Toppings bar - Sprinkles, Peanuts, M&Ms', price: '$2/guest' },
+  { desc: 'Custom Ice Cream Flavors', price: 'Contact for Quote' },
+];
+
 export const cateringFlavors = [
   ...flavors.foreverFlavors,
   ...flavors.sidePieces,
