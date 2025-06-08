@@ -200,8 +200,10 @@ export function Catering() {
                   return (
                     <li key={index} className="my-2 w-1/2 px-4 list-inside">
                       <div className="inline-flex justify-between w-10/12">
-                        <h4 className="text-base md:text-lg">{flavor.title}</h4>
-                        <div className="flex justify-center sm:justify-left items-center w-1/4 flex-col sm:flex-row">
+                        <h4 className="text-sm sm:text-base md:text-lg w-9/12">
+                          {flavor.title}
+                        </h4>
+                        <div className="flex justify-between sm:justify-left items-center w-1/6 flex-col sm:flex-row">
                           {flavor.isVegan ? (
                             <div className="inline mx-2">
                               <VeganBullet />
