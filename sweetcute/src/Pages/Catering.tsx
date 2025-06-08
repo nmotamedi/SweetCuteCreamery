@@ -78,7 +78,7 @@ export function Catering() {
             Artisanal Ice Cream Catering
           </h2>
           <div className="flex flex-wrap justify-center mx-3 md:mx-16">
-            <div className="basis-[80%] sm:basis-[40%] my-2 md:my-4 rounded-2xl">
+            <div className="basis-[90%] sm:basis-[40%] my-2 md:my-4 rounded-2xl">
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center mt-5">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl p-2  bg-white rounded-xl w-fit h-fit drop-shadow-xl">
@@ -86,7 +86,7 @@ export function Catering() {
                   </h3>
                 </div>
                 <div className="relative ">
-                  <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl p-2 pt-3 lg:p-6 text-left list-disc">
+                  <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl pl-4 md:pl-0 p-2 pt-3 lg:p-6 text-left list-disc">
                     <li>Hand Scooped Premium Ice Cream</li>
                     <li>1 Scooper</li>
                     <li>2 Hours of service (plus 30 minute set up)</li>
@@ -111,7 +111,7 @@ export function Catering() {
           </h2>
           <div className="flex flex-wrap justify-center ">
             <div className="basis-[60%] lg:basis-[40%] rounded-2xl">
-              <div className="relative w-full h-full rounded-2xl justify-center bg-[#94cbf8] p-2 md:p-5">
+              <div className="relative w-full h-full rounded-2xl justify-center bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
                     $12 per person
@@ -145,7 +145,7 @@ export function Catering() {
           </h2>
           <div className="flex flex-wrap justify-center ">
             <div className="basis-[60%] lg:basis-[40%] =rounded-2xl">
-              <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5">
+              <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
                     $10 per person
