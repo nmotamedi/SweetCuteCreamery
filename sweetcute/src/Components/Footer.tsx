@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
@@ -45,11 +45,23 @@ export function Footer() {
           </a>
           <a
             className="rounded-full w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
-            href="https://g.page/r/CYap19fkGsPtECA/review"
+            href="https://maps.app.goo.gl/9cytRLRWYS4D2AEs7"
           >
-            <p className="font-PoppinsLight text-white text-center">
-              Leave a review!
-            </p>
+            <img
+              className="w-12 grayscale"
+              src="Google_Maps_icon.png"
+              alt="Google Maps logo in white"
+            />
+          </a>
+          <a
+            className="rounded-full w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
+            href="https://www.yelp.com/biz/sweet-cute-ice-cream-culver-city?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
+          >
+            <img
+              className="w-12 grayscale"
+              src="yelp_burst.png"
+              alt="Yelp logo in white"
+            />
           </a>
         </div>
       </div>

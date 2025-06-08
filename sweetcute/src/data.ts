@@ -8,6 +8,7 @@ export type Flavors = {
   isVegan?: boolean;
   isDairyFree?: boolean;
   isInSeason?: boolean;
+  isCatering?: boolean;
 };
 
 export type QuizQuestions = {
@@ -17,6 +18,13 @@ export type QuizQuestions = {
   option2: string;
 }[];
 
+export type CateringTier = {
+  guestRange: string;
+  flavorCount: number;
+  addFlavorPrice: number;
+  price: number;
+};
+
 export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
   foreverFlavors: [
     {
@@ -25,6 +33,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 1,
       img: '/flavor_imgs/Sweet Cream Vanilla.png',
+      isCatering: true,
     },
     {
       title: 'Double Dark Chocolate',
@@ -35,6 +44,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 2,
       img: '/flavor_imgs/Double Dark Choc.png',
+      isCatering: true,
     },
     {
       title: 'Hazelnut Chocolate Crunch',
@@ -45,6 +55,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 3,
       img: '/flavor_imgs/Hazelnute Chocolate Crunch (1).png',
+      isCatering: true,
     },
     {
       title: 'Cookie Dough',
@@ -54,6 +65,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         'Like Cookie Dough, you are strong, bold and trendy. You bring the energy in every situation, so much so that people always want to come back for more! You are not afraid to speak up for what you believe in and stand out! Grab a pint of the addictively chunky Cookie Dough today!',
       id: 4,
       img: '/flavor_imgs/Cookie Dough.png',
+      isCatering: true,
     },
     {
       title: 'Banana Chocolate Chip',
@@ -64,6 +76,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 5,
       img: '/flavor_imgs/Banana Choc Chip.png',
+      isCatering: true,
     },
     {
       title: 'Chocolate Caramel Waffle Cone',
@@ -80,6 +93,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       respDescription:
         'Like S’mores you are full of child-like wonder and are sweet as can be. You are the friend that everyone counts on for a shoulder to cry on but you also know how to brighten up everyone’s day. You are sweet, compassionate, and you probably give great hugs! Grab a pint of nostalgic S’mores today!',
       id: 7,
+      isCatering: true,
     },
     {
       title: 'Pistachio Chocolate Chip',
@@ -88,6 +102,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       img: '/flavor_imgs/Pistachio Choc Chip.png',
       id: 8,
+      isCatering: true,
     },
     {
       title: 'Birthday Cake',
@@ -97,6 +112,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         'Like Birthday Cake, you aren’t afraid to let your personality shine! You are sweet and friendly, but also know how to party! You are full of flavor and full of surprises, keeping everyone in your life guessing what spontaneous fun you’ll bring to their lives next! Grab a pint of the party-starting Birthday Cake today!',
       id: 9,
       img: '/flavor_imgs/Birthday Cake.png',
+      isCatering: true,
     },
     {
       title: 'M&M Flurry',
@@ -104,6 +120,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 10,
       img: '/flavor_imgs/M&M Flurry.png',
+      isCatering: true,
     },
     {
       title: 'Strawberry Chocolate Chip',
@@ -114,6 +131,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       img: '/flavor_imgs/Strawberry Chocolate Chip (1).png',
       id: 11,
+      isCatering: true,
     },
     {
       title: 'Peanut Butter Salted Ganache',
@@ -124,6 +142,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 12,
       img: '/flavor_imgs/PB Salted Ganache.png',
+      isCatering: true,
     },
     {
       title: 'Vegan Coconut Chip',
@@ -133,6 +152,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isVegan: true,
       id: 13,
       img: '/flavor_imgs/coconut_chip.png',
+      isCatering: true,
     },
     {
       title: 'Strawberry Lemonade Sorbet',
@@ -149,6 +169,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
         'House made fudge brownies pieces in our sweet cream base with a salty caramel swirl!',
       id: 15,
       img: '/flavor_imgs/Caramel Brownie Sundae.png',
+      isCatering: true,
     },
   ],
   sidePieces: [
@@ -156,6 +177,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Mint Cookies & Cream',
       id: 16,
       isInSeason: false,
+      isCatering: true,
     },
     {
       title: 'Kiwi Pomegranate Sorbet',
@@ -200,6 +222,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: true,
       id: 22,
       isInSeason: false,
+      isCatering: true,
     },
     { title: 'Cookies & Cream', id: 23, isInSeason: false },
     { title: 'Speculoos Cookie Butter', id: 24, isInSeason: false },
@@ -211,6 +234,27 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     { title: 'Halloween Candy Crunch', id: 26, isInSeason: false },
   ],
 };
+
+export const cateringTiers: CateringTier[] = [
+  { price: 500, guestRange: '25 - 50', flavorCount: 2, addFlavorPrice: 50 },
+  { price: 950, guestRange: '51 - 100', flavorCount: 3, addFlavorPrice: 75 },
+  { price: 1400, guestRange: '101 - 150', flavorCount: 4, addFlavorPrice: 75 },
+  { price: 1800, guestRange: '151 - 200', flavorCount: 4, addFlavorPrice: 75 },
+];
+
+export const cateringAddOns: { desc: string; price: string }[] = [
+  { desc: 'Waffle Cones', price: '$0.50/guest' },
+  { desc: 'Extra Hour of Service', price: '$100' },
+  { desc: 'Extra Scooper (for faster service)', price: '$100/hr' },
+  { desc: 'Travel over 25 miles from Culver City', price: '$5/mile' },
+  { desc: 'Toppings bar - Sprinkles, Peanuts, M&Ms', price: '$2/guest' },
+  { desc: 'Custom Ice Cream Flavors', price: 'Contact for Quote' },
+];
+
+export const cateringFlavors = [
+  ...flavors.foreverFlavors,
+  ...flavors.sidePieces,
+].filter((flavor) => flavor.isCatering);
 
 export const quizQuestions: QuizQuestions = [
   {
