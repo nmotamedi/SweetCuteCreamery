@@ -40,8 +40,8 @@ export function Catering() {
         desiredPackage,
       };
       emailjs
-        .send('service_xupfg62', 'template_cszp1rv', emailParams, {
-          publicKey: 'Hn_2krR1sFjxnrUyV',
+        .send('service_vyn7d25', 'template_uyudw3e', emailParams, {
+          publicKey: 'xWvR0d6huBxCsxOxl',
         })
         .then(
           () => {
