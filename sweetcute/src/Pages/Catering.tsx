@@ -103,9 +103,10 @@ export function Catering() {
             rightImageObject="object-center"
             className=""
             columnClasses={{
-              left: 'basis-[90%] sm:basis-[28%] sm:mr-2 drop-shadow-xl',
-              right: 'basis-[90%] sm:basis-[28%] sm:ml-2 drop-shadow-xl',
-              middle: 'basis-[90%] sm:basis-[40%]',
+              left: 'basis-[80%] sm:basis-[28%] sm:mr-2 drop-shadow-xl my-2 sm:my-0',
+              right:
+                'basis-[80%] sm:basis-[28%] sm:ml-2 drop-shadow-xl my-2 sm:my-0',
+              middle: 'basis-[80%] sm:basis-[40%] my-2 sm:my-0',
             }}
           />
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
@@ -156,9 +157,10 @@ export function Catering() {
             }
             className=""
             columnClasses={{
-              left: 'basis-[60%] lg:basis-[28%] lg:mr-2 drop-shadow-xl',
-              right: 'basis-[60%] lg:basis-[28%] lg:ml-2 drop-shadow-xl',
-              middle: 'basis-[60%] lg:basis-[40%]',
+              left: 'basis-[75%] lg:basis-[28%] lg:mr-2 drop-shadow-xl my-2 lg:my-0',
+              right:
+                'basis-[75%] lg:basis-[28%] lg:ml-2 drop-shadow-xl my-2 lg:my-0',
+              middle: 'basis-[75%] lg:basis-[40%] my-2 lg:my-0',
             }}
           />
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
@@ -303,7 +305,7 @@ export function Catering() {
                 name="name"
                 required
                 placeholder="Name"
-                className="bg-white rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={name}
                 onChange={(e) => setName(e.currentTarget.value)}
               />
@@ -313,7 +315,7 @@ export function Catering() {
                 name="email"
                 required
                 placeholder="Email"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={email}
                 onChange={(e) => setEmail(e.currentTarget.value)}
               />
@@ -323,7 +325,7 @@ export function Catering() {
                 name="phone"
                 required
                 placeholder="Contact Number"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={phone}
                 onChange={(e) => setPhone(e.currentTarget.value)}
               />
@@ -333,7 +335,7 @@ export function Catering() {
                 name="guestCount"
                 required
                 placeholder="Number of Guests"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={guestCount}
                 inputMode="numeric"
                 onChange={(e) => setGuestCount(e.currentTarget.value)}
@@ -344,7 +346,7 @@ export function Catering() {
                 name="eventDate"
                 required
                 placeholder="Event Date"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={eventDate}
                 onChange={(e) => setEventDate(e.currentTarget.value)}
               />
@@ -354,7 +356,7 @@ export function Catering() {
                 name="eventLocation"
                 required
                 placeholder="Event Location"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={eventLocation}
                 onChange={(e) => setEventLocation(e.currentTarget.value)}
               />
@@ -364,13 +366,13 @@ export function Catering() {
                 name="eventType"
                 required
                 placeholder="Event Type"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={eventType}
                 onChange={(e) => setEventType(e.currentTarget.value)}
               />
 
               <select
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 onChange={(e) => setDesiredPackage(e.currentTarget.value)}
               >
                 <option defaultChecked value="">
