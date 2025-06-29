@@ -9,13 +9,18 @@ import {
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { CateringImageLayout } from '../Components/CateringImageLayout';
+import Datetime from 'react-datetime';
+import 'react-datetime/css/react-datetime.css';
+import moment from 'moment';
 
 export function Catering() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [eventType, setEventType] = useState('');
-  const [eventDate, setEventDate] = useState('');
+  const [eventDate, setEventDate] = useState<moment.Moment | undefined>(
+    undefined
+  );
   const [guestCount, setGuestCount] = useState('');
   const [eventLocation, setEventLocation] = useState('');
   const [desiredPackage, setDesiredPackage] = useState('');
@@ -35,7 +40,7 @@ export function Catering() {
         email,
         phone,
         eventType,
-        eventDate: new Date(eventDate).toLocaleString(),
+        eventDate: eventDate?.format('MMMM D, YYYY h:mm A'),
         eventLocation,
         guestCount,
         desiredPackage,
@@ -56,7 +61,7 @@ export function Catering() {
       setEmail('');
       setPhone('');
       setEventType('');
-      setEventDate('');
+      setEventDate(undefined);
       setEventLocation('');
       setGuestCount('');
       setDesiredPackage('');
@@ -341,19 +346,24 @@ export function Catering() {
                 onChange={(e) => setGuestCount(e.currentTarget.value)}
               />
 
-              <input
-                type="text"
-                onFocus={(e) => (e.currentTarget.type = 'datetime-local')}
-                onBlur={(e) => {
-                  if (!e.currentTarget.value) e.currentTarget.type = 'text';
-                }}
-                name="eventDate"
-                required
-                placeholder="Event Date"
-                className="block min-h-14 w-full rounded-full p-4 text-[#FF0000] placeholder:text-[#FF0000] appearance-none bg-white mb-2"
-                value={eventDate}
-                onChange={(e) => setEventDate(e.currentTarget.value)}
-              />
+              <div className="w-full mb-2">
+                <Datetime
+                  value={eventDate}
+                  onChange={(date) => {
+                    if (moment.isMoment(date)) {
+                      setEventDate(date);
+                    }
+                  }}
+                  inputProps={{
+                    name: 'eventDate',
+                    placeholder: 'Event Date & Time',
+                    className:
+                      'bg-white rounded-full p-4 w-full text-[#FF0000] placeholder:text-[#FF0000]',
+                    required: true,
+                  }}
+                  closeOnSelect={true}
+                />
+              </div>
 
               <input
                 type="text"
