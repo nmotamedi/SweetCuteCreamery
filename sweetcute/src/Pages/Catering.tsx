@@ -342,11 +342,15 @@ export function Catering() {
               />
 
               <input
-                type="datetime-local"
+                type="text"
+                onFocus={(e) => (e.currentTarget.type = 'datetime-local')}
+                onBlur={(e) => {
+                  if (!e.currentTarget.value) e.currentTarget.type = 'text';
+                }}
                 name="eventDate"
                 required
                 placeholder="Event Date"
-                className="block w-full rounded-full p-4 text-[#FF0000] appearance-none bg-white mb-2"
+                className="block min-h-14 w-full rounded-full p-4 text-[#FF0000] placeholder:text-[#FF0000] appearance-none bg-white mb-2"
                 value={eventDate}
                 onChange={(e) => setEventDate(e.currentTarget.value)}
               />
