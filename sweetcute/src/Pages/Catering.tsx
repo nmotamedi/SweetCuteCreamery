@@ -346,7 +346,7 @@ export function Catering() {
                 name="eventDate"
                 required
                 placeholder="Event Date"
-                className="bg-white rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
+                className="bg-white rounded-full p-4 w-full min-h-[56px] mb-2 placeholder:text-[#FF0000]"
                 value={eventDate}
                 onChange={(e) => setEventDate(e.currentTarget.value)}
               />
@@ -372,7 +372,7 @@ export function Catering() {
               />
 
               <select
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full min-h-[56px] mb-2 placeholder:text-[#FF0000]"
                 onChange={(e) => setDesiredPackage(e.currentTarget.value)}
               >
                 <option defaultChecked value="">
