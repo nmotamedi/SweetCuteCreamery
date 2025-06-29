@@ -21,7 +21,7 @@ export type QuizQuestions = {
 export type CateringTier = {
   guestRange: string;
   flavorCount: number;
-  addFlavorPrice: number;
+  addFlavorPrice?: number;
   price: number;
 };
 
@@ -238,14 +238,14 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
 export const cateringTiers: CateringTier[] = [
   { price: 500, guestRange: '25 - 50', flavorCount: 2, addFlavorPrice: 50 },
   { price: 950, guestRange: '51 - 100', flavorCount: 3, addFlavorPrice: 75 },
-  { price: 1400, guestRange: '101 - 150', flavorCount: 4, addFlavorPrice: 75 },
-  { price: 1800, guestRange: '151 - 200', flavorCount: 4, addFlavorPrice: 75 },
+  { price: 1400, guestRange: '101 - 150', flavorCount: 4 },
+  { price: 1800, guestRange: '151 - 200', flavorCount: 4 },
 ];
 
 export const cateringAddOns: { desc: string; price: string }[] = [
   { desc: 'Waffle Cones', price: '$0.50/guest' },
   { desc: 'Extra Hour of Service', price: '$100' },
-  { desc: 'Extra Scooper (for faster service)', price: '$100/hr' },
+  { desc: 'Extra Server (req. over 150 guests)', price: '$100/hr' },
   { desc: 'Travel over 25 miles from Culver City', price: '$5/mile' },
   { desc: 'Toppings bar - Sprinkles, Peanuts, M&Ms', price: '$2/guest' },
   { desc: 'Custom Ice Cream Flavors', price: 'Contact for Quote' },

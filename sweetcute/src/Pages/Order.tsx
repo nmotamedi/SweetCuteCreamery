@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from "react";
-import { flavors } from "../data";
-import emailjs from "@emailjs/browser";
-import { Helmet } from "react-helmet";
+import { useState, useRef, useEffect } from 'react';
+import { flavors } from '../data';
+import emailjs from '@emailjs/browser';
+import { Helmet } from 'react-helmet';
 
 type OptionProps = {
   option: string;
@@ -9,12 +9,12 @@ type OptionProps = {
 };
 
 export function Order() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [notes, setNotes] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [notes, setNotes] = useState('');
   const [pickUpDelivery, setPickUpDelivery] = useState<
-    "pickUp" | "delivery" | ""
-  >("");
+    'pickUp' | 'delivery' | ''
+  >('');
   const [selectedFlavors, setSelectedFlavors] = useState<Map<string, number>>(
     new Map()
   );
@@ -78,7 +78,7 @@ export function Order() {
     event.preventDefault();
     try {
       if (!form.current) {
-        throw new Error("Error");
+        throw new Error('Error');
       }
       const emailParams = {
         selectedFlavors: JSON.stringify(Object.fromEntries(selectedFlavors)),
@@ -88,21 +88,21 @@ export function Order() {
         notes,
       };
       emailjs
-        .send("service_vyn7d25", "template_nh8jalo", emailParams, {
-          publicKey: "xWvR0d6huBxCsxOxl",
+        .send('service_vyn7d25', 'template_nh8jalo', emailParams, {
+          publicKey: 'xWvR0d6huBxCsxOxl',
         })
         .then(
           () => {
-            alert("Email successfully sent");
+            alert('Email successfully sent');
           },
           (error) => {
             throw new Error(error);
           }
         );
-      setName("");
-      setEmail("");
-      setNotes("");
-      setPickUpDelivery("");
+      setName('');
+      setEmail('');
+      setNotes('');
+      setPickUpDelivery('');
       setSelectedFlavors(new Map());
     } catch (err) {
       alert(err);
@@ -129,7 +129,7 @@ export function Order() {
           LOS ANGELES
         </h2>
         <h3 className="font-PoppinsBold text-white text-sm md:text-xl mb-3">
-          $12 PER PINT
+          $13 PER PINT
           <br />
           <br />
           FOR LARGER ORDERS, PLEASE ALLOW 3-5 DAYS FOR PRODUCTION!
@@ -171,10 +171,10 @@ export function Order() {
                 onClick={toggleDropdown}
               >
                 <div className="flex-grow truncate text-[#FF0000]">
-                  {"Select Flavors"}
+                  {'Select Flavors'}
                 </div>
                 <div className="text-[#FF0000]">
-                  {isDropdownOpen ? "▲" : "▼"}
+                  {isDropdownOpen ? '▲' : '▼'}
                 </div>
               </div>
               {isDropdownOpen && (
@@ -182,9 +182,9 @@ export function Order() {
                   {flavors.foreverFlavors.map((option) => (
                     <Option
                       key={option.id}
-                      option={`${option.title}${option.isGF ? " - GF" : ""}${
-                        option.isVegan ? " - V" : ""
-                      }${option.isDairyFree ? " - DF" : ""}`}
+                      option={`${option.title}${option.isGF ? ' - GF' : ''}${
+                        option.isVegan ? ' - V' : ''
+                      }${option.isDairyFree ? ' - DF' : ''}`}
                       handleCheckboxChange={handleCheckboxChange}
                     />
                   ))}
@@ -194,9 +194,9 @@ export function Order() {
                         <Option
                           key={option.id}
                           option={`${option.title}${
-                            option.isGF ? " - GF" : ""
-                          }${option.isVegan ? " - V" : ""}${
-                            option.isDairyFree ? " - DF" : ""
+                            option.isGF ? ' - GF' : ''
+                          }${option.isVegan ? ' - V' : ''}${
+                            option.isDairyFree ? ' - DF' : ''
                           }`}
                           handleCheckboxChange={handleCheckboxChange}
                         />
@@ -212,7 +212,7 @@ export function Order() {
                 <h2
                   onClick={() =>
                     setPickUpDelivery(
-                      pickUpDelivery === "pickUp" ? "" : "pickUp"
+                      pickUpDelivery === 'pickUp' ? '' : 'pickUp'
                     )
                   }
                   className="cursor-pointer"
@@ -223,10 +223,10 @@ export function Order() {
                   type="radio"
                   name="Pick Up"
                   value="pickUp"
-                  checked={pickUpDelivery === "pickUp"}
+                  checked={pickUpDelivery === 'pickUp'}
                   onChange={() =>
                     setPickUpDelivery(
-                      pickUpDelivery === "pickUp" ? "" : "pickUp"
+                      pickUpDelivery === 'pickUp' ? '' : 'pickUp'
                     )
                   }
                 />
@@ -235,7 +235,7 @@ export function Order() {
                 <h2
                   onClick={() =>
                     setPickUpDelivery(
-                      pickUpDelivery === "delivery" ? "" : "delivery"
+                      pickUpDelivery === 'delivery' ? '' : 'delivery'
                     )
                   }
                   className="cursor-pointer"
@@ -246,10 +246,10 @@ export function Order() {
                   type="radio"
                   name="Delivery"
                   value="delivery"
-                  checked={pickUpDelivery === "delivery"}
+                  checked={pickUpDelivery === 'delivery'}
                   onChange={() =>
                     setPickUpDelivery(
-                      pickUpDelivery === "delivery" ? "" : "delivery"
+                      pickUpDelivery === 'delivery' ? '' : 'delivery'
                     )
                   }
                 />

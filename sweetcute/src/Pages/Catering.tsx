@@ -8,6 +8,7 @@ import {
 } from '../data';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { CateringImageLayout } from '../Components/CateringImageLayout';
 
 export function Catering() {
   const [name, setName] = useState('');
@@ -77,8 +78,10 @@ export function Catering() {
           <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 mb-4 underline">
             Artisanal Ice Cream Catering
           </h2>
-          <div className="flex flex-wrap justify-center mx-3 md:mx-16">
-            <div className="basis-[90%] sm:basis-[40%] my-2 md:my-4 rounded-2xl">
+          <CateringImageLayout
+            leftImageSrc="/catering_imgs/IMG_0740.jpg"
+            rightImageSrc="/catering_imgs/IMG_0741.jpg"
+            middleCard={
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center mt-5">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl p-2  bg-white rounded-xl w-fit h-fit drop-shadow-xl">
@@ -95,8 +98,16 @@ export function Catering() {
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
+            }
+            leftImageObject="object-left"
+            rightImageObject="object-center"
+            className=""
+            columnClasses={{
+              left: 'basis-[90%] sm:basis-[28%] sm:mr-2 drop-shadow-xl',
+              right: 'basis-[90%] sm:basis-[28%] sm:ml-2 drop-shadow-xl',
+              middle: 'basis-[90%] sm:basis-[40%]',
+            }}
+          />
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Hand Scooped Package
           </h2>
@@ -109,11 +120,13 @@ export function Catering() {
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Ice Cream Sammie Package
           </h2>
-          <div className="flex flex-wrap justify-center ">
-            <div className="basis-[60%] lg:basis-[40%] rounded-2xl">
+          <CateringImageLayout
+            leftImageSrc="/catering_imgs/IMG_0773.jpeg"
+            rightImageSrc="/catering_imgs/IMG_0791.jpg"
+            middleCard={
               <div className="relative w-full h-full rounded-2xl justify-center bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center p-3">
-                  <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
+                  <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl bg-white rounded-xl w-fit h-fit p-3">
                     $12 per person
                   </h3>
                 </div>
@@ -134,9 +147,20 @@ export function Catering() {
                     $8 per sandwich for pickup
                   </h3>
                 </div>
+                <div className="w-full text-center flex justify-center p-3">
+                  <h3 className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl text-center underline">
+                    Max order - 100 sandwiches
+                  </h3>
+                </div>
               </div>
-            </div>
-          </div>
+            }
+            className=""
+            columnClasses={{
+              left: 'basis-[60%] lg:basis-[28%] lg:mr-2 drop-shadow-xl',
+              right: 'basis-[60%] lg:basis-[28%] lg:ml-2 drop-shadow-xl',
+              middle: 'basis-[60%] lg:basis-[40%]',
+            }}
+          />
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Pre-Scooped Package
           </h2>
@@ -149,6 +173,11 @@ export function Catering() {
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
                     $10 per person
+                  </h3>
+                </div>
+                <div className="w-full text-center flex justify-center p-3">
+                  <h3 className="text-black font-FaroVariable text-sm md:text-lg xl:text-2xl  bg-white rounded-xl w-fit h-fit p-3">
+                    $9 per person for parties over 200 guests
                   </h3>
                 </div>
                 <div className="relative p-3">
@@ -381,7 +410,9 @@ function PackageCard({ tier }: { tier: CateringTier }) {
         </div>
         <div className="text-center relative text-black font-PoppinsLight text-sm md:text-lg xl:text-xl">
           <h3>{tier.flavorCount} Flavors</h3>
-          <h3>${tier.addFlavorPrice} for additional flavor</h3>
+          {tier.addFlavorPrice && (
+            <h3>${tier.addFlavorPrice} for additional flavor</h3>
+          )}
         </div>
       </div>
     </div>
