@@ -8,13 +8,19 @@ import {
 } from '../data';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { CateringImageLayout } from '../Components/CateringImageLayout';
+import Datetime from 'react-datetime';
+import 'react-datetime/css/react-datetime.css';
+import moment from 'moment';
 
 export function Catering() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [eventType, setEventType] = useState('');
-  const [eventDate, setEventDate] = useState('');
+  const [eventDate, setEventDate] = useState<moment.Moment | undefined>(
+    undefined
+  );
   const [guestCount, setGuestCount] = useState('');
   const [eventLocation, setEventLocation] = useState('');
   const [desiredPackage, setDesiredPackage] = useState('');
@@ -34,7 +40,7 @@ export function Catering() {
         email,
         phone,
         eventType,
-        eventDate: new Date(eventDate).toLocaleString(),
+        eventDate: eventDate?.format('MMMM D, YYYY h:mm A'),
         eventLocation,
         guestCount,
         desiredPackage,
@@ -55,7 +61,7 @@ export function Catering() {
       setEmail('');
       setPhone('');
       setEventType('');
-      setEventDate('');
+      setEventDate(undefined);
       setEventLocation('');
       setGuestCount('');
       setDesiredPackage('');
@@ -77,8 +83,20 @@ export function Catering() {
           <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 mb-4 underline">
             Artisanal Ice Cream Catering
           </h2>
-          <div className="flex flex-wrap justify-center mx-3 md:mx-16">
-            <div className="basis-[90%] sm:basis-[40%] my-2 md:my-4 rounded-2xl">
+          <button
+            className="mb-4 p-4 font-FaroVariable text-black outline-black bg-[#94cbf8] border-white border-2 rounded-xl hover:drop-shadow-2xl"
+            onClick={() =>
+              document
+                .querySelector(`#contact`)
+                ?.scrollIntoView({ behavior: 'smooth' })
+            }
+          >
+            Get in touch!
+          </button>
+          <CateringImageLayout
+            leftImageSrc="/catering_imgs/IMG_0740.jpg"
+            rightImageSrc="/catering_imgs/IMG_0741.jpg"
+            middleCard={
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center mt-5">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl p-2  bg-white rounded-xl w-fit h-fit drop-shadow-xl">
@@ -95,8 +113,17 @@ export function Catering() {
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
+            }
+            leftImageObject="object-left"
+            rightImageObject="object-center"
+            className=""
+            columnClasses={{
+              left: 'basis-[80%] sm:basis-[28%] sm:mr-2 drop-shadow-xl my-2 sm:my-0',
+              right:
+                'basis-[80%] sm:basis-[28%] sm:ml-2 drop-shadow-xl my-2 sm:my-0',
+              middle: 'basis-[80%] sm:basis-[40%] my-2 sm:my-0',
+            }}
+          />
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Hand Scooped Package
           </h2>
@@ -109,11 +136,13 @@ export function Catering() {
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Ice Cream Sammie Package
           </h2>
-          <div className="flex flex-wrap justify-center ">
-            <div className="basis-[60%] lg:basis-[40%] rounded-2xl">
+          <CateringImageLayout
+            leftImageSrc="/catering_imgs/IMG_0773.jpeg"
+            rightImageSrc="/catering_imgs/IMG_0791.jpg"
+            middleCard={
               <div className="relative w-full h-full rounded-2xl justify-center bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center p-3">
-                  <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
+                  <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl bg-white rounded-xl w-fit h-fit p-3">
                     $12 per person
                   </h3>
                 </div>
@@ -134,9 +163,21 @@ export function Catering() {
                     $8 per sandwich for pickup
                   </h3>
                 </div>
+                <div className="w-full text-center flex justify-center p-3">
+                  <h3 className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl text-center underline">
+                    Max order - 100 sandwiches
+                  </h3>
+                </div>
               </div>
-            </div>
-          </div>
+            }
+            className=""
+            columnClasses={{
+              left: 'basis-[75%] lg:basis-[28%] lg:mr-2 drop-shadow-xl my-2 lg:my-0',
+              right:
+                'basis-[75%] lg:basis-[28%] lg:ml-2 drop-shadow-xl my-2 lg:my-0',
+              middle: 'basis-[75%] lg:basis-[40%] my-2 lg:my-0',
+            }}
+          />
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Pre-Scooped Package
           </h2>
@@ -149,6 +190,11 @@ export function Catering() {
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
                     $10 per person
+                  </h3>
+                </div>
+                <div className="w-full text-center flex justify-center p-3">
+                  <h3 className="text-black font-FaroVariable text-sm md:text-lg xl:text-2xl  bg-white rounded-xl w-fit h-fit p-3">
+                    $9 per person for parties over 200 guests
                   </h3>
                 </div>
                 <div className="relative p-3">
@@ -260,7 +306,10 @@ export function Catering() {
               </div>
             </div>
           </div>
-          <div className="text-center pb-4 md:pb-16 w-11/12 md:w-5/12 m-auto">
+          <div
+            className="text-center pb-4 md:pb-16 w-11/12 md:w-5/12 m-auto"
+            id="contact"
+          >
             <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
               Booking Inquiry Form
             </h2>
@@ -274,7 +323,7 @@ export function Catering() {
                 name="name"
                 required
                 placeholder="Name"
-                className="bg-white rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={name}
                 onChange={(e) => setName(e.currentTarget.value)}
               />
@@ -284,7 +333,7 @@ export function Catering() {
                 name="email"
                 required
                 placeholder="Email"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={email}
                 onChange={(e) => setEmail(e.currentTarget.value)}
               />
@@ -294,7 +343,7 @@ export function Catering() {
                 name="phone"
                 required
                 placeholder="Contact Number"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={phone}
                 onChange={(e) => setPhone(e.currentTarget.value)}
               />
@@ -304,28 +353,37 @@ export function Catering() {
                 name="guestCount"
                 required
                 placeholder="Number of Guests"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={guestCount}
                 inputMode="numeric"
                 onChange={(e) => setGuestCount(e.currentTarget.value)}
               />
 
-              <input
-                type="datetime-local"
-                name="eventDate"
-                required
-                placeholder="Event Date"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
-                value={eventDate}
-                onChange={(e) => setEventDate(e.currentTarget.value)}
-              />
+              <div className="w-full mb-2">
+                <Datetime
+                  value={eventDate}
+                  onChange={(date) => {
+                    if (moment.isMoment(date)) {
+                      setEventDate(date);
+                    }
+                  }}
+                  inputProps={{
+                    name: 'eventDate',
+                    placeholder: 'Event Date & Time',
+                    className:
+                      'bg-white rounded-full p-4 w-full text-[#FF0000] placeholder:text-[#FF0000]',
+                    required: true,
+                  }}
+                  closeOnSelect={true}
+                />
+              </div>
 
               <input
                 type="text"
                 name="eventLocation"
                 required
                 placeholder="Event Location"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={eventLocation}
                 onChange={(e) => setEventLocation(e.currentTarget.value)}
               />
@@ -335,13 +393,13 @@ export function Catering() {
                 name="eventType"
                 required
                 placeholder="Event Type"
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={eventType}
                 onChange={(e) => setEventType(e.currentTarget.value)}
               />
 
               <select
-                className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+                className="block w-full rounded-full p-4 text-[#FF0000] appearance-none bg-white mb-2"
                 onChange={(e) => setDesiredPackage(e.currentTarget.value)}
               >
                 <option defaultChecked value="">
@@ -381,7 +439,9 @@ function PackageCard({ tier }: { tier: CateringTier }) {
         </div>
         <div className="text-center relative text-black font-PoppinsLight text-sm md:text-lg xl:text-xl">
           <h3>{tier.flavorCount} Flavors</h3>
-          <h3>${tier.addFlavorPrice} for additional flavor</h3>
+          {tier.addFlavorPrice && (
+            <h3>${tier.addFlavorPrice} for additional flavor</h3>
+          )}
         </div>
       </div>
     </div>
