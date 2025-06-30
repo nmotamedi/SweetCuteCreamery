@@ -83,6 +83,16 @@ export function Catering() {
           <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 mb-4 underline">
             Artisanal Ice Cream Catering
           </h2>
+          <button
+            className="mb-4 p-4 font-FaroVariable text-black outline-black bg-[#94cbf8] border-white border-2 rounded-xl hover:drop-shadow-2xl"
+            onClick={() =>
+              document
+                .querySelector(`#contact`)
+                ?.scrollIntoView({ behavior: 'smooth' })
+            }
+          >
+            Get in touch!
+          </button>
           <CateringImageLayout
             leftImageSrc="/catering_imgs/IMG_0740.jpg"
             rightImageSrc="/catering_imgs/IMG_0741.jpg"
@@ -296,7 +306,10 @@ export function Catering() {
               </div>
             </div>
           </div>
-          <div className="text-center pb-4 md:pb-16 w-11/12 md:w-5/12 m-auto">
+          <div
+            className="text-center pb-4 md:pb-16 w-11/12 md:w-5/12 m-auto"
+            id="contact"
+          >
             <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
               Booking Inquiry Form
             </h2>
