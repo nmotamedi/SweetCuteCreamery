@@ -76,7 +76,7 @@ export function Catering() {
       <div className="flex  relative flex-wrap bg-[#FAE498] w-full min-h-svh">
         <div className="text-center py-1 md:pb-4 lg:pb-20 w-full">
           <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 mb-4 underline">
-            Artisanal Ice Cream Catering
+            Artisan Ice Cream Catering
           </h2>
           <button
             className="mb-4 p-4 font-FaroVariable text-black outline-black bg-[#94cbf8] border-white border-2 rounded-xl hover:drop-shadow-2xl"
@@ -122,8 +122,10 @@ export function Catering() {
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Hand Scooped Package
           </h2>
-          <div className="flex flex-wrap justify-center mx-3 md:mx-16">
-            <div className="basis-[60%] sm:basis-[40%] lg:basis-[30%] xl:basis-[20%] rounded-2xl my-2 sm:my-0 mx-5">
+          <CateringImageLayout
+            leftImageSrc="/catering_imgs/IMG_5119.jpg"
+            rightImageSrc="/catering_imgs/IMG_2018 (2).jpg"
+            middleCard={
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] drop-shadow-xl p-5">
                 <div className=" w-full text-center flex flex-col justify-center items-center">
                   <h3 className="text-black font-FaroVariable text-base md:text-lg lg:text-xl  bg-white rounded-xl w-fit h-fit p-3 my-3 text-center">
@@ -143,8 +145,18 @@ export function Catering() {
                   <h3>$75 for additional flavor</h3>
                 </div>
               </div>
-            </div>
-          </div>
+            }
+            className=""
+            leftImageObject="object-center"
+            rightImageObject="object-top"
+            columnClasses={{
+              left: 'basis-[60%] sm:basis-[25%] lg:basis-[30%] xl:basis-[30%] lg:mr-2 drop-shadow-xl my-2 lg:my-0',
+              right:
+                'basis-[60%] sm:basis-[25%] lg:basis-[30%] xl:basis-[30%] lg:ml-2 drop-shadow-xl my-2 lg:my-0',
+              middle:
+                'basis-[60%] sm:basis-[40%] lg:basis-[30%] xl:basis-[20%] my-2 sm:my-0 mx-5',
+            }}
+          />
 
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Ice Cream Sammie Package
