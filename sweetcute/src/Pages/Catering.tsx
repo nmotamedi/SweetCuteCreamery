@@ -106,7 +106,7 @@ export function Catering() {
                 <div className="relative ">
                   <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl pl-4 md:pl-0 p-2 pt-3 lg:p-6 text-left list-disc">
                     <li>Hand Scooped Premium Ice Cream</li>
-                    <li>1 Scooper</li>
+                    <li>1 Server (extra required over 150 guests)</li>
                     <li>2 Hours of service (plus 30 minute set up)</li>
                     <li>Sweet Cute Ice Cream cart w/ umbrella</li>
                     <li>Cups, spoons, and napkins</li>
@@ -127,7 +127,7 @@ export function Catering() {
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Hand Scooped Package
           </h2>
-          <div className="flex flex-wrap justify-between mx-3 md:mx-16">
+          <div className="flex flex-wrap justify-center mx-3 md:mx-16">
             {cateringTiers.map((tier, index) => (
               <PackageCard key={index} tier={tier} />
             ))}
@@ -143,7 +143,7 @@ export function Catering() {
               <div className="relative w-full h-full rounded-2xl justify-center bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl bg-white rounded-xl w-fit h-fit p-3">
-                    $12 per person
+                    $10 per person
                   </h3>
                 </div>
                 <div className="relative p-3">
@@ -189,12 +189,7 @@ export function Catering() {
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
-                    $10 per person
-                  </h3>
-                </div>
-                <div className="w-full text-center flex justify-center p-3">
-                  <h3 className="text-black font-FaroVariable text-sm md:text-lg xl:text-2xl  bg-white rounded-xl w-fit h-fit p-3">
-                    $9 per person for parties over 200 guests
+                    $8 per person
                   </h3>
                 </div>
                 <div className="relative p-3">
@@ -351,6 +346,7 @@ export function Catering() {
               <input
                 type="number"
                 name="guestCount"
+                max={350}
                 required
                 placeholder="Number of Guests"
                 className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
@@ -425,7 +421,7 @@ export function Catering() {
 
 function PackageCard({ tier }: { tier: CateringTier }) {
   return (
-    <div className="basis-[48%] sm:basis-[24%] rounded-2xl my-2 sm:my-0">
+    <div className="basis-[25%] rounded-2xl my-2 sm:my-0 mx-5">
       <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] drop-shadow-xl p-5">
         <div className=" w-full text-center flex justify-center">
           <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl bg-white rounded-xl w-fit h-fit p-2">
@@ -434,14 +430,12 @@ function PackageCard({ tier }: { tier: CateringTier }) {
         </div>
         <div className="relative text-center p-2">
           <h2 className="text-[#FF0000] font-FaroVariable text-2xl md:text-3xl overflow-visible leading-none relative">
-            ${tier.price}
+            ${tier.price} per person
           </h2>
         </div>
         <div className="text-center relative text-black font-PoppinsLight text-sm md:text-lg xl:text-xl">
-          <h3>{tier.flavorCount} Flavors</h3>
-          {tier.addFlavorPrice && (
-            <h3>${tier.addFlavorPrice} for additional flavor</h3>
-          )}
+          <h3>{tier.info.split(':')[0]}</h3>
+          <h3>{tier.info.split(':')[1]}</h3>
         </div>
       </div>
     </div>

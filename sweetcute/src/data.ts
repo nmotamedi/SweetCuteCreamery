@@ -20,8 +20,7 @@ export type QuizQuestions = {
 
 export type CateringTier = {
   guestRange: string;
-  flavorCount: number;
-  addFlavorPrice?: number;
+  info: string;
   price: number;
 };
 
@@ -236,10 +235,16 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
 };
 
 export const cateringTiers: CateringTier[] = [
-  { price: 500, guestRange: '25 - 50', flavorCount: 2, addFlavorPrice: 50 },
-  { price: 950, guestRange: '51 - 100', flavorCount: 3, addFlavorPrice: 75 },
-  { price: 1400, guestRange: '101 - 150', flavorCount: 4 },
-  { price: 1800, guestRange: '151 - 200', flavorCount: 4 },
+  {
+    price: 9,
+    guestRange: '25 - 100',
+    info: '3 Flavors:$75 for an additional flavor',
+  },
+  {
+    price: 8,
+    guestRange: '101 - 350',
+    info: '3 Flavors:$75 for an additional flavor',
+  },
 ];
 
 export const cateringAddOns: { desc: string; price: string }[] = [
