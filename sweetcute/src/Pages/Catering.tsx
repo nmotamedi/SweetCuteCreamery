@@ -1,11 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { DFBullet, GFBullet, VeganBullet } from '../Components/FlavorCards';
-import {
-  cateringAddOns,
-  cateringFlavors,
-  CateringTier,
-  cateringTiers,
-} from '../data';
+import { cateringAddOns, cateringFlavors } from '../data';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { CateringImageLayout } from '../Components/CateringImageLayout';
