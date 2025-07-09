@@ -18,13 +18,6 @@ export type QuizQuestions = {
   option2: string;
 }[];
 
-export type CateringTier = {
-  guestRange: string;
-  flavorCount: number;
-  addFlavorPrice?: number;
-  price: number;
-};
-
 export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
   foreverFlavors: [
     {
@@ -234,13 +227,6 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     { title: 'Halloween Candy Crunch', id: 26, isInSeason: false },
   ],
 };
-
-export const cateringTiers: CateringTier[] = [
-  { price: 500, guestRange: '25 - 50', flavorCount: 2, addFlavorPrice: 50 },
-  { price: 950, guestRange: '51 - 100', flavorCount: 3, addFlavorPrice: 75 },
-  { price: 1400, guestRange: '101 - 150', flavorCount: 4 },
-  { price: 1800, guestRange: '151 - 200', flavorCount: 4 },
-];
 
 export const cateringAddOns: { desc: string; price: string }[] = [
   { desc: 'Waffle Cones', price: '$0.50/guest' },

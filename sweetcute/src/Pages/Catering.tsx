@@ -1,11 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { DFBullet, GFBullet, VeganBullet } from '../Components/FlavorCards';
-import {
-  cateringAddOns,
-  cateringFlavors,
-  CateringTier,
-  cateringTiers,
-} from '../data';
+import { cateringAddOns, cateringFlavors } from '../data';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { CateringImageLayout } from '../Components/CateringImageLayout';
@@ -81,7 +76,7 @@ export function Catering() {
       <div className="flex  relative flex-wrap bg-[#FAE498] w-full min-h-svh">
         <div className="text-center py-1 md:pb-4 lg:pb-20 w-full">
           <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 mb-4 underline">
-            Artisanal Ice Cream Catering
+            Artisan Ice Cream Catering
           </h2>
           <button
             className="mb-4 p-4 font-FaroVariable text-black outline-black bg-[#94cbf8] border-white border-2 rounded-xl hover:drop-shadow-2xl"
@@ -106,7 +101,7 @@ export function Catering() {
                 <div className="relative ">
                   <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl pl-4 md:pl-0 p-2 pt-3 lg:p-6 text-left list-disc">
                     <li>Hand Scooped Premium Ice Cream</li>
-                    <li>1 Scooper</li>
+                    <li>1 Server (extra required over 150 guests)</li>
                     <li>2 Hours of service (plus 30 minute set up)</li>
                     <li>Sweet Cute Ice Cream cart w/ umbrella</li>
                     <li>Cups, spoons, and napkins</li>
@@ -127,11 +122,41 @@ export function Catering() {
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Hand Scooped Package
           </h2>
-          <div className="flex flex-wrap justify-between mx-3 md:mx-16">
-            {cateringTiers.map((tier, index) => (
-              <PackageCard key={index} tier={tier} />
-            ))}
-          </div>
+          <CateringImageLayout
+            leftImageSrc="/catering_imgs/IMG_5119.jpg"
+            rightImageSrc="/catering_imgs/IMG_2018 (2).jpg"
+            middleCard={
+              <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] drop-shadow-xl p-5">
+                <div className=" w-full text-center flex flex-col justify-center items-center">
+                  <h3 className="text-black font-FaroVariable text-base md:text-lg lg:text-xl  bg-white rounded-xl w-fit h-fit p-3 my-3 text-center">
+                    $9 per Person
+                    <br />
+                    for guests 25 - 100
+                  </h3>
+                  <h3 className="text-black font-FaroVariable text-base md:text-lg lg:text-xl bg-white rounded-xl w-fit h-fit p-3 my-3 text-center">
+                    $8 per Person
+                    <br />
+                    for guests 101 - 350
+                  </h3>
+                </div>
+                <div className="text-center relative text-black font-PoppinsLight text-sm md:text-lg xl:text-xl">
+                  <h3 className="font-PoppinsBold underline">Includes:</h3>
+                  <h3>3 Flavors</h3>
+                  <h3>$75 for additional flavor</h3>
+                </div>
+              </div>
+            }
+            className=""
+            leftImageObject="object-center"
+            rightImageObject="object-top"
+            columnClasses={{
+              left: 'basis-[60%] sm:basis-[25%] lg:basis-[30%] xl:basis-[30%] lg:mr-2 drop-shadow-xl my-2 lg:my-0',
+              right:
+                'basis-[60%] sm:basis-[25%] lg:basis-[30%] xl:basis-[30%] lg:ml-2 drop-shadow-xl my-2 lg:my-0',
+              middle:
+                'basis-[60%] sm:basis-[40%] lg:basis-[30%] xl:basis-[20%] my-2 sm:my-0 mx-5',
+            }}
+          />
 
           <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
             Ice Cream Sammie Package
@@ -143,7 +168,7 @@ export function Catering() {
               <div className="relative w-full h-full rounded-2xl justify-center bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl bg-white rounded-xl w-fit h-fit p-3">
-                    $12 per person
+                    $10 per person
                   </h3>
                 </div>
                 <div className="relative p-3">
@@ -189,12 +214,7 @@ export function Catering() {
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
-                    $10 per person
-                  </h3>
-                </div>
-                <div className="w-full text-center flex justify-center p-3">
-                  <h3 className="text-black font-FaroVariable text-sm md:text-lg xl:text-2xl  bg-white rounded-xl w-fit h-fit p-3">
-                    $9 per person for parties over 200 guests
+                    $8 per person
                   </h3>
                 </div>
                 <div className="relative p-3">
@@ -351,6 +371,7 @@ export function Catering() {
               <input
                 type="number"
                 name="guestCount"
+                max={350}
                 required
                 placeholder="Number of Guests"
                 className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
@@ -420,30 +441,5 @@ export function Catering() {
         </div>
       </div>
     </>
-  );
-}
-
-function PackageCard({ tier }: { tier: CateringTier }) {
-  return (
-    <div className="basis-[48%] sm:basis-[24%] rounded-2xl my-2 sm:my-0">
-      <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] drop-shadow-xl p-5">
-        <div className=" w-full text-center flex justify-center">
-          <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl bg-white rounded-xl w-fit h-fit p-2">
-            {tier.guestRange} GUESTS
-          </h3>
-        </div>
-        <div className="relative text-center p-2">
-          <h2 className="text-[#FF0000] font-FaroVariable text-2xl md:text-3xl overflow-visible leading-none relative">
-            ${tier.price}
-          </h2>
-        </div>
-        <div className="text-center relative text-black font-PoppinsLight text-sm md:text-lg xl:text-xl">
-          <h3>{tier.flavorCount} Flavors</h3>
-          {tier.addFlavorPrice && (
-            <h3>${tier.addFlavorPrice} for additional flavor</h3>
-          )}
-        </div>
-      </div>
-    </div>
   );
 }
