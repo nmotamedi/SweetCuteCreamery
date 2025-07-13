@@ -8,7 +8,7 @@ export function Footer() {
           <div className="w-2/3 md:w-1/3 mb-10">
             <Link to="/">
               <img
-                src="/Sweet_Cute_Title.png"
+                src="/images/Sweet_Cute_Title.png"
                 className="w-full hover:invert"
                 alt="Sweet Cute Title Icon"
               />
@@ -39,7 +39,7 @@ export function Footer() {
           >
             <img
               className="w-12"
-              src="Instagram_Glyph_White.png"
+              src="/images/Instagram_Glyph_White.png"
               alt="Instagram Logo in white"
             />
           </a>
@@ -49,7 +49,7 @@ export function Footer() {
           >
             <img
               className="w-12 grayscale"
-              src="Google_Maps_icon.png"
+              src="/images/Google_Maps_icon.png"
               alt="Google Maps logo in white"
             />
           </a>
@@ -59,7 +59,7 @@ export function Footer() {
           >
             <img
               className="w-12 grayscale"
-              src="yelp_burst.png"
+              src="/images/yelp_burst.png"
               alt="Yelp logo in white"
             />
           </a>

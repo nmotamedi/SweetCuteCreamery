@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 export function About() {
   return (
@@ -13,7 +13,7 @@ export function About() {
               <img
                 className="w-full rounded-xl"
                 alt="Photo of Sarah"
-                src="/sarah_about.jpeg"
+                src="/images/sarah_about.jpeg"
               />
             </div>
           </div>
@@ -85,7 +85,7 @@ export function About() {
           <img
             className="w-full rounded-xl"
             alt="Photo of Sarah"
-            src="/sarah_about.jpeg"
+            src="/images/sarah_about.jpeg"
           />
         </div>
 

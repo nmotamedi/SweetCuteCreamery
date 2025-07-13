@@ -1,7 +1,7 @@
-import { useRef } from "react";
-import { Quiz } from "../Components/Quiz";
-import { Carousel } from "../Components/Carousel";
-import { Helmet } from "react-helmet";
+import { useRef } from 'react';
+import { Quiz } from '../Components/Quiz';
+import { Carousel } from '../Components/Carousel';
+import { Helmet } from 'react-helmet';
 
 export function Home() {
   const modal = useRef<HTMLDialogElement>(null);
@@ -22,7 +22,7 @@ export function Home() {
         </a>
         <div className="w-8/12 lg:w-5/12">
           <img
-            src="/Sweet_Cute_Title.png"
+            src="/images/Sweet_Cute_Title.png"
             className="w-full"
             alt="Sweet Cute Title Icon"
           />
@@ -32,23 +32,23 @@ export function Home() {
         </div>
         <div className="w-10/12 lg:w-7/12 mt-20 sm:mt-auto my-10 md:py-12">
           <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl uppercase text-center">
-            Come visit us at{" "}
+            Come visit us at{' '}
             <a
               className="underline"
               href="https://maps.app.goo.gl/7dViRS66yYtGGmM3A"
             >
               Banyan Tree Marketplace
-            </a>{" "}
+            </a>{' '}
             in Culver City for a scoop!
             <br />
             <br />
-            Follow us on{" "}
+            Follow us on{' '}
             <a
               className="underline"
               href="https://www.instagram.com/sweetcuteicecream/"
             >
               Instagram
-            </a>{" "}
+            </a>{' '}
             for our weekly schedule
           </h2>
         </div>
@@ -69,7 +69,7 @@ export function Home() {
         </div>
         <div className="w-5/12 flex justify-center">
           <img
-            src="/SweetCute_IceCream_Illustration_Cut.png"
+            src="/images/SweetCute_IceCream_Illustration_Cut.png"
             alt="2 Ice cream cones in love"
             className="w-full"
           />

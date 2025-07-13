@@ -37,7 +37,7 @@ export function NavHeader() {
             <div className="flex justify-center w-full">
               <img
                 alt="Ice Cream Logo"
-                src="/SweetCute_IceCream_Illustration.png"
+                src="/images/SweetCute_IceCream_Illustration.png"
                 className="w-full lg:w-3/4"
               />
             </div>

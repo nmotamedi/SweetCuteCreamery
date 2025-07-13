@@ -89,8 +89,8 @@ export function Catering() {
             Get in touch!
           </button>
           <CateringImageLayout
-            leftImageSrc="/catering_imgs/IMG_0740.jpg"
-            rightImageSrc="/catering_imgs/IMG_0741.jpg"
+            leftImageSrc="/images/catering_imgs/IMG_0740.jpg"
+            rightImageSrc="/images/catering_imgs/IMG_0741.jpg"
             middleCard={
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center mt-5">
@@ -123,8 +123,8 @@ export function Catering() {
             Hand Scooped Package
           </h2>
           <CateringImageLayout
-            leftImageSrc="/catering_imgs/IMG_5119.jpg"
-            rightImageSrc="/catering_imgs/IMG_2018 (2).jpg"
+            leftImageSrc="/images/catering_imgs/IMG_5119.jpg"
+            rightImageSrc="/images/catering_imgs/IMG_2018 (2).jpg"
             middleCard={
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] drop-shadow-xl p-5">
                 <div className=" w-full text-center flex flex-col justify-center items-center">
@@ -162,8 +162,8 @@ export function Catering() {
             Ice Cream Sammie Package
           </h2>
           <CateringImageLayout
-            leftImageSrc="/catering_imgs/IMG_0773.jpeg"
-            rightImageSrc="/catering_imgs/IMG_0791.jpg"
+            leftImageSrc="/images/catering_imgs/IMG_0773.jpeg"
+            rightImageSrc="/images/catering_imgs/IMG_0791.jpg"
             middleCard={
               <div className="relative w-full h-full rounded-2xl justify-center bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center p-3">
