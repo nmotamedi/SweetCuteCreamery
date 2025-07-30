@@ -233,7 +233,7 @@ export const cateringAddOns: { desc: string; price: string }[] = [
   { desc: 'Extra Hour of Service', price: '$100' },
   { desc: 'Extra Server (req. over 150 guests)', price: '$100/hr' },
   { desc: 'Travel over 25 miles from Culver City', price: '$5/mile' },
-  { desc: 'Toppings bar - Sprinkles, Peanuts, M&Ms', price: '$2/guest' },
+  { desc: 'Toppings bar - Sprinkles, Peanuts, M&Ms', price: '$1/guest' },
   { desc: 'Custom Ice Cream Flavors', price: 'Contact for Quote' },
 ];
 
