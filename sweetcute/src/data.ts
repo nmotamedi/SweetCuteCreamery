@@ -192,7 +192,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Peaches & Cream',
       isGF: true,
       id: 18,
-      isInSeason: true,
+      isInSeason: false,
     },
 
     {
