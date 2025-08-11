@@ -207,7 +207,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isGF: false,
       isVegan: true,
       id: 21,
-      isInSeason: true,
+      isInSeason: false,
     },
 
     {
