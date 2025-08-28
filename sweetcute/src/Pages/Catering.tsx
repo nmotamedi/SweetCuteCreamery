@@ -429,8 +429,8 @@ export function Catering() {
                 <option value="handScooped">Hand Scooped</option>
                 <option value="sammie_full">Ice Cream Sammie - Cart</option>
                 <option value="sammie_pickup">Ice Cream Sammie - Pickup</option>
-                <option value="preScooped_full">Scoops - Cart</option>
-                <option value="preScooped_pickup">Scoops - Pickup</option>
+                <option value="preScooped_full">Pre-Scooped - Cart</option>
+                <option value="preScooped_pickup">Pre-Scooped - Pickup</option>
               </select>
 
               <button className="bg-[#FC4700] hover:bg-[#85D3A5] text-white rounded-xl mt-2 p-3">
