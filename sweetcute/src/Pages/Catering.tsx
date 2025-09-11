@@ -89,7 +89,7 @@ export function Catering() {
             Get in touch!
           </button>
           <CateringImageLayout
-            leftImageSrc="/catering_imgs/IMG_0740.jpg"
+            leftImageSrc="/catering_imgs/IMG_1357.jpg"
             rightImageSrc="/catering_imgs/IMG_0741.jpg"
             middleCard={
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
@@ -124,7 +124,7 @@ export function Catering() {
           </h2>
           <CateringImageLayout
             leftImageSrc="/catering_imgs/IMG_5119.jpg"
-            rightImageSrc="/catering_imgs/IMG_2018 (2).jpg"
+            rightImageSrc="/catering_imgs/IMG_5382.JPG"
             middleCard={
               <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] drop-shadow-xl p-5">
                 <div className=" w-full text-center flex flex-col justify-center items-center">

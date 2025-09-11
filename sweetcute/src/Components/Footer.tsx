@@ -34,7 +34,18 @@ export function Footer() {
         </div>
         <div className="basis-1/2 flex flex-col sm:flex-row justify-around items-center">
           <a
-            className="rounded-full w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
+            className="rounded-full mt-3 sm:mt-0 w-24 h-24 hover:invert flex justify-center items-center"
+            target="_blank"
+            href="https://www.zola.com/wedding-vendors/wedding-cakes-desserts/sweet-cute-ice-cream?utm_source=vendor&utm_medium=various&utm_content=badge"
+          >
+            <img
+              className="w-full"
+              alt="Featured on Zola"
+              src="https://d1tntvpcrzvon2.cloudfront.net/static-assets/images/badges/featured_on_zola_v3.png"
+            />
+          </a>
+          <a
+            className="rounded-full mt-3 sm:mt-0 w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
             href="https://www.instagram.com/sweetcuteicecream/"
           >
             <img
@@ -44,7 +55,7 @@ export function Footer() {
             />
           </a>
           <a
-            className="rounded-full w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
+            className="rounded-full mt-3 sm:mt-0 w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
             href="https://maps.app.goo.gl/9cytRLRWYS4D2AEs7"
           >
             <img
@@ -54,7 +65,7 @@ export function Footer() {
             />
           </a>
           <a
-            className="rounded-full w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
+            className="rounded-full mt-3 mb-3 sm:mt-0 sm:mb-0 w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
             href="https://www.yelp.com/biz/sweet-cute-ice-cream-culver-city?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
           >
             <img
