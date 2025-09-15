@@ -152,7 +152,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       description:
         'A refreshing blend of fresh strawberries and lemons for the perfect non-dairy treat!',
       isGF: true,
-      isVegan: true,
+      isDairyFree: true,
       img: '/flavor_imgs/Strawberry Lemonade (1).png',
       id: 14,
     },
