@@ -30,15 +30,16 @@ export function NavHeader() {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? 'underline basis-1/5'
-                : 'hover:text-[#85D3A5] basis-1/5'
+                ? 'underline relative basis-1/5'
+                : 'hover:text-[#85D3A5] relative basis-1/5'
             }
           >
             <div className="flex justify-center w-full">
+              <h3 className="absolute z-50 top-1/2 -translate-y-1/2">HOME</h3>
               <img
                 alt="Ice Cream Logo"
                 src="/SweetCute_IceCream_Illustration.png"
-                className="w-full lg:w-3/4"
+                className="z-0 w-full lg:w-3/4"
               />
             </div>
           </NavLink>
