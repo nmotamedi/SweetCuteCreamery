@@ -148,13 +148,13 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isCatering: true,
     },
     {
-      title: 'Strawberry Lemonade Sorbet',
-      description:
-        'A refreshing blend of fresh strawberries and lemons for the perfect non-dairy treat!',
+      title: 'Kiwi Pomegranate Sorbet',
       isGF: true,
       isDairyFree: true,
-      img: '/flavor_imgs/Strawberry Lemonade (1).png',
-      id: 14,
+      img: '/flavor_imgs/Pom Kiwi Sorb.png',
+      description:
+        'A unique combo of freshly juiced pomegranate seeds and mouth watering kiwi for a refreshing sorbet perfect for any season.',
+      id: 19,
     },
     {
       title: 'Caramel Brownie Sundae',
@@ -171,16 +171,15 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       id: 16,
       isInSeason: false,
       isCatering: true,
-    },
-    {
-      title: 'Kiwi Pomegranate Sorbet',
+    },{
+      title: 'Strawberry Lemonade Sorbet',
+      description:
+        'A refreshing blend of fresh strawberries and lemons for the perfect non-dairy treat!',
       isGF: true,
       isDairyFree: true,
-      img: '/flavor_imgs/Pom Kiwi Sorb.png',
+      img: '/flavor_imgs/Strawberry Lemonade (1).png',
+      id: 14,
       isInSeason: false,
-      description:
-        'A unique combo of freshly juiced pomegranate seeds and mouth watering kiwi for a refreshing sorbet perfect for any season.',
-      id: 19,
     },
     {
       title: 'Avocado Chocolate Chip',
