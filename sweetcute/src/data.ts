@@ -223,7 +223,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       id: 25,
       isInSeason: false,
     },
-    { title: 'Jack-O-Lantern', id: 26, isInSeason: true },
+    { title: 'Apple Pie', id: 26, isInSeason: true },
   ],
 };
 
