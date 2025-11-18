@@ -132,6 +132,10 @@ export function Order() {
           $13 PER PINT
           <br />
           <br />
+          <span className="font-PoppinsBold text-white text-lg md:text-3xl mb-0 m-0 p-0">
+            NOW AVAILABLE:
+          </span>
+          <br />
           THANKSGIVING 4-PACK - $48
           <br />
           SWEET CREAM VANILLA, COOKIE BUTTER, APPLE PIE & DOUBLE DARK CHOCOLATE
@@ -227,7 +231,7 @@ export function Order() {
                   }
                   className="cursor-pointer"
                 >
-                  Pick up (Mar Vista)
+                  Pick up (Culver City)
                 </h2>
                 <input
                   type="radio"
