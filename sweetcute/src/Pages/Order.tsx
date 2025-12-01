@@ -132,15 +132,6 @@ export function Order() {
           $13 PER PINT
           <br />
           <br />
-          <span className="font-PoppinsBold text-white text-lg md:text-3xl mb-0 m-0 p-0">
-            NOW AVAILABLE:
-          </span>
-          <br />
-          THANKSGIVING 4-PACK - $48
-          <br />
-          SWEET CREAM VANILLA, COOKIE BUTTER, APPLE PIE & DOUBLE DARK CHOCOLATE
-          <br />
-          <br />
           FOR LARGER ORDERS, PLEASE ALLOW 3-5 DAYS FOR PRODUCTION!
           <br />
           <br />
@@ -188,11 +179,6 @@ export function Order() {
               </div>
               {isDropdownOpen && (
                 <div className="absolute mt-1 w-full  bg-white rounded-3xl shadow-lg max-h-60 overflow-y-auto z-10">
-                  <Option
-                    key="thanx"
-                    option="Thanksgiving 4-Pack"
-                    handleCheckboxChange={handleCheckboxChange}
-                  />
                   {flavors.foreverFlavors.map((option) => (
                     <Option
                       key={option.id}
