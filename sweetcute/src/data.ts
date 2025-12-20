@@ -202,8 +202,8 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     },
 
     {
-      title: 'Triple Cookie',
-      isGF: false,
+      title: 'Maple Butter Pecan',
+      isGF: true,
       isVegan: false,
       id: 21,
       isInSeason: true,
