@@ -210,10 +210,10 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     },
 
     {
-      title: 'Espresso Chocolate Chip',
+      title: 'Espresso Crunch',
       isGF: true,
       id: 22,
-      isInSeason: false,
+      isInSeason: true,
       isCatering: true,
     },
     { title: 'Cookies & Cream', id: 23, isInSeason: false },
