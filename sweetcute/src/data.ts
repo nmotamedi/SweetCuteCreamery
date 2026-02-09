@@ -179,7 +179,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isDairyFree: true,
       img: '/flavor_imgs/Strawberry Lemonade (1).png',
       id: 14,
-      isInSeason: false,
+      isInSeason: true,
     },
     {
       title: 'Avocado Chocolate Chip',
@@ -223,7 +223,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       id: 25,
       isInSeason: false,
     },
-    { title: 'Apple Pie', id: 26, isInSeason: false },
+    { title: 'Raspberry Chocolate Torte', id: 26, isInSeason: true },
   ],
 };
 
