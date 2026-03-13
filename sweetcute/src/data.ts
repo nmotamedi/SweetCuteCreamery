@@ -169,7 +169,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: 'Mint Cookies & Cream',
       id: 16,
-      isInSeason: true,
+      isInSeason: false,
       isCatering: true,
     },{
       title: 'Strawberry Lemonade Sorbet',
@@ -191,7 +191,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Peaches & Cream',
       isGF: true,
       id: 18,
-      isInSeason: false,
+      isInSeason: true,
     },
 
     {
@@ -213,7 +213,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Espresso Crunch',
       isGF: true,
       id: 22,
-      isInSeason: true,
+      isInSeason: false,
       isCatering: true,
     },
     { title: 'Cookies & Cream', id: 23, isInSeason: false },
@@ -223,7 +223,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       id: 25,
       isInSeason: false,
     },
-    { title: 'Raspberry Chocolate Torte', id: 26, isInSeason: true },
+    { title: 'Raspberry Chocolate Torte', id: 26, isInSeason: false },
   ],
 };
 
