@@ -223,7 +223,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: 'Matzah Toffee Bark (for Passover)',
       id: 25,
-      isInSeason: false,
+      isInSeason: true,
     },
     { title: 'Raspberry Chocolate Torte', id: 26, isInSeason: false },
   ],
