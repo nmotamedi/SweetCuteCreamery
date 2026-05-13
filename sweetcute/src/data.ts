@@ -209,6 +209,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isVegan: false,
       id: 21,
       isInSeason: true,
+      isCatering: true
     },
 
     {
@@ -219,7 +220,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isCatering: true,
     },
     { title: 'Cookies & Cream', id: 23, isInSeason: false },
-    { title: 'Cookie Butter', id: 24, isInSeason: true },
+    { title: 'Cookie Butter', id: 24, isInSeason: true, isCatering: true },
     {
       title: 'Matzah Toffee Bark (for Passover)',
       id: 25,
