@@ -200,7 +200,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Cherry Chocolate Chunk',
       isGF: true,
       id: 20,
-      isInSeason: false,
+      isInSeason: true,
     },
 
     {
