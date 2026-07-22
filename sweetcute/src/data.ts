@@ -171,7 +171,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Mint Cookies & Cream',
       id: 16,
       isInSeason: false,
-      isCatering: true,
+      isCatering: false,
     },
     {
       title: 'Kiwi Pomegranate Sorbet',
@@ -193,7 +193,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Peaches & Cream',
       isGF: true,
       id: 18,
-      isInSeason: true,
+      isInSeason: false,
     },
 
     {
