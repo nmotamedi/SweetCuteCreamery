@@ -6,7 +6,7 @@ export function NavHeader() {
     <div className="min-h-full">
       <div className="w-full bg-[#7FBEF0]">
         <h2 className="font-FaroVariable text-black text-base md:text-2xl uppercase text-center">
-          Business Rate’s Top 3 Ice Cream Shop in Culver City 2025
+          Business Rate’s #1 Ice Cream Shop in Los Angeles 2026
         </h2>
       </div>
       <div className=" text-base md:text-2xl lg:text-4xl text-[#FF0000] font-FaroVariable uppercase bg-[#FAE498] text-center">
