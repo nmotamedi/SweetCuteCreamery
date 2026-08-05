@@ -14,16 +14,17 @@ export function Catering() {
   const [phone, setPhone] = useState('');
   const [eventType, setEventType] = useState('');
   const [eventDate, setEventDate] = useState<moment.Moment | undefined>(
-    undefined
+    undefined,
   );
   const [guestCount, setGuestCount] = useState('');
   const [eventLocation, setEventLocation] = useState('');
   const [desiredPackage, setDesiredPackage] = useState('');
+  const [pipeline, setPipeline] = useState('');
 
   const form = useRef<HTMLFormElement>(null);
 
   async function handleSubmit(
-    event: React.FormEvent<HTMLFormElement>
+    event: React.FormEvent<HTMLFormElement>,
   ): Promise<void> {
     event.preventDefault();
     try {
@@ -38,11 +39,12 @@ export function Catering() {
         eventDate: eventDate?.format('MMMM D, YYYY h:mm A'),
         eventLocation,
         guestCount,
+        pipeline,
         desiredPackage,
       };
       emailjs
-        .send('service_vyn7d25', 'template_uyudw3e', emailParams, {
-          publicKey: 'xWvR0d6huBxCsxOxl',
+        .send('service_xupfg62', 'template_cszp1rv', emailParams, {
+          publicKey: 'Hn_2krR1sFjxnrUyV',
         })
         .then(
           () => {
@@ -50,7 +52,7 @@ export function Catering() {
           },
           (error) => {
             throw new Error(error);
-          }
+          },
         );
       setName('');
       setEmail('');
@@ -60,6 +62,7 @@ export function Catering() {
       setEventLocation('');
       setGuestCount('');
       setDesiredPackage('');
+      setPipeline('');
     } catch (err) {
       alert(err);
     }
@@ -207,32 +210,16 @@ export function Catering() {
             Pre-Scooped Package
           </h2>
           <h2 className="font-PoppinsLight text-black text-xl md:text-2xl my-5">
-            <em>*recommended for quicker service with large parties*</em>
+            Individual scoops of ice cream pre-packaged with lids in a variety
+            of flavors!
+            <br />
+            <br />
+            <em>*ONLY FOR PICK UP*</em>
           </h2>
           <div className="flex flex-wrap justify-center ">
-            <div className="basis-[60%] lg:basis-[40%] =rounded-2xl">
-              <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
-                <div className="w-full text-center flex justify-center p-3">
-                  <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl  bg-white rounded-xl w-fit h-fit p-3">
-                    $8 per person
-                  </h3>
-                </div>
-                <div className="relative p-3">
-                  <ul className="text-black font-PoppinsLight text-sm md:text-lg xl:text-xl text-center">
-                    <li>Your choice of 3 flavors of Ice Cream.</li>
-                    <li>
-                      Pre-scooped into sealed cups, ready to hand out to your
-                      guests from our ice cream cart!
-                    </li>
-                  </ul>
-                </div>
-                <div className="w-full text-center flex justify-center p-3">
-                  <h3 className="text-black font-FaroVariable text-sm md:text-lg xl:text-xl  bg-white rounded-xl w-fit h-fit p-3">
-                    $6 per scoop for pickup
-                  </h3>
-                </div>
-              </div>
-            </div>
+            <h3 className="text-black font-FaroVariable text-sm md:text-lg xl:text-xl   w-fit h-fit p-3">
+              $6 per scoop
+            </h3>
           </div>
           <div className="text-center w-full flex flex-col items-center">
             <h2 className="font-FaroVariable text-black text-xl md:text-4xl my-10 mb-4 underline">
@@ -431,6 +418,21 @@ export function Catering() {
                 <option value="sammie_pickup">Ice Cream Sammie - Pickup</option>
                 <option value="preScooped_full">Pre-Scooped - Cart</option>
                 <option value="preScooped_pickup">Pre-Scooped - Pickup</option>
+              </select>
+
+              <select
+                className="block w-full rounded-full p-4 text-[#FF0000] appearance-none bg-white mb-2"
+                onChange={(e) => setPipeline(e.currentTarget.value)}
+              >
+                <option defaultChecked value="">
+                  How did you hear about us?
+                </option>
+                <option value="yelp">Yelp</option>
+                <option value="zola">Zola</option>
+                <option value="instagram">Instagram</option>
+                <option value="tiktok">TikTok</option>
+                <option value="pop_up">Pop Up</option>
+                <option value="friend">Friend</option>
               </select>
 
               <button className="bg-[#FC4700] hover:bg-[#85D3A5] text-white rounded-xl mt-2 p-3">
