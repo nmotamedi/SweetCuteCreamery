@@ -200,7 +200,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Cherry Chocolate Chunk',
       isGF: true,
       id: 20,
-      isInSeason: true,
+      isInSeason: false,
     },
 
     {
@@ -216,7 +216,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Espresso Crunch',
       isGF: true,
       id: 22,
-      isInSeason: false,
+      isInSeason: true,
       isCatering: true,
     },
     { title: 'Triple Cookie', id: 23, isInSeason: true },
@@ -224,7 +224,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
     {
       title: 'Matzah Toffee Bark (for Passover)',
       id: 25,
-      isInSeason: true,
+      isInSeason: false,
     },
     { title: 'Raspberry Chocolate Torte', id: 26, isInSeason: false },
   ],
