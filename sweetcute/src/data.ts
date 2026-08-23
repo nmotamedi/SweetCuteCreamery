@@ -216,11 +216,11 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       title: 'Espresso Crunch',
       isGF: true,
       id: 22,
-      isInSeason: true,
+      isInSeason: false,
       isCatering: true,
     },
     { title: 'Triple Cookie', id: 23, isInSeason: true },
-    { title: 'Cookie Butter', id: 24, isInSeason: true, isCatering: true },
+    { title: 'Cookie Butter', id: 24, isInSeason: false, isCatering: true },
     {
       title: 'Matzah Toffee Bark (for Passover)',
       id: 25,
