@@ -209,7 +209,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isVegan: false,
       id: 21,
       isInSeason: true,
-      isCatering: true
+      isCatering: true,
     },
 
     {
@@ -227,6 +227,7 @@ export const flavors: { foreverFlavors: Flavors[]; sidePieces: Flavors[] } = {
       isInSeason: false,
     },
     { title: 'Raspberry Chocolate Torte', id: 26, isInSeason: false },
+    { title: 'Coffee Pumpkin Bread', id: 27, isInSeason: true },
   ],
 };
 
