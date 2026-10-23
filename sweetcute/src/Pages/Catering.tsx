@@ -360,9 +360,10 @@ export function Catering() {
               <input
                 type="number"
                 name="guestCount"
+                min={50}
                 max={350}
                 required
-                placeholder="Number of Guests"
+                placeholder="Number of Guests (50-350)"
                 className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={guestCount}
                 inputMode="numeric"
