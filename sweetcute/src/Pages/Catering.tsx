@@ -440,7 +440,7 @@ export function Catering() {
                 <option value="friend">Friend</option>
               </select>
 
-              <button className="bg-brand-orange hover:bg-brand-green text-black rounded-xl mt-2 p-3">
+              <button className="bg-brand-orange hover:bg-brand-green-dark hover:text-white text-black rounded-xl mt-2 p-3">
                 Submit
               </button>
             </form>

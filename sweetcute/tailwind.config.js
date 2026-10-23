@@ -22,10 +22,9 @@ export default {
           "blue-light": "#94CBF8",
           orange: "#FC4700",
           "badge-yellow": "#FEE38C",
-          green: "#85D3A5",
-          // Hover color for text and icons; passes 4.5:1 on every page background.
+          // Hover color for text, icons and button backgrounds (with white
+          // text). Passes 4.5:1 on every page background and 9.4:1 under white.
           "green-dark": "#0F5132",
-          "green-bright": "#69D6A1",
         },
       },
       perspective: {

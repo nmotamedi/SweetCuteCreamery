@@ -71,7 +71,7 @@ export function Quiz() {
           Find out what flavor you are
         </h2>
         <a
-          className="bg-brand-orange hover:bg-brand-green border text-md sm:text-2xl border-black p-4 hover:cursor-pointer rounded-full"
+          className="bg-brand-orange hover:bg-brand-green-dark hover:text-white border text-md sm:text-2xl border-black p-4 hover:cursor-pointer rounded-full"
           onClick={() => setQuestionView(questionView + 1)}
         >
           Get started!
@@ -122,7 +122,7 @@ export function Quiz() {
                   }}
                   className={
                     question.respVal !== ""
-                      ? "bg-brand-orange hover:bg-brand-green border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
+                      ? "bg-brand-orange hover:bg-brand-green-dark hover:text-white border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
                       : "invisible"
                   }
                 >
@@ -133,7 +133,7 @@ export function Quiz() {
                   disabled={isSubmitting}
                   className={
                     question.respVal !== ""
-                      ? "bg-brand-orange hover:bg-brand-green border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full "
+                      ? "bg-brand-orange hover:bg-brand-green-dark hover:text-white border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full "
                       : "invisible"
                   }
                 >
@@ -158,7 +158,7 @@ export function Quiz() {
         </h3>
         <Link
           to="order"
-          className="bg-brand-orange hover:bg-brand-green border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
+          className="bg-brand-orange hover:bg-brand-green-dark hover:text-white border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
         >
           Order Now!
         </Link>
