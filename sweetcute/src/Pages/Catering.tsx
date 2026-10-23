@@ -135,7 +135,7 @@ export function Catering() {
                   <h3 className="text-black font-FaroVariable text-base md:text-lg lg:text-xl  bg-white rounded-xl w-fit h-fit p-3 my-3 text-center">
                     $9 per Person
                     <br />
-                    for guests 25 - 100
+                    for guests 50 - 100
                   </h3>
                   <h3 className="text-black font-FaroVariable text-base md:text-lg lg:text-xl bg-white rounded-xl w-fit h-fit p-3 my-3 text-center">
                     $8 per Person
@@ -174,6 +174,8 @@ export function Catering() {
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl bg-white rounded-xl w-fit h-fit p-3">
                     $10 per person
+                    <br />
+                    for 50+ guests
                   </h3>
                 </div>
                 <div className="relative p-3">
@@ -360,9 +362,10 @@ export function Catering() {
               <input
                 type="number"
                 name="guestCount"
+                min={50}
                 max={350}
                 required
-                placeholder="Number of Guests"
+                placeholder="Number of Guests (50-350)"
                 className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
                 value={guestCount}
                 inputMode="numeric"
