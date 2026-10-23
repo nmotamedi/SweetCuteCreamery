@@ -14,7 +14,7 @@ export function Home() {
       <div className="flex flex-col justify-evenly items-center relative flex-wrap bg-brand-yellow">
         <a
           onClick={() => modal.current?.showModal()}
-          className="hover:cursor-pointer h-24 w-24 sm:h-40 sm:w-40 lg:h-56 lg:w-56 rounded-full bg-brand-blue flex justify-center items-center absolute bottom-[52%] sm:bottom-auto sm:top-10 left-2 sm:left-3 lg:left-[10%] hover:drop-shadow-2xl font-FaroVariable text-white text-[0.67rem] sm:text-xl lg:text-3xl -rotate-12 p-3 uppercase text-center z-20"
+          className="hover:cursor-pointer h-24 w-24 sm:h-40 sm:w-40 lg:h-56 lg:w-56 rounded-full bg-brand-blue flex justify-center items-center absolute bottom-[52%] sm:bottom-auto sm:top-10 left-2 sm:left-3 lg:left-[10%] hover:drop-shadow-2xl font-FaroVariable text-black text-[0.67rem] sm:text-xl lg:text-3xl -rotate-12 p-3 uppercase text-center z-20"
         >
           QUIZ:
           <br />
@@ -33,7 +33,7 @@ export function Home() {
           <Carousel />
         </div>
         <div className="w-10/12 lg:w-7/12 mt-20 sm:mt-auto my-10 md:py-12">
-          <h2 className="font-FaroVariable text-brand-red text-xl md:text-4xl uppercase text-center">
+          <h2 className="font-FaroVariable text-brand-red-text md:text-brand-red text-xl md:text-4xl uppercase text-center">
             Come visit us at{" "}
             <a
               className="underline"
@@ -57,13 +57,13 @@ export function Home() {
         <div className="text-center md:py-3 pb-9 md:pb-12">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
-            <text fill="#FF0000" fontSize="36" fontFamily="FaroVariableDisplay">
+            <text className="fill-brand-red" fontSize="36" fontFamily="FaroVariableDisplay">
               <textPath href="#curve" startOffset="50%" textAnchor="middle">
                 FALL BACK
               </textPath>
             </text>
           </svg>
-          <h2 className="font-FaroVariable text-brand-red text-xl md:text-4xl -mt-8">
+          <h2 className="font-FaroVariable text-brand-red-text md:text-brand-red text-xl md:text-4xl -mt-8">
             IN LOVE
             <br />
             WITH ICE CREAM
@@ -85,12 +85,12 @@ export function Home() {
         >
           <div className="w-full h-full text-center  flex flex-col items-center">
             <a
-              className="basis-1/12 self-end pt-6 pr-6 hover:text-brand-red hover:cursor-pointer text-3xl font-MyriadPro  text-white"
+              className="basis-1/12 self-end pt-6 pr-6 hover:text-brand-red-text hover:cursor-pointer text-3xl font-MyriadPro  text-black"
               onClick={() => modal.current?.close()}
             >
               X
             </a>
-            <div className="basis-11/12 w-full p-4 sm:p-16 flex flex-col items-center justify-center font-FaroVariable text-white">
+            <div className="basis-11/12 w-full p-4 sm:p-16 flex flex-col items-center justify-center font-FaroVariable text-black">
               <Quiz />
             </div>
           </div>

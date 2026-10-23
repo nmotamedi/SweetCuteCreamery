@@ -78,7 +78,7 @@ export function Catering() {
       </Helmet>
       <div className="flex  relative flex-wrap bg-brand-yellow w-full min-h-svh">
         <div className="text-center py-1 md:pb-4 lg:pb-20 w-full">
-          <h2 className="font-FaroVariable text-brand-red text-xl md:text-4xl my-10 mb-4 underline">
+          <h2 className="font-FaroVariable text-brand-red-text md:text-brand-red text-xl md:text-4xl my-10 mb-4 underline">
             Artisan Ice Cream Catering
           </h2>
           <button
@@ -239,7 +239,7 @@ export function Catering() {
                     <h3 className="text-black font-PoppinsLight  text-lg md:text-2xl text-left">
                       {addOn.desc}
                     </h3>
-                    <h3 className="font-FaroVariable text-brand-red text-lg md:text-2xl text-right">
+                    <h3 className="font-FaroVariable text-brand-red-text md:text-brand-red text-lg md:text-2xl text-right">
                       {addOn.price}
                     </h3>
                   </div>
@@ -299,7 +299,7 @@ export function Catering() {
                 </li>
               </ul>
             </div>
-            <h2 className="font-FaroVariable text-brand-red text-xl md:text-2xl mb-4">
+            <h2 className="font-FaroVariable text-brand-red-text md:text-brand-red text-xl md:text-2xl mb-4">
               <em>Contact Us for Seasonal Flavors</em>
             </h2>
             <div className="flex w-1/2 justify-center items-start m-auto text-center">
@@ -325,7 +325,7 @@ export function Catering() {
               Booking Inquiry Form
             </h2>
             <form
-              className="flex flex-col justify-center items-center font-PoppinsLight text-brand-red"
+              className="flex flex-col justify-center items-center font-PoppinsLight text-brand-red-text"
               ref={form}
               onSubmit={handleSubmit}
             >
@@ -334,7 +334,7 @@ export function Catering() {
                 name="name"
                 required
                 placeholder="Name"
-                className="bg-white rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
+                className="bg-white rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red-text"
                 value={name}
                 onChange={(e) => setName(e.currentTarget.value)}
               />
@@ -344,7 +344,7 @@ export function Catering() {
                 name="email"
                 required
                 placeholder="Email"
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red-text"
                 value={email}
                 onChange={(e) => setEmail(e.currentTarget.value)}
               />
@@ -354,7 +354,7 @@ export function Catering() {
                 name="phone"
                 required
                 placeholder="Contact Number"
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red-text"
                 value={phone}
                 onChange={(e) => setPhone(e.currentTarget.value)}
               />
@@ -366,7 +366,7 @@ export function Catering() {
                 max={350}
                 required
                 placeholder="Number of Guests (50-350)"
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red-text"
                 value={guestCount}
                 inputMode="numeric"
                 onChange={(e) => setGuestCount(e.currentTarget.value)}
@@ -384,7 +384,7 @@ export function Catering() {
                     name: 'eventDate',
                     placeholder: 'Event Date & Time',
                     className:
-                      'bg-white rounded-full p-4 w-full text-brand-red placeholder:text-brand-red',
+                      'bg-white rounded-full p-4 w-full text-brand-red-text placeholder:text-brand-red-text',
                     required: true,
                   }}
                   closeOnSelect={true}
@@ -396,7 +396,7 @@ export function Catering() {
                 name="eventLocation"
                 required
                 placeholder="Event Location"
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red-text"
                 value={eventLocation}
                 onChange={(e) => setEventLocation(e.currentTarget.value)}
               />
@@ -406,13 +406,13 @@ export function Catering() {
                 name="eventType"
                 required
                 placeholder="Event Type"
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red-text"
                 value={eventType}
                 onChange={(e) => setEventType(e.currentTarget.value)}
               />
 
               <select
-                className="block w-full rounded-full p-4 text-brand-red appearance-none bg-white mb-2"
+                className="block w-full rounded-full p-4 text-brand-red-text appearance-none bg-white mb-2"
                 onChange={(e) => setDesiredPackage(e.currentTarget.value)}
               >
                 <option defaultChecked value="">
@@ -426,7 +426,7 @@ export function Catering() {
               </select>
 
               <select
-                className="block w-full rounded-full p-4 text-brand-red appearance-none bg-white mb-2"
+                className="block w-full rounded-full p-4 text-brand-red-text appearance-none bg-white mb-2"
                 onChange={(e) => setPipeline(e.currentTarget.value)}
               >
                 <option defaultChecked value="">
@@ -440,7 +440,7 @@ export function Catering() {
                 <option value="friend">Friend</option>
               </select>
 
-              <button className="bg-brand-orange hover:bg-brand-green text-white rounded-xl mt-2 p-3">
+              <button className="bg-brand-orange hover:bg-brand-green text-black rounded-xl mt-2 p-3">
                 Submit
               </button>
             </form>

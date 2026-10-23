@@ -17,19 +17,19 @@ export function Footer() {
               />
             </Link>
           </div>
-          <ul className="text-brand-red font-PoppinsBold ml-2">
+          <ul className="text-black font-PoppinsBold ml-2">
             <li>
-              <Link to="/about" className="hover:text-brand-green">
+              <Link to="/about" className="hover:text-brand-green-dark">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/flavors" className="hover:text-brand-green">
+              <Link to="/flavors" className="hover:text-brand-green-dark">
                 Flavors
               </Link>
             </li>
             <li>
-              <Link to="/order" className="hover:text-brand-green">
+              <Link to="/order" className="hover:text-brand-green-dark">
                 Order
               </Link>
             </li>
@@ -51,7 +51,7 @@ export function Footer() {
             />
           </a>
           <a
-            className="rounded-full mt-3 sm:mt-0 w-24 h-24 bg-brand-red hover:bg-brand-green flex justify-center items-center"
+            className="rounded-full mt-3 sm:mt-0 w-24 h-24 bg-brand-red hover:bg-brand-green-dark flex justify-center items-center"
             href="https://www.instagram.com/sweetcuteicecream/"
           >
             <img
@@ -64,7 +64,7 @@ export function Footer() {
             />
           </a>
           <a
-            className="rounded-full mt-3 sm:mt-0 w-24 h-24 bg-brand-red hover:bg-brand-green flex justify-center items-center"
+            className="rounded-full mt-3 sm:mt-0 w-24 h-24 bg-brand-red hover:bg-brand-green-dark flex justify-center items-center"
             href="https://maps.app.goo.gl/9cytRLRWYS4D2AEs7"
           >
             <img
@@ -77,7 +77,7 @@ export function Footer() {
             />
           </a>
           <a
-            className="rounded-full mt-3 mb-3 sm:mt-0 sm:mb-0 w-24 h-24 bg-brand-red hover:bg-brand-green flex justify-center items-center"
+            className="rounded-full mt-3 mb-3 sm:mt-0 sm:mb-0 w-24 h-24 bg-brand-red hover:bg-brand-green-dark flex justify-center items-center"
             href="https://www.yelp.com/biz/sweet-cute-ice-cream-culver-city?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
           >
             <img
@@ -91,7 +91,7 @@ export function Footer() {
           </a>
         </div>
       </div>
-      <footer className="text-center text-[#ff0000ce] text-xs md:text-sm">
+      <footer className="text-center text-black text-xs md:text-sm">
         Designed by Meagan Rafferty. Developed by Nader Motamedi.
       </footer>
     </div>

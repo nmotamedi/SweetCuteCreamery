@@ -64,7 +64,7 @@ export function Carousel() {
         >
           <FontAwesomeIcon
             icon={faCaretLeft}
-            className="hover:text-brand-green-bright lg:text-7xl"
+            className="hover:text-brand-green-dark lg:text-7xl"
           />
         </div>
         <div className="relative">
@@ -78,7 +78,7 @@ export function Carousel() {
         >
           <FontAwesomeIcon
             icon={faCaretRight}
-            className="hover:text-brand-green-bright lg:text-7xl"
+            className="hover:text-brand-green-dark lg:text-7xl"
           />
         </div>
       </div>
@@ -93,7 +93,7 @@ export function Carousel() {
                 setCurrentShowing(num);
               }}
               color={num !== currentShowing ? "black" : "red"}
-              className="cursor-pointer hover:text-brand-green-bright"
+              className="cursor-pointer hover:text-brand-green-dark"
             />
           );
         })}
@@ -116,10 +116,10 @@ export function Carousel() {
       >
         {card.circleText && (
           <div
-            className={`z-20 absolute rounded-full w-28 h-28 text-[0.5rem] p-1 md:w-52 md:h-52 md:p-2 font-FaroVariable text-white md:text-base -top-4 md:-top-8 text-center  drop-shadow-2xl flex flex-col items-center justify-center ${
+            className={`z-20 absolute rounded-full w-32 h-32 text-[0.625rem] p-1 md:w-52 md:h-52 md:p-2 font-FaroVariable md:text-base -top-4 md:-top-8 text-center  drop-shadow-2xl flex flex-col items-center justify-center ${
               index % 2 === 0
-                ? "-right-0 md:-right-8 bg-brand-blue rotate-12"
-                : "-left-0 md:-left-8 bg-brand-red -rotate-12"
+                ? "-right-0 md:-right-8 bg-brand-blue text-black rotate-12"
+                : "-left-0 md:-left-8 bg-brand-red-text text-white -rotate-12"
             }`}
           >
             {card.circleText.split("\n").map((str) => (

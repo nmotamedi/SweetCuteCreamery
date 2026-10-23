@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Visible keyboard focus everywhere. Black is at least 6:1 against every
+     page background (yellow, cream, pink, white, blue, orange). */
+  :focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 2px;
+  }
+}
+
 @font-face {
   font-family: "FaroVariableDisplay";
   src: url("/font/FaroVariableDisplayTrial.ttf") format("truetype");
