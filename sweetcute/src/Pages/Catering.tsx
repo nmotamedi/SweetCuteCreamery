@@ -172,6 +172,8 @@ export function Catering() {
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl bg-white rounded-xl w-fit h-fit p-3">
                     $10 per person
+                    <br />
+                    for 50+ guests
                   </h3>
                 </div>
                 <div className="relative p-3">
