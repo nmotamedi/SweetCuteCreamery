@@ -25,21 +25,27 @@ export function FlavorsPage() {
             <img
               alt="Pints of Sweet Cute Ice Cream"
               className="w-full  "
-              src="/sweet_cute_branding_photos/img11.jpeg"
+              src="/sweet_cute_branding_photos/img11.webp"
+              width={1280}
+              height={914}
             />
           </div>
           <div className="basis-1/3">
             <img
               alt="Hand holding a pint of chocolate Sweet Cute ice cream"
               className="w-full  "
-              src="/sweet_cute_branding_photos/img3.jpeg"
+              src="/sweet_cute_branding_photos/img3.webp"
+              width={1280}
+              height={914}
             />
           </div>
           <div className="basis-1/3">
             <img
               alt="Hand holding a cone of Sweet Cute ice cream"
               className="w-full  "
-              src="/sweet_cute_branding_photos/img6.jpeg"
+              src="/sweet_cute_branding_photos/img6.webp"
+              width={1280}
+              height={914}
             />
           </div>
         </div>
@@ -104,7 +110,10 @@ export function FlavorsPage() {
         </div>
         <div className="w-1/4 flex justify-center pb-12">
           <img
-            src="/SweetCute_IceCream_Illustration.png"
+            src="/ice-cream-illustration.webp"
+            width={960}
+            height={1094}
+            loading="lazy"
             className="w-full"
             alt="Image of 2 cones of ice cream in love"
           />

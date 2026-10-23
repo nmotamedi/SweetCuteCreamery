@@ -43,7 +43,9 @@ export function NavHeader() {
               <h3 className="absolute z-50 top-1/2 -translate-y-1/2">HOME</h3>
               <img
                 alt="Ice Cream Logo"
-                src="/SweetCute_IceCream_Illustration.png"
+                src="/ice-cream-illustration.webp"
+                width={960}
+                height={1094}
                 className="z-0 w-full lg:w-3/4"
               />
             </div>

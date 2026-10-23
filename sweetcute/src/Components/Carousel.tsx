@@ -1,31 +1,44 @@
 import { useEffect, useState } from "react";
-import img2 from "/sweet_cute_branding_photos/img2.jpeg";
-import img4 from "/sweet_cute_branding_photos/img4.jpeg";
-import img10 from "/sweet_cute_branding_photos/img10.jpeg";
-import img7 from "/sweet_cute_branding_photos/img7.jpeg";
-import img8 from "/sweet_cute_branding_photos/img8.jpeg";
-import img9 from "/sweet_cute_branding_photos/img9.jpeg";
+import img2 from "/sweet_cute_branding_photos/img2.webp";
+import img4 from "/sweet_cute_branding_photos/img4.webp";
+import img10 from "/sweet_cute_branding_photos/img10.webp";
+import img7 from "/sweet_cute_branding_photos/img7.webp";
+import img8 from "/sweet_cute_branding_photos/img8.webp";
+import img9 from "/sweet_cute_branding_photos/img9.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { faIceCream } from "@fortawesome/free-solid-svg-icons";
 
-const imgObj: { src: string; circleText?: string }[] = [
+type CarouselImage = {
+  src: string;
+  width: number;
+  height: number;
+  circleText?: string;
+};
+
+const imgObj: CarouselImage[] = [
   {
     src: img10,
+    width: 1536,
+    height: 1097,
     circleText: `SMALL BATCH\nCUSTARD BASED\nICE CREAM`,
   },
   {
     src: img4,
+    width: 1437,
+    height: 1026,
     circleText: `REAL CREAM,\nREAL CHOCOLATE,\nREAL FRUIT\nAND REAL LOVE\nIN EVERY PINT`,
   },
   {
     src: img2,
+    width: 1384,
+    height: 989,
     circleText: `SCRATCH MADE\nWITH CLEAN INGREDIENTS\nAND NO ARTIFICIAL STABILIZERS/GUMS`,
   },
-  { src: img9, circleText: "CLASSIC NOSTALGIC FLAVORS" },
-  { src: img7 },
-  { src: img8 },
+  { src: img9, width: 1407, height: 1005, circleText: "CLASSIC NOSTALGIC FLAVORS" },
+  { src: img7, width: 1536, height: 1097 },
+  { src: img8, width: 1484, height: 1060 },
 ];
 
 export function Carousel() {
@@ -89,7 +102,7 @@ export function Carousel() {
   );
 
   function CarouselCard(
-    card: { src: string; circleText?: string },
+    card: CarouselImage,
     index: number
   ) {
     return (
@@ -120,6 +133,8 @@ export function Carousel() {
           <img
             className="w-full rounded-xl"
             src={card.src}
+            width={card.width}
+            height={card.height}
             alt="Picture of Sweet Cute Ice Cream"
           />
         </div>

@@ -6,6 +6,7 @@ type Props = {
   leftImageObject?: string;
   rightImageObject?: string;
   middleCard: React.ReactNode;
+  lazy?: boolean;
   className?: string;
   columnClasses?: {
     left: string;
@@ -20,6 +21,7 @@ export function CateringImageLayout({
   leftImageObject = 'object-center',
   rightImageObject = 'object-center',
   middleCard,
+  lazy = false,
   className = '',
   columnClasses = {
     left: 'basis-[90%] sm:basis-[28%] sm:mr-2',
@@ -53,6 +55,7 @@ export function CateringImageLayout({
             className={`w-full h-full object-cover rounded-xl ${leftImageObject}`}
             src={leftImageSrc}
             alt=""
+            loading={lazy ? 'lazy' : undefined}
           />
         </div>
       </div>
@@ -75,6 +78,7 @@ export function CateringImageLayout({
             className={`w-full h-full object-cover rounded-xl ${rightImageObject}`}
             src={rightImageSrc}
             alt=""
+            loading={lazy ? 'lazy' : undefined}
           />
         </div>
       </div>
