@@ -20,7 +20,7 @@ export function About() {
             </div>
           </div>
           <div className="basis-1/2">
-            <h2 className="font-FaroVariable text-black text-xl md:text-2xl text-center -mb-5">
+            <h2 className="font-FaroVariable text-brand-badge-yellow text-outline text-xl md:text-2xl text-center -mb-5">
               HI
               <br />
               IM SARAH
@@ -28,7 +28,7 @@ export function About() {
             <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
               <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
               <text
-                className="fill-black"
+                className="fill-brand-badge-yellow svg-outline"
                 fontSize="36"
                 fontFamily="FaroVariableDisplay"
               >
@@ -37,7 +37,7 @@ export function About() {
                 </textPath>
               </text>
             </svg>
-            <h2 className="font-FaroVariable text-black text-xl md:text-4xl -mt-8 mb-10 text-center">
+            <h2 className="font-FaroVariable text-brand-badge-yellow text-outline text-xl md:text-4xl -mt-8 mb-10 text-center">
               IS MY
               <br />
               ENTIRE PERSONALITY
@@ -65,20 +65,20 @@ export function About() {
         </div>
       </div>
       <div className="bg-brand-blue flex-col justify-center items-center flex sm:hidden">
-        <h2 className="font-FaroVariable text-black text-xl md:text-2xl text-center mt-5 -mb-5">
+        <h2 className="font-FaroVariable text-brand-badge-yellow text-outline text-xl md:text-2xl text-center mt-5 -mb-5">
           HI
           <br />
           IM SARAH
         </h2>
         <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
           <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
-          <text className="fill-black" fontSize="36" fontFamily="FaroVariableDisplay">
+          <text className="fill-brand-badge-yellow svg-outline" fontSize="36" fontFamily="FaroVariableDisplay">
             <textPath href="#curve" startOffset="50%" textAnchor="middle">
               ICE CREAM
             </textPath>
           </text>
         </svg>
-        <h2 className="font-FaroVariable text-black text-xl md:text-4xl -mt-8 mb-10 text-center">
+        <h2 className="font-FaroVariable text-brand-badge-yellow text-outline text-xl md:text-4xl -mt-8 mb-10 text-center">
           IS MY
           <br />
           ENTIRE PERSONALITY

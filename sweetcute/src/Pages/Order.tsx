@@ -124,10 +124,10 @@ export function Order() {
             height={914}
           />
         </div>
-        <h2 className="font-FaroVariable text-black text-xl md:text-4xl  pt-6 mb-2 text-center">
+        <h2 className="font-FaroVariable text-brand-badge-yellow text-outline text-xl md:text-4xl  pt-6 mb-2 text-center">
           PICK UP OR DELIVERY
         </h2>
-        <h2 className="font-FaroVariable text-black text-xl md:text-4xl mb-6 text-center">
+        <h2 className="font-FaroVariable text-brand-badge-yellow text-outline text-xl md:text-4xl mb-6 text-center">
           LOS ANGELES
         </h2>
         <h3 className="font-PoppinsBold text-black text-sm md:text-xl mb-3">

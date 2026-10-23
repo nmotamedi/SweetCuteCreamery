@@ -61,7 +61,7 @@ export function FlavorCards({
             }}
           >
             <div className="basis-1/3">
-              <h2 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl p-2 pt-3 lg:p-6">
+              <h2 className="text-black md:text-brand-red md:text-outline font-FaroVariable text-base md:text-xl xl:text-3xl p-2 pt-3 lg:p-6">
                 {flavor.title}
               </h2>
             </div>
