@@ -134,7 +134,7 @@ export function Catering() {
                   <h3 className="text-black font-FaroVariable text-base md:text-lg lg:text-xl  bg-white rounded-xl w-fit h-fit p-3 my-3 text-center">
                     $9 per Person
                     <br />
-                    for guests 25 - 100
+                    for guests 50 - 100
                   </h3>
                   <h3 className="text-black font-FaroVariable text-base md:text-lg lg:text-xl bg-white rounded-xl w-fit h-fit p-3 my-3 text-center">
                     $8 per Person
