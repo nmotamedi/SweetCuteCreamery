@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Visible keyboard focus everywhere. Black is at least 6:1 against every
+     page background (yellow, cream, pink, white, blue, orange). */
+  :focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Black outline around large display text. WCAG counts a narrow outline as
+     part of the letter, so contrast is measured outline vs background (black
+     passes on every page background), and axe/Lighthouse agree. Use only on
+     headings 20px and up; on smaller text the outline fills in the letters. */
+  .text-outline {
+    -webkit-text-stroke: 3px #000;
+    paint-order: stroke fill;
+  }
+  /* Same outline for SVG <text>, which takes stroke rather than text-stroke. */
+  .svg-outline {
+    stroke: #000;
+    stroke-width: 3px;
+    paint-order: stroke fill;
+  }
+}
+
 @font-face {
   font-family: "FaroVariableDisplay";
   src: url("/font/FaroVariableDisplayTrial.ttf") format("truetype");

@@ -21,7 +21,7 @@ export function FlavorCards({
           isFlipped ? "rotate-y-180" : ""
         }`}
       >
-        <div className="absolute w-full rounded-2xl h-full backface-hidden flex items-center justify-center bg-[#FFF5C1]">
+        <div className="absolute w-full rounded-2xl h-full backface-hidden flex items-center justify-center bg-brand-cream">
           <div
             className=" h-full w-full rounded-2xl flex flex-col justify-center items-center"
             onClick={() => handleChange(flavor.title)}
@@ -46,13 +46,13 @@ export function FlavorCards({
               )}
             </div>
             <div className="basis-[25%] relative flex items-center justify-center">
-              <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-3xl px-2 md:px-6 overflow-visible leading-none relative -top-2">
+              <h2 className="text-brand-red-text md:text-brand-red font-FaroVariable text-base md:text-3xl px-2 md:px-6 overflow-visible leading-none relative -top-2">
                 {flavor.title}
               </h2>
             </div>
           </div>
         </div>
-        <div className="absolute w-full rounded-2xl h-full backface-hidden flex items-center justify-center bg-[#FFB0AA] rotate-y-180">
+        <div className="absolute w-full rounded-2xl h-full backface-hidden flex items-center justify-center bg-brand-pink rotate-y-180">
           <div
             className=" flex w-full h-full flex-col justify-center items-center"
             onClick={() => {
@@ -61,12 +61,12 @@ export function FlavorCards({
             }}
           >
             <div className="basis-1/3">
-              <h2 className="text-[#FF0000] font-FaroVariable text-base md:text-xl xl:text-3xl p-2 pt-3 lg:p-6">
+              <h2 className="text-black md:text-brand-red md:text-outline font-FaroVariable text-base md:text-xl xl:text-3xl p-2 pt-3 lg:p-6">
                 {flavor.title}
               </h2>
             </div>
             <div className="basis-2/3 ">
-              <h2 className="text-[#FF0000] font-PoppinsLight text-xs md:text-lg xl:text-xl p-2 pt-3 lg:p-6">
+              <h2 className="text-black font-PoppinsLight text-xs md:text-lg xl:text-xl p-2 pt-3 lg:p-6">
                 {flavor.description}
               </h2>
             </div>
@@ -79,24 +79,24 @@ export function FlavorCards({
 
 export function GFBullet() {
   return (
-    <div className="w-8 h-8 flex justify-center items-center bg-[#FF0000] rounded-full">
-      <h2 className="font-FaroVariable text-[#FEE38C]">GF</h2>
+    <div className="w-8 h-8 flex justify-center items-center bg-brand-red-text rounded-full">
+      <h2 className="font-FaroVariable text-brand-badge-yellow">GF</h2>
     </div>
   );
 }
 
 export function VeganBullet() {
   return (
-    <div className="w-8 h-8 flex justify-center items-center bg-[#FF0000] rounded-full">
-      <h2 className="font-FaroVariable text-[#FEE38C]">V</h2>
+    <div className="w-8 h-8 flex justify-center items-center bg-brand-red-text rounded-full">
+      <h2 className="font-FaroVariable text-brand-badge-yellow">V</h2>
     </div>
   );
 }
 
 export function DFBullet() {
   return (
-    <div className="w-8 h-8 flex justify-center items-center bg-[#FF0000] rounded-full">
-      <h2 className="font-FaroVariable text-[#FEE38C]">DF</h2>
+    <div className="w-8 h-8 flex justify-center items-center bg-brand-red-text rounded-full">
+      <h2 className="font-FaroVariable text-brand-badge-yellow">DF</h2>
     </div>
   );
 }

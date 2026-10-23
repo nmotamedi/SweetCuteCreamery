@@ -71,7 +71,7 @@ export function Quiz() {
           Find out what flavor you are
         </h2>
         <a
-          className="bg-[#FC4700] hover:bg-[#85D3A5] border text-md sm:text-2xl border-black p-4 hover:cursor-pointer rounded-full"
+          className="bg-brand-orange hover:bg-brand-green-dark hover:text-white border text-md sm:text-2xl border-black p-4 hover:cursor-pointer rounded-full"
           onClick={() => setQuestionView(questionView + 1)}
         >
           Get started!
@@ -92,7 +92,7 @@ export function Quiz() {
                 Q{question.questionId}: {question.question}
               </h2>
               <div className="flex justify-between mb-8 ">
-                <label className="hover:cursor-pointer text-lg sm:text-2xl hover:drop-shadow-2xl hover:text-slate-200 capitalize basis-[45%] sm:basis-1/2">
+                <label className="hover:cursor-pointer text-lg sm:text-2xl hover:drop-shadow-2xl hover:underline capitalize basis-[45%] sm:basis-1/2">
                   <input
                     type="checkbox"
                     value="a"
@@ -102,7 +102,7 @@ export function Quiz() {
                   <br />
                   {question.option1}
                 </label>
-                <label className="hover:cursor-pointer text-lg sm:text-2xl hover:drop-shadow-2xl hover:text-slate-200 capitalize basis-[45%] sm:basis-1/2">
+                <label className="hover:cursor-pointer text-lg sm:text-2xl hover:drop-shadow-2xl hover:underline capitalize basis-[45%] sm:basis-1/2">
                   <input
                     type="checkbox"
                     value="b"
@@ -122,7 +122,7 @@ export function Quiz() {
                   }}
                   className={
                     question.respVal !== ""
-                      ? "bg-[#FC4700] hover:bg-[#85D3A5] border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
+                      ? "bg-brand-orange hover:bg-brand-green-dark hover:text-white border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
                       : "invisible"
                   }
                 >
@@ -133,7 +133,7 @@ export function Quiz() {
                   disabled={isSubmitting}
                   className={
                     question.respVal !== ""
-                      ? "bg-[#FC4700] hover:bg-[#85D3A5] border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full "
+                      ? "bg-brand-orange hover:bg-brand-green-dark hover:text-white border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full "
                       : "invisible"
                   }
                 >
@@ -158,7 +158,7 @@ export function Quiz() {
         </h3>
         <Link
           to="order"
-          className="bg-[#FC4700] hover:bg-[#85D3A5] border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
+          className="bg-brand-orange hover:bg-brand-green-dark hover:text-white border text-lg sm:text-2xl border-black p-4 hover:cursor-pointer hover:drop-shadow-2xl rounded-full"
         >
           Order Now!
         </Link>

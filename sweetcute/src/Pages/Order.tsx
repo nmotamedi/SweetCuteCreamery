@@ -114,7 +114,7 @@ export function Order() {
       <Helmet>
         <link rel="canonical" href="https://www.sweetcuteicecream.com/order" />
       </Helmet>
-      <div className="pb-44 md:pb-4 bg-[#7FBEF0] text-center w-full">
+      <div className="pb-44 md:pb-4 bg-brand-blue text-center w-full">
         <div className="w-full h-32 md:h-64 lg:h-96 flex justify-center">
           <img
             className="w-full h-32 md:h-64 lg:h-96 object-cover"
@@ -124,13 +124,13 @@ export function Order() {
             height={914}
           />
         </div>
-        <h2 className="font-FaroVariable text-[#FEE38C] text-xl md:text-4xl  pt-6 mb-2 text-center">
+        <h2 className="font-FaroVariable text-brand-badge-yellow text-outline text-xl md:text-4xl  pt-6 mb-2 text-center">
           PICK UP OR DELIVERY
         </h2>
-        <h2 className="font-FaroVariable text-[#FEE38C] text-xl md:text-4xl mb-6 text-center">
+        <h2 className="font-FaroVariable text-brand-badge-yellow text-outline text-xl md:text-4xl mb-6 text-center">
           LOS ANGELES
         </h2>
-        <h3 className="font-PoppinsBold text-white text-sm md:text-xl mb-3">
+        <h3 className="font-PoppinsBold text-black text-sm md:text-xl mb-3">
           $13 PER PINT
           <br />
           <br />
@@ -143,7 +143,7 @@ export function Order() {
         </h3>
         <div className="text-center pb-4 md:pb-16 w-11/12 md:w-5/12 m-auto">
           <form
-            className="flex flex-col justify-center items-center font-PoppinsLight text-[#FF0000]"
+            className="flex flex-col justify-center items-center font-PoppinsLight text-brand-red-text"
             ref={form}
             onSubmit={handleSubmit}
           >
@@ -152,7 +152,7 @@ export function Order() {
               name="name"
               required
               placeholder="Name"
-              className="bg-white rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+              className="bg-white rounded-full p-4 w-full mb-2 placeholder:text-brand-red-text"
               value={name}
               onChange={(e) => setName(e.currentTarget.value)}
             />
@@ -162,7 +162,7 @@ export function Order() {
               name="email"
               required
               placeholder="Email"
-              className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-[#FF0000]"
+              className="bg-white  rounded-full p-4 w-full mb-2 placeholder:text-brand-red-text"
               value={email}
               onChange={(e) => setEmail(e.currentTarget.value)}
             />
@@ -172,10 +172,10 @@ export function Order() {
                 className="flex justify-between items-center  bg-white p-2 rounded-full cursor-pointer w-full"
                 onClick={toggleDropdown}
               >
-                <div className="flex-grow truncate text-[#FF0000]">
+                <div className="flex-grow truncate text-brand-red-text">
                   {'Select Flavors'}
                 </div>
-                <div className="text-[#FF0000]">
+                <div className="text-brand-red-text">
                   {isDropdownOpen ? '▲' : '▼'}
                 </div>
               </div>
@@ -209,7 +209,7 @@ export function Order() {
               )}
             </div>
 
-            <div className="bg-white  rounded-3xl p-4 w-full mb-2 placeholder:text-[#FF0000] flex">
+            <div className="bg-white  rounded-3xl p-4 w-full mb-2 placeholder:text-brand-red flex">
               <div className="basis-1/2">
                 <h2
                   onClick={() =>
@@ -259,14 +259,14 @@ export function Order() {
             </div>
 
             <textarea
-              className="bg-white  rounded-3xl p-4 w-full placeholder:text-[#FF0000]"
+              className="bg-white  rounded-3xl p-4 w-full placeholder:text-brand-red-text"
               name="notes"
               placeholder="Notes"
               value={notes}
               onChange={(e) => setNotes(e.currentTarget.value)}
             />
 
-            <button className="bg-[#FC4700] hover:bg-[#85D3A5] text-white rounded-xl mt-2 p-3">
+            <button className="bg-brand-orange hover:bg-brand-green-dark hover:text-white text-black rounded-xl mt-2 p-3">
               Submit
             </button>
           </form>
