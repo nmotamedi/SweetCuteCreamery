@@ -22,7 +22,9 @@ export function Home() {
         </a>
         <div className="w-8/12 lg:w-5/12">
           <img
-            src="/Sweet_Cute_Title.png"
+            src="/sweet-cute-title.webp"
+            width={1600}
+            height={780}
             className="w-full"
             alt="Sweet Cute Title Icon"
           />
@@ -69,7 +71,10 @@ export function Home() {
         </div>
         <div className="w-5/12 flex justify-center">
           <img
-            src="/SweetCute_IceCream_Illustration_Cut.png"
+            src="/ice-cream-illustration-cut.webp"
+            width={1595}
+            height={1427}
+            loading="lazy"
             alt="2 Ice cream cones in love"
             className="w-full"
           />

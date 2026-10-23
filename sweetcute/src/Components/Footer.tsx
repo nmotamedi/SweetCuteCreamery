@@ -8,7 +8,10 @@ export function Footer() {
           <div className="w-2/3 md:w-1/3 mb-10">
             <Link to="/">
               <img
-                src="/Sweet_Cute_Title.png"
+                src="/sweet-cute-title.webp"
+                width={1600}
+                height={780}
+                loading="lazy"
                 className="w-full hover:invert"
                 alt="Sweet Cute Title Icon"
               />
@@ -42,6 +45,9 @@ export function Footer() {
               className="w-full"
               alt="Featured on Zola"
               src="https://d1tntvpcrzvon2.cloudfront.net/static-assets/images/badges/featured_on_zola_v3.png"
+              width={320}
+              height={320}
+              loading="lazy"
             />
           </a>
           <a
@@ -50,7 +56,10 @@ export function Footer() {
           >
             <img
               className="w-12"
-              src="Instagram_Glyph_White.png"
+              src="/instagram-glyph-white.webp"
+              width={96}
+              height={96}
+              loading="lazy"
               alt="Instagram Logo in white"
             />
           </a>
@@ -60,7 +69,10 @@ export function Footer() {
           >
             <img
               className="w-12 grayscale"
-              src="Google_Maps_icon.png"
+              src="/google-maps-icon.webp"
+              width={96}
+              height={138}
+              loading="lazy"
               alt="Google Maps logo in white"
             />
           </a>
@@ -70,7 +82,10 @@ export function Footer() {
           >
             <img
               className="w-12 grayscale"
-              src="yelp_burst.png"
+              src="/yelp-burst.webp"
+              width={96}
+              height={108}
+              loading="lazy"
               alt="Yelp logo in white"
             />
           </a>

@@ -119,7 +119,9 @@ export function Order() {
           <img
             className="w-full h-32 md:h-64 lg:h-96 object-cover"
             alt="Pints of sweet cute ice cream on a table with sprinkles and colorful napkins. "
-            src="/sweet_cute_branding_photos/img1.jpeg"
+            src="/sweet_cute_branding_photos/img1.webp"
+            width={2048}
+            height={914}
           />
         </div>
         <h2 className="font-FaroVariable text-[#FEE38C] text-xl md:text-4xl  pt-6 mb-2 text-center">

@@ -13,7 +13,9 @@ export function About() {
               <img
                 className="w-full rounded-xl"
                 alt="Photo of Sarah"
-                src="/sarah_about.jpeg"
+                src="/sarah-about.webp"
+                width={1298}
+                height={1817}
               />
             </div>
           </div>
@@ -85,7 +87,9 @@ export function About() {
           <img
             className="w-full rounded-xl"
             alt="Photo of Sarah"
-            src="/sarah_about.jpeg"
+            src="/sarah-about.webp"
+            width={1298}
+            height={1817}
           />
         </div>
 
