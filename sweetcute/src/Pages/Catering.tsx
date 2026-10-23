@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { DFBullet, GFBullet, VeganBullet } from '../Components/FlavorCards';
 import { cateringAddOns, cateringFlavors } from '../data';
 import { sendEmail } from '../sendEmail';
