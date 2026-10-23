@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { flavors } from '../data';
-import emailjs from '@emailjs/browser';
+import { sendEmail } from '../sendEmail';
 import { Helmet } from 'react-helmet';
 
 type OptionProps = {
@@ -87,18 +87,18 @@ export function Order() {
         pickUpDelivery,
         notes,
       };
-      emailjs
-        .send('service_vyn7d25', 'template_nh8jalo', emailParams, {
-          publicKey: 'xWvR0d6huBxCsxOxl',
-        })
-        .then(
-          () => {
-            alert('Email successfully sent');
-          },
-          (error) => {
-            throw new Error(error);
-          }
-        );
+      sendEmail('template_nh8jalo', emailParams).then(
+        (sent) => {
+          alert(
+            sent
+              ? 'Email successfully sent'
+              : 'Test site: no email was sent',
+          );
+        },
+        (error) => {
+          throw new Error(error);
+        }
+      );
       setName('');
       setEmail('');
       setNotes('');

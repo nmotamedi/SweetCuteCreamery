@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet';
 import { DFBullet, GFBullet, VeganBullet } from '../Components/FlavorCards';
 import { cateringAddOns, cateringFlavors } from '../data';
+import { sendEmail } from '../sendEmail';
 import { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { CateringImageLayout } from '../Components/CateringImageLayout';
 import Datetime from 'react-datetime';
 import 'react-datetime/css/react-datetime.css';
@@ -42,18 +42,18 @@ export function Catering() {
         pipeline,
         desiredPackage,
       };
-      emailjs
-        .send('service_vyn7d25', 'template_uyudw3e', emailParams, {
-          publicKey: 'xWvR0d6huBxCsxOxl',
-        })
-        .then(
-          () => {
-            alert('Email successfully sent');
-          },
-          (error) => {
-            throw new Error(error);
-          },
-        );
+      sendEmail('template_uyudw3e', emailParams).then(
+        (sent) => {
+          alert(
+            sent
+              ? 'Email successfully sent'
+              : 'Test site: no email was sent',
+          );
+        },
+        (error) => {
+          throw new Error(error);
+        },
+      );
       setName('');
       setEmail('');
       setPhone('');
