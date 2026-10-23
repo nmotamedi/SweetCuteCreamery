@@ -96,7 +96,7 @@ export function FlavorsPage() {
         <div className="text-center py-2 md:py-6 pb-36 ">
           <svg xmlns="http://www.w3.org/2000/svg" className="m-auto">
             <path id="curve" d="M50 100 Q150 55 250 100" fill="transparent" />
-            <text className="fill-brand-red" fontSize="36" fontFamily="FaroVariableDisplay">
+            <text className="fill-brand-red-text md:fill-brand-red" fontSize="36" fontFamily="FaroVariableDisplay">
               <textPath href="#curve" startOffset="50%" textAnchor="middle">
                 FALL BACK
               </textPath>
