@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { flavors } from "../data";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import {
   DFBullet,
   FlavorCards,

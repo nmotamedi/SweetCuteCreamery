@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { flavors } from '../data';
 import { sendEmail } from '../sendEmail';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 type OptionProps = {
   option: string;

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Quiz } from "../Components/Quiz";
 import { Carousel } from "../Components/Carousel";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export function Home() {
   const modal = useRef<HTMLDialogElement>(null);
