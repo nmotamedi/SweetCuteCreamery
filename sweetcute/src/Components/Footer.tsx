@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
-    <div className="w-full bg-[#FFB0AA]">
+    <div className="w-full bg-brand-pink">
       <div className=" flex">
         <div className="basis-1/2 m-10">
           <div className="w-2/3 md:w-1/3 mb-10">
@@ -17,19 +17,19 @@ export function Footer() {
               />
             </Link>
           </div>
-          <ul className="text-[#FF0000] font-PoppinsBold ml-2">
+          <ul className="text-brand-red font-PoppinsBold ml-2">
             <li>
-              <Link to="/about" className="hover:text-[#85D3A5]">
+              <Link to="/about" className="hover:text-brand-green">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/flavors" className="hover:text-[#85D3A5]">
+              <Link to="/flavors" className="hover:text-brand-green">
                 Flavors
               </Link>
             </li>
             <li>
-              <Link to="/order" className="hover:text-[#85D3A5]">
+              <Link to="/order" className="hover:text-brand-green">
                 Order
               </Link>
             </li>
@@ -51,7 +51,7 @@ export function Footer() {
             />
           </a>
           <a
-            className="rounded-full mt-3 sm:mt-0 w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
+            className="rounded-full mt-3 sm:mt-0 w-24 h-24 bg-brand-red hover:bg-brand-green flex justify-center items-center"
             href="https://www.instagram.com/sweetcuteicecream/"
           >
             <img
@@ -64,7 +64,7 @@ export function Footer() {
             />
           </a>
           <a
-            className="rounded-full mt-3 sm:mt-0 w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
+            className="rounded-full mt-3 sm:mt-0 w-24 h-24 bg-brand-red hover:bg-brand-green flex justify-center items-center"
             href="https://maps.app.goo.gl/9cytRLRWYS4D2AEs7"
           >
             <img
@@ -77,7 +77,7 @@ export function Footer() {
             />
           </a>
           <a
-            className="rounded-full mt-3 mb-3 sm:mt-0 sm:mb-0 w-24 h-24 bg-[#FF0000] hover:bg-[#85D3A5] flex justify-center items-center"
+            className="rounded-full mt-3 mb-3 sm:mt-0 sm:mb-0 w-24 h-24 bg-brand-red hover:bg-brand-green flex justify-center items-center"
             href="https://www.yelp.com/biz/sweet-cute-ice-cream-culver-city?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
           >
             <img

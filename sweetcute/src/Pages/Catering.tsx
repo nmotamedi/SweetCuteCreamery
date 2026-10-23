@@ -76,13 +76,13 @@ export function Catering() {
           href="https://www.sweetcuteicecream.com/catering"
         />
       </Helmet>
-      <div className="flex  relative flex-wrap bg-[#FAE498] w-full min-h-svh">
+      <div className="flex  relative flex-wrap bg-brand-yellow w-full min-h-svh">
         <div className="text-center py-1 md:pb-4 lg:pb-20 w-full">
-          <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-4xl my-10 mb-4 underline">
+          <h2 className="font-FaroVariable text-brand-red text-xl md:text-4xl my-10 mb-4 underline">
             Artisan Ice Cream Catering
           </h2>
           <button
-            className="mb-4 p-4 font-FaroVariable text-black outline-black bg-[#94cbf8] border-white border-2 rounded-xl hover:drop-shadow-2xl"
+            className="mb-4 p-4 font-FaroVariable text-black outline-black bg-brand-blue-light border-white border-2 rounded-xl hover:drop-shadow-2xl"
             onClick={() =>
               document
                 .querySelector(`#contact`)
@@ -95,7 +95,7 @@ export function Catering() {
             leftImageSrc="/catering_imgs/img-1357.webp"
             rightImageSrc="/catering_imgs/img-0741.webp"
             middleCard={
-              <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
+              <div className="relative w-full h-full rounded-2xl bg-brand-blue-light p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center mt-5">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl p-2  bg-white rounded-xl w-fit h-fit drop-shadow-xl">
                     All Packages Include
@@ -130,7 +130,7 @@ export function Catering() {
             leftImageSrc="/catering_imgs/img-5119.webp"
             rightImageSrc="/catering_imgs/img-5382.webp"
             middleCard={
-              <div className="relative w-full h-full rounded-2xl bg-[#94cbf8] drop-shadow-xl p-5">
+              <div className="relative w-full h-full rounded-2xl bg-brand-blue-light drop-shadow-xl p-5">
                 <div className=" w-full text-center flex flex-col justify-center items-center">
                   <h3 className="text-black font-FaroVariable text-base md:text-lg lg:text-xl  bg-white rounded-xl w-fit h-fit p-3 my-3 text-center">
                     $9 per Person
@@ -170,7 +170,7 @@ export function Catering() {
             leftImageSrc="/catering_imgs/img-0773.webp"
             rightImageSrc="/catering_imgs/img-0791.webp"
             middleCard={
-              <div className="relative w-full h-full rounded-2xl justify-center bg-[#94cbf8] p-2 md:p-5 drop-shadow-xl">
+              <div className="relative w-full h-full rounded-2xl justify-center bg-brand-blue-light p-2 md:p-5 drop-shadow-xl">
                 <div className="w-full text-center flex justify-center p-3">
                   <h3 className="text-black font-FaroVariable text-base md:text-xl xl:text-3xl bg-white rounded-xl w-fit h-fit p-3">
                     $10 per person
@@ -239,7 +239,7 @@ export function Catering() {
                     <h3 className="text-black font-PoppinsLight  text-lg md:text-2xl text-left">
                       {addOn.desc}
                     </h3>
-                    <h3 className="font-FaroVariable text-[#FF0000] text-lg md:text-2xl text-right">
+                    <h3 className="font-FaroVariable text-brand-red text-lg md:text-2xl text-right">
                       {addOn.price}
                     </h3>
                   </div>
@@ -299,7 +299,7 @@ export function Catering() {
                 </li>
               </ul>
             </div>
-            <h2 className="font-FaroVariable text-[#FF0000] text-xl md:text-2xl mb-4">
+            <h2 className="font-FaroVariable text-brand-red text-xl md:text-2xl mb-4">
               <em>Contact Us for Seasonal Flavors</em>
             </h2>
             <div className="flex w-1/2 justify-center items-start m-auto text-center">
@@ -325,7 +325,7 @@ export function Catering() {
               Booking Inquiry Form
             </h2>
             <form
-              className="flex flex-col justify-center items-center font-PoppinsLight text-[#FF0000]"
+              className="flex flex-col justify-center items-center font-PoppinsLight text-brand-red"
               ref={form}
               onSubmit={handleSubmit}
             >
@@ -334,7 +334,7 @@ export function Catering() {
                 name="name"
                 required
                 placeholder="Name"
-                className="bg-white rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
+                className="bg-white rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
                 value={name}
                 onChange={(e) => setName(e.currentTarget.value)}
               />
@@ -344,7 +344,7 @@ export function Catering() {
                 name="email"
                 required
                 placeholder="Email"
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
                 value={email}
                 onChange={(e) => setEmail(e.currentTarget.value)}
               />
@@ -354,7 +354,7 @@ export function Catering() {
                 name="phone"
                 required
                 placeholder="Contact Number"
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
                 value={phone}
                 onChange={(e) => setPhone(e.currentTarget.value)}
               />
@@ -366,7 +366,7 @@ export function Catering() {
                 max={350}
                 required
                 placeholder="Number of Guests (50-350)"
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
                 value={guestCount}
                 inputMode="numeric"
                 onChange={(e) => setGuestCount(e.currentTarget.value)}
@@ -384,7 +384,7 @@ export function Catering() {
                     name: 'eventDate',
                     placeholder: 'Event Date & Time',
                     className:
-                      'bg-white rounded-full p-4 w-full text-[#FF0000] placeholder:text-[#FF0000]',
+                      'bg-white rounded-full p-4 w-full text-brand-red placeholder:text-brand-red',
                     required: true,
                   }}
                   closeOnSelect={true}
@@ -396,7 +396,7 @@ export function Catering() {
                 name="eventLocation"
                 required
                 placeholder="Event Location"
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
                 value={eventLocation}
                 onChange={(e) => setEventLocation(e.currentTarget.value)}
               />
@@ -406,13 +406,13 @@ export function Catering() {
                 name="eventType"
                 required
                 placeholder="Event Type"
-                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-[#FF0000]"
+                className="bg-white  rounded-full p-4 w-full h-fit mb-2 placeholder:text-brand-red"
                 value={eventType}
                 onChange={(e) => setEventType(e.currentTarget.value)}
               />
 
               <select
-                className="block w-full rounded-full p-4 text-[#FF0000] appearance-none bg-white mb-2"
+                className="block w-full rounded-full p-4 text-brand-red appearance-none bg-white mb-2"
                 onChange={(e) => setDesiredPackage(e.currentTarget.value)}
               >
                 <option defaultChecked value="">
@@ -426,7 +426,7 @@ export function Catering() {
               </select>
 
               <select
-                className="block w-full rounded-full p-4 text-[#FF0000] appearance-none bg-white mb-2"
+                className="block w-full rounded-full p-4 text-brand-red appearance-none bg-white mb-2"
                 onChange={(e) => setPipeline(e.currentTarget.value)}
               >
                 <option defaultChecked value="">
@@ -440,7 +440,7 @@ export function Catering() {
                 <option value="friend">Friend</option>
               </select>
 
-              <button className="bg-[#FC4700] hover:bg-[#85D3A5] text-white rounded-xl mt-2 p-3">
+              <button className="bg-brand-orange hover:bg-brand-green text-white rounded-xl mt-2 p-3">
                 Submit
               </button>
             </form>

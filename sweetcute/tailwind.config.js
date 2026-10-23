@@ -10,6 +10,20 @@ export default {
         PoppinsLight: ["PoppinsLight", "sans-serif"],
         MyriadPro: ["MyriadPro", "sans-serif"],
       },
+      colors: {
+        brand: {
+          red: "#FF0000",
+          yellow: "#FAE498",
+          cream: "#FFF5C1",
+          pink: "#FFB0AA",
+          blue: "#7FBEF0",
+          "blue-light": "#94CBF8",
+          orange: "#FC4700",
+          "badge-yellow": "#FEE38C",
+          green: "#85D3A5",
+          "green-bright": "#69D6A1",
+        },
+      },
       perspective: {
         1000: "1000px",
       },

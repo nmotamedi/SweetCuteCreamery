@@ -6,7 +6,7 @@ export function About() {
       <Helmet>
         <link rel="canonical" href="https://www.sweetcuteicecream.com/about" />
       </Helmet>
-      <div className="bg-[#7FBEF0] flex-col justify-center items-center hidden sm:flex">
+      <div className="bg-brand-blue flex-col justify-center items-center hidden sm:flex">
         <div className="w-full flex items-center m-10">
           <div className="basis-1/2 flex justify-center">
             <div className="w-3/4 rounded-xl">
@@ -37,7 +37,7 @@ export function About() {
                 </textPath>
               </text>
             </svg>
-            <h2 className="font-FaroVariable text-[#FEE38C] text-xl md:text-4xl -mt-8 mb-10 text-center">
+            <h2 className="font-FaroVariable text-brand-badge-yellow text-xl md:text-4xl -mt-8 mb-10 text-center">
               IS MY
               <br />
               ENTIRE PERSONALITY
@@ -64,7 +64,7 @@ export function About() {
           </div>
         </div>
       </div>
-      <div className="bg-[#7FBEF0] flex-col justify-center items-center flex sm:hidden">
+      <div className="bg-brand-blue flex-col justify-center items-center flex sm:hidden">
         <h2 className="font-FaroVariable text-white text-xl md:text-2xl text-center mt-5 -mb-5">
           HI
           <br />
@@ -78,7 +78,7 @@ export function About() {
             </textPath>
           </text>
         </svg>
-        <h2 className="font-FaroVariable text-[#FEE38C] text-xl md:text-4xl -mt-8 mb-10 text-center">
+        <h2 className="font-FaroVariable text-brand-badge-yellow text-xl md:text-4xl -mt-8 mb-10 text-center">
           IS MY
           <br />
           ENTIRE PERSONALITY

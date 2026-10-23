@@ -4,19 +4,19 @@ import { Footer } from './Footer';
 export function NavHeader() {
   return (
     <div className="min-h-full">
-      <div className="w-full bg-[#7FBEF0]">
+      <div className="w-full bg-brand-blue">
         <h2 className="font-FaroVariable text-black text-base md:text-2xl uppercase text-center">
           Business Rate’s #1 Ice Cream Shop in Los Angeles 2026
         </h2>
       </div>
-      <div className=" text-base md:text-2xl lg:text-4xl text-[#FF0000] font-FaroVariable uppercase bg-[#FAE498] text-center">
+      <div className=" text-base md:text-2xl lg:text-4xl text-brand-red font-FaroVariable uppercase bg-brand-yellow text-center">
         <div className="flex justify-center items-center w-full md:w-3/4 m-auto">
           <NavLink
             to="/about"
             className={({ isActive }) =>
               isActive
                 ? 'underline basis-1/5'
-                : 'hover:text-[#85D3A5] basis-1/5'
+                : 'hover:text-brand-green basis-1/5'
             }
           >
             About
@@ -26,7 +26,7 @@ export function NavHeader() {
             className={({ isActive }) =>
               isActive
                 ? 'underline basis-1/5'
-                : 'hover:text-[#85D3A5] basis-1/5'
+                : 'hover:text-brand-green basis-1/5'
             }
           >
             Flavors
@@ -36,7 +36,7 @@ export function NavHeader() {
             className={({ isActive }) =>
               isActive
                 ? 'underline relative basis-1/5'
-                : 'hover:text-[#85D3A5] relative basis-1/5'
+                : 'hover:text-brand-green relative basis-1/5'
             }
           >
             <div className="flex justify-center w-full">
@@ -55,7 +55,7 @@ export function NavHeader() {
             className={({ isActive }) =>
               isActive
                 ? 'underline basis-1/5'
-                : 'hover:text-[#85D3A5] basis-1/5'
+                : 'hover:text-brand-green basis-1/5'
             }
           >
             Order
@@ -65,7 +65,7 @@ export function NavHeader() {
             className={({ isActive }) =>
               isActive
                 ? 'underline basis-1/5'
-                : 'hover:text-[#85D3A5] basis-1/5'
+                : 'hover:text-brand-green basis-1/5'
             }
           >
             Catering
